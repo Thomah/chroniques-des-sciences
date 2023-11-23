@@ -1,0 +1,25 @@
+.reveal .slide-number {
+    left: 8px;
+    right: auto;
+}
+
+.reveal p {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+.red {
+    color: darkred;
+}
+
+.green {
+    color: darkgreen;
+}
+
+.no-border {
+    border: 0px !important;
+}
+
+.left {
+    text-align: left;
+}
