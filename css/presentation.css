@@ -3,6 +3,22 @@
     right: auto;
 }
 
+.reveal h1 {
+    font-size: 4rem;
+}
+
+.reveal h2 {
+    font-size: 3rem;
+}
+
+.reveal p, .reveal a, .reveal th, .reveal td, .reveal li {
+    font-size: 1.5rem;
+}
+
+.reveal th {
+    font-weight: bold;
+}
+
 .reveal p {
     margin-top: 0.1em;
     margin-bottom: 0.1em;
