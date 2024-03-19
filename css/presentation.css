@@ -37,10 +37,12 @@
     border: 0px !important;
 }
 
-.left {
+.left,
+.left > li {
     text-align: left;
 }
 
-.center * {
-    text-align: center !important;
+.center *,
+.center tr td {
+    text-align: center;
 }
