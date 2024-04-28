@@ -1,5 +1,5 @@
 <section>
-    <h1>Les Grandes Théories</h1>
+    <h1>Vers l'informatique à grande échelle</h1>
 </section>
 <section>
     <h2>Le problème de la communication</h2>
@@ -48,8 +48,33 @@ autre point.
     </aside>
 </section>
 <section>
-    <h2>Sémiotique</h2>
+    <h2>Communiquer avec les machines</h2>
+    <pre><code data-trim>
+        bits 64
+section .text
+        global _start
+_start:
+        mov     rax, 1 ; write
+        mov     rdi, 1 ; stdout
+        mov     rsi, msg
+        mov     rdx, msg.len
+        syscall
+        mov     rax, 60 ; exit
+        mov     rdi, 0
+        syscall
+        section .data
+msg:    db      "Hello, world!", 10
+.len:   equ     $ - msg
+    </code></pre>
+    <p>Programme écrit en assembleur affichant "Hello, world!" dans une console</p>
 </section>
 <section>
-    <h2>Cybernétique</h2>
+    <h2>L'assembleur à la conquête de l'espace</h2>
+    <img src="images/margaret-hamilton.jpg" height="400px" />
+    <p>Margaret Hamilton en 1969, à côté des logiciels qu'elle et son équipe du MIT ont produits pour le projet Apollo 11.</p>
+    <aside class="notes">
+        <p>Logiciel de bord du vaisseau spatial Apollo et la station spatiale Skylab</p>
+        <p>Logiciels de détection et de récupération d'erreurs</p>
+        <p>Les cours de génie logiciel n'existaient pas</p>
+    </aside>
 </section>
