@@ -37,13 +37,15 @@
     border: 0px !important;
 }
 
+p,
 .left,
 .left > li {
     text-align: left;
 }
 
-.center *,
-.center tr td {
+.center,
+.center tr td,
+.caption {
     text-align: center;
 }
 
