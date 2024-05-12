@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Text-to-Speech</title>
+</head>
+
+<body>
+  <h1>Test Text-to-Speech</h1>
+  <label for="textToSpeak">Texte à synthétiser :</label>
+  <textarea id="textToSpeak" rows="4" cols="50"></textarea><br>
+  <button onclick="speakText()">Synthétiser</button>
+
+  <script>
+    // Vérification de la compatibilité avec l'API Web Speech
+    if ('speechSynthesis' in window) {
+      // Création de l'objet SpeechSynthesisUtterance
+      var msg = new SpeechSynthesisUtterance();
+
+      // Configuration de l'objet SpeechSynthesisUtterance
+      msg.lang = 'fr-FR'; // Langue de la synthèse vocale (français)
+
+      // Fonction pour démarrer la synthèse vocale
+      function speakText() {
+        var text = document.getElementById('textToSpeak').value;
+        msg.text = text; // Texte à synthétiser
+
+        // Sélection de la voix (par exemple, la première voix disponible)
+        var voices = window.speechSynthesis.getVoices();
+        console.log(voices)
+        msg.voice = voices[5];
+
+        window.speechSynthesis.speak(msg); // Démarrer la synthèse vocale
+      }
+    } else {
+      // Si l'API Web Speech n'est pas supportée
+      console.error("L'API Web Speech n'est pas supportée par votre navigateur.");
+      alert("L'API Web Speech n'est pas supportée par votre navigateur.");
+    }
+
+  </script>
+</body>
+
+</html>
