@@ -1,0 +1,76 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.widget {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 6em;
+  max-height: 6em;
+  /* Hauteur maximale de la div */
+  overflow-y: auto;
+  /* Défilement vertical si nécessaire */
+}
+
+.status-icon {
+  color: green;
+  margin-bottom: 20px;
+}
+
+.system-details {
+  margin-bottom: 30px;
+}
+
+.system-details p {
+  margin-top: 0;
+  font-size: xx-small;
+}
+
+.widget h3,
+.system-details h3 {
+  margin-top: 0;
+  font-size: xx-small;
+}
+
+.system-status {
+  font-weight: bold;
+}
+
+.system-status.online {
+  color: green;
+}
+
+.system-status.active {
+  color: green;
+}
+
+.system-status.initialized {
+  color: green;
+}
+
+.system-status.offline {
+  color: red;
+}
+
+.system-status.inactive {
+  color: red;
+}
+
+.system-status.uninitialized {
+  color: red;
+}
+
+#liveCode {
+  box-shadow: none;
+  font-size: xx-small;
+}
+
+#matrix {
+  width: 6em;
+  height: 6em;
+}
