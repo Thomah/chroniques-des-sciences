@@ -29,3 +29,17 @@ function speak(text) {
     textElement.textContent = '';
   };
 }
+
+function print(text) {
+  const subtitleElement = document.getElementById('companion-subtitles');
+  const textElement = subtitleElement.querySelector('.text');
+  subtitleElement.style.visibility = 'visible';
+  textElement.textContent = text;
+}
+
+function hide() {
+  const subtitleElement = document.getElementById('companion-subtitles');
+  const textElement = subtitleElement.querySelector('.text');
+  subtitleElement.style.visibility = 'hidden';
+  textElement.textContent = '';
+}
