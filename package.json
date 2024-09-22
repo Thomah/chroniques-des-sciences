@@ -13,9 +13,13 @@
   },
   "homepage": "https://github.com/Thomah/chrono-byte#readme",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server",
+    "generate-script": "node script/generate-pdf.js"
   },
   "dependencies": {
+    "asciidoctor": "^3.0.4",
+    "asciidoctor-pdf": "^1.0.0-alpha.16",
+    "fs-extra": "^11.2.0",
     "http-server": "^14.1.1"
   }
 }

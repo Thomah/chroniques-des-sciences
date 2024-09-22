@@ -1,17 +1,26 @@
 # Chrono Byte
 
-# Build
+# Slides
+
+## Build
 
 ```
 npm install
 ```
 
-# Run
+## Run
 
 ```
 npm start
 ```
 
-# Open the speaker view
+## Open the speaker view
 
 Enter  `S` on any slide
+
+# Script
+
+```
+bundle install
+ruby generate_script_pdf.rb
+```

@@ -1,0 +1,24 @@
+= Chrono Byte - Histoire et techniques de l'informatique
+Thomah <5090230+Thomah@users.noreply.github.com>
+:reproducible:
+:listing-caption: Listing
+:source-highlighter: rouge
+:linkcss:
+:stylesdir: script/
+:stylesheet: styles.css
+:toc:
+:title-page:
+
+== Ouverture
+
+*La scène s'ouvre sur un laboratoire. Des vieux livres, des fioles, des instruments de mesure, des parchemins sont sur une table. A côté, sur une place d'honneur, on devine derrière un tissu une grande boîte avec des lumières clignotantes. Un savant en blouse blance entre en scène l'air surexité*
+
+[.text-center]
+**Prof. Calvet**
+
+Chers toustes, bienveune dans mon laboratoire ! Je suis le Professeur Calvet et je serais votre hôte pour la soirée. Avant de commencer, laissez-moi vous présenter mon assistant IA : Jack 
+
+[.text-center]
+**Jack**
+
+Bonjour à tous ! Je suis Jack, une Intelligence Artificielle, et je vais vous accompagner tout le long de la soirée. Professeur, êtes-vous prêt ?
