@@ -1,0 +1,106 @@
+ /* Styles pour le conteneur parent */
+ .tunnel-container {
+   position: absolute;
+   /* Assure qu'il est positionné par rapport à son parent */
+   top: 0;
+   left: 0;
+   width: 100%;
+   /* S'assure qu'il occupe tout l'espace du parent */
+   height: 100%;
+   /* S'assure qu'il occupe toute la hauteur du parent */
+   pointer-events: none;
+   /* Permet d'interagir avec d'autres éléments en dessous */
+   overflow: hidden;
+   z-index: 9999;
+   /* S'assurer que le tunnel est au-dessus */
+ }
+
+ .tunnel {
+   position: absolute;
+   /* Pour pouvoir le centrer correctement */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   /* Centrage parfait */
+   width: 100%;
+   /* Occuper toute la largeur */
+   height: 100%;
+   /* Occuper toute la hauteur */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+ }
+
+ .circle {
+   position: absolute;
+   border-radius: 50%;
+   border: 3px solid;
+   animation: expand 2s infinite linear, colorChange 3s infinite linear, float 4s ease-in-out infinite;
+   transform-origin: center;
+ }
+
+ /* Animation de l'agrandissement */
+ @keyframes expand {
+   0% {
+     transform: scale(0.1) rotate(0deg);
+     opacity: 1;
+   }
+
+   100% {
+     transform: scale(12) rotate(360deg);
+     /* Agrandir suffisamment pour atteindre les bords */
+     opacity: 0;
+   }
+ }
+
+ /* Animation de changement de couleur */
+ @keyframes colorChange {
+   0% {
+     border-color: rgba(0, 153, 255, 0.8);
+   }
+
+   25% {
+     border-color: rgba(255, 0, 153, 0.8);
+   }
+
+   50% {
+     border-color: rgba(0, 255, 153, 0.8);
+   }
+
+   75% {
+     border-color: rgba(255, 255, 0, 0.8);
+   }
+
+   100% {
+     border-color: rgba(0, 153, 255, 0.8);
+   }
+ }
+
+ /* Animation de mouvement flottant plus intense */
+ @keyframes float {
+   0% {
+     transform: translate(0, 0);
+   }
+
+   20% {
+     transform: translate(-30px, -30px);
+   }
+
+   /* Déplacement plus prononcé */
+   40% {
+     transform: translate(30px, 30px);
+   }
+
+   60% {
+     transform: translate(-30px, 30px);
+   }
+
+   80% {
+     transform: translate(30px, -30px);
+   }
+
+   100% {
+     transform: translate(0, 0);
+   }
+ }
