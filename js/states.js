@@ -85,7 +85,7 @@ function getFragmentIndex() {
 var states = {};
 var currentElementIndex = 0;
 function initStates() {
-  fetchAndParseYaml('/states.yaml')
+  fetchAndParseYaml('states.yaml')
     .then(data => {
         states = data;
         console.log('Contenu YAML parsé:', data);
