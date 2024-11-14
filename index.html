@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/timeline.css">
 	<link rel="stylesheet" href="css/lab.css">
 	<link rel="stylesheet" href="css/tunnel.css">
+	<link rel="stylesheet" href="css/booleanhero.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -35,10 +36,9 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
-				<h1>INSERER AFFICHE ICI</h1>
+			<section data-timing="120">
+				<img src="images/poster.jpg" height="600px" />
 			</section>
-			<section data-external="modules/00.html"></section>
 			<section data-external="modules/01.html"></section>
 			<section data-external="modules/02.html"></section>
 			<section data-external="modules/03.html"></section>
@@ -46,6 +46,7 @@
 			<section data-external="modules/05.html"></section>
 			<section data-external="modules/06.html"></section>
 			<section data-external="modules/07.html"></section>
+			<section data-external="modules/08.html"></section>
 			<div id="companion-subtitles">
         <span class="icon">🤖</span><span class="text"></span>
 			</div>
@@ -57,6 +58,7 @@
 	<script src="js/companion.js"></script>
 	<script src="js/states.js"></script>
 	<script src="js/lab.js"></script>
+	<script src="js/booleanhero.js"></script>
 	<script src="plugin/highlight/highlight.min.js"></script>
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/math/math.js"></script>
@@ -69,6 +71,7 @@
 			hash: true,
 			backgroundTransition: 'none',
 			slideNumber: false,
+			defaultTiming: 0,
 			plugins: [RevealNotes, RevealHighlight, RevealMath.KaTeX],
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },

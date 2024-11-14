@@ -1,4 +1,4 @@
-# Chrono Byte
+# Chrononiques des Sciences - Des cailloux aux octets
 
 # Slides
 

@@ -1,7 +1,9 @@
 .dashboard {
+  margin-top: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, 7em);
+  grid-gap: 1em;
 }
 
 .widget {
@@ -10,11 +12,15 @@
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 6em;
-  max-height: 6em;
-  /* Hauteur maximale de la div */
   overflow-y: auto;
-  /* Défilement vertical si nécessaire */
+}
+
+.widget-overflow {
+  max-height: 7em;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .status-icon {
@@ -71,6 +77,36 @@
 }
 
 #matrix {
-  width: 6em;
-  height: 6em;
+  width: 7em;
+  height: 7em;
+}
+
+.chart-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bar {
+  height: 100%;
+  background-color: #aa0;
+  transition: height 0.5s ease-out;
+}
+
+.label {
+  margin-top: 5px;
+  text-align: center;
+  color: #333;
+}
+
+.bar-container {
+  width: calc(100% / 10);
+  margin-right: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #aa0;
 }

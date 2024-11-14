@@ -1,0 +1,60 @@
+name: Build Script
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run Ruby Command
+        run: |
+          ruby generate_script_pdf.rb
+
+      - name: Store artifact's name
+        id: artifact-name
+        env:
+          REF: ${{ github.ref }}
+        run: echo "::set-output name=value::${REF////-}-script"
+
+      - name: List, filter and delete artifacts
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { owner, repo } = context.issue
+            
+            const res = await github.rest.actions.listArtifactsForRepo({
+              owner,
+              repo,
+            })
+            
+            res.data.artifacts
+              .filter(({ name }) => name === '${{ steps.artifact-name.outputs.value }}')
+              .forEach(({ id }) => {
+                github.rest.actions.deleteArtifact({
+                  owner,
+                  repo,
+                  artifact_id: id,
+                })
+              })
+
+      - name: Upload latest script
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.artifact-name.outputs.value }}
+          path: output.pdf

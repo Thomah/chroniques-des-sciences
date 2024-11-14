@@ -89,7 +89,7 @@ function createLab() {
     "end:",
     "    xor rax, rax",
     "    ret"
-];
+  ];
 
   // Fonction pour afficher une ligne de code après l'autre avec un délai
 
@@ -148,5 +148,39 @@ function createLab() {
 
   // Loop the animation
   setInterval(draw, 60);
+
+  // Données initiales du graphique (valeurs aléatoires pour cet exemple)
+  const data = [120, 200, 150, 80, 170, 220, 140, 190, 110, 160, 110, 150, 160];
+
+  const chartContainer = document.getElementById("chart-container");
+
+  // Créer les barres du graphique
+  const bars = data.map(value => {
+    const bar = document.createElement("div");
+    bar.classList.add("bar");
+    bar.style.height = `${value}px`; // Définir la hauteur de chaque barre
+
+    const label = document.createElement("div");
+    label.classList.add("label");
+    label.innerText = value;
+
+    const barContainer = document.createElement("div");
+    barContainer.classList.add("bar-container");
+    barContainer.appendChild(bar);
+
+    chartContainer.appendChild(barContainer);
+    return bar;
+  });
+
+  // Fonction pour changer la hauteur des barres de manière aléatoire entre 1em et 5em
+  function randomizeHeights() {
+    bars.forEach(bar => {
+      const randomHeight = (Math.random() * 4 + 1); // Génère une hauteur aléatoire entre 1em et 5em
+      bar.style.height = `${randomHeight}em`; // Applique la nouvelle hauteur en 'em'
+    });
+  }
+
+  // Mettre à jour les hauteurs toutes les secondes (1000 ms)
+  setInterval(randomizeHeights, 1000);
 }
 
