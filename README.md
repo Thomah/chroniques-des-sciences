@@ -27,3 +27,12 @@ Enter  `S` on any slide
 bundle install
 ruby generate_script_pdf.rb
 ```
+
+# MAVHi
+
+## On Windows
+
+```
+pip install pygetwindow pywin32 pyserial pynput
+python mavhi\windows-connector.py
+```

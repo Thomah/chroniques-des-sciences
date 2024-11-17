@@ -12,3 +12,6 @@ node_modules/
 css/reveal.min.css
 js/reveal.min.js
 script.pdf
+
+mavhi/3d-models/gcodes
+mavhi/3d-models/*.FCBak
