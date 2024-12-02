@@ -19,7 +19,7 @@
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/applause.wav;2;6
+    args: audio/applause.mp3;2;6
   - trigger: auto
     delay: 15000
     exec: speak
@@ -45,6 +45,34 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;0;5
+2_2:
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: Autrement dit, c'était l'ancêtre de nos reçus de caisse… en plus lourd et friable. Mais là au moins, personne ne pouvait prétendre avoir perdu son reçu.
+2_3:
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: "Je note d'ailleurs l'omniprésence du nombre 60 parmi les calculis. C'est très malin car il est divisible par de nombreux nombres : 2, 3, 4, 5, 6, 10, 12, 15, 20 et 30"
+2_5:
+  - trigger: fragment
+    delay: 5000
+    exec: audio
+    args: audio/extrait-grave-dans-la-roche.mp3;0;30
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: Etrange, je ne détecte rien.
+  - trigger: auto
+    delay: 4000
+    exec: speak
+    args: Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes sur ces abaques. Les fondations d'Excel, en quelque sorte.
+2_6:
+  - trigger: fragment
+    delay: 4000
+    exec: speak
+    args: "Économie d'énergie assurée : l'abaque et le boulier fonctionnent sans électricité, ne tombent jamais en panne, et, en prime, font un joli cliquetis."
 5_7:
   - trigger: fragment
     delay: 0

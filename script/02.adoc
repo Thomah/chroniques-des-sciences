@@ -9,44 +9,68 @@ _Slide 2.0_
 
 _Slide 2.1_
 
-Et voilà, nous venons de faire un bon de près de 5 000 ans en arrière. Nous sommes en Mésopotamie, berceau des premières civilisations... et, devinez quoi, des premiers calculs !
+Et voilà, nous venons de faire un bon de près de 5 000 ans en arrière. Nous sommes en Mésopotamie, l'un des berceaux des premières civilisations... et, devinez quoi, des premiers calculs !
 
 _Slide 2.2_
 
-Ici, entre le Tigre et l’Euphrate, les gens n’utilisent pas encore de chiffres comme nous les connaissons. Pour tenir des comptes, ils créent des petites bulles d’argile, des bulle-enveloppe. À l'intérieur, on place des petits jetons représentant différentes quantités de moutons, jarres d’huile, ou sacs de grain. Et ce n’est pas tout ! L’extérieur de chaque bulle est soigneusement gravé avec un résumé de ce qui se trouve à l’intérieur.
+A cette époque, les gens n’utilisent pas encore de chiffres comme nous les connaissons. 
+
+Pour tenir des comptes, ils créent des petites bulles d’argile, des bulle-enveloppe. À l'intérieur, on place des petits jetons représentant différentes quantités de moutons, jarres d’huile, ou sacs de grain. Et ce n’est pas tout ! L’extérieur de chaque bulle est soigneusement gravé avec un résumé de ce qui se trouve à l’intérieur.
 
 [.text-center]
 **Jack**
 
 Autrement dit, c’était l’ancêtre de nos reçus de caisse… en plus lourd et friable. Mais là au moins, personne ne pouvait prétendre avoir perdu son reçu.
 
+_Slide 2.3_
+
 [.text-center]
 **Prof. Calvet**
 
-(Riant) Très juste ! Et voilà d'ailleurs une anecdote amusante : ces jetons s’appelaient calculi. Ce terme a d’ailleurs donné le mot calcul que nous utilisons aujourd’hui. Les calculi étaient faits en argile et servaient à tenir les comptes… Et même bien plus tard, dans la Rome antique, on utilisait encore ces petits galets pour faire des calculs.
+(Riant) Très juste ! Et voilà d'ailleurs une anecdote amusante : ces jetons s’appelaient calculi. Ce terme a d’ailleurs donné le mot calcul que nous utilisons aujourd’hui. Ces calculis ont longtemps été utilisé car même dans la Rome antique, on utilisait encore ces petits galets pour faire des calculs.
+
+[.text-center]
+**Jack**
+
+Je note d'ailleurs l'omniprésence du nombre "60" parmi les calculis. C'est très malin car il est divisible par de nombreux nombres : 2, 3, 4, 5, 6, 10, 12, 15, 20 et 30
+
+_Slide 2.4_
+
+[.text-center]
+**Prof. Calvet**
+
+Le nombre 60 était la base même de leur système de calcul : le système sexagésimale. Si nous, on compte de 10 en 10, les Mésopotamiens comptaient de 60 en 60. Vous voulez essayer ?
 
 === Scène 2
 
 [.text-center]
 **Prof. Calvet**
 
-_Slide 2.3_
+_Slide 2.5_
 
-Et bien des années - des millénaires après, les techniques de calcul vont connaître une avancée majeure : les abaques. La plus ancienne qui ait été retrouvée était la tablette de Salamine, trouvée sur l'île du même nom. Regardez bien, elle est gravée de lignes et de colonnes...
+Et bien des années - des millénaires après, les techniques de calcul vont connaître une avancée majeure : les abaques. 
+
+_Slide 2.5.0_
+
+Ce sont simplement des tablettes gravées sur lesquelles on renseignait les différentes valeurs à calculer...
+
+... C'était quoi ça ?
 
 [.text-center]
 **Jack**
 
-Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes. Les fondations d’Excel, en quelque sorte.
+Etrange, je ne détecte rien.
+
+Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes sur ces abaques. Les fondations d’Excel, en quelque sorte.
 
 [.text-center]
 **Prof. Calvet**
 
-(Riant) Oui, une version antique d’Excel en marbre ! La tablette de Salamine servait aux Grecs pour réaliser des opérations de comptabilité et de calcul. On y plaçait des petits jetons dans les différentes cases pour représenter les nombres. C’est le premier véritable “abaque”, un outil de calcul fixe et organisé, qui permet de gérer des calculs bien plus complexes que de simples additions.
+(Riant) Oui, une version antique d’Excel ! Ces tablettes ont servi à plusieurs civilisations pour réaliser des opérations de comptabilité et de calcul. On y plaçait des petits jetons dans les différentes cases pour représenter les nombres. C'est un outil de calcul fixe et organisé, qui permet de gérer des calculs bien plus complexes que de simples additions.
 
-C’est une avancée majeure qui influence bien d’autres civilisations. En fait, grâce à cet abaque de Salamine, le calcul devient “mobile” : plus besoin de graver ou de sculpter chaque opération. Ce principe sera perfectionné dans d’autres régions, notamment en Chine, avec l’invention du boulier.
+C’est une avancée majeure, car grâce à lui, le calcul devient “mobile” : plus besoin de graver ou de sculpter chaque opération. Ce principe sera perfectionné dans d’autres régions, notamment en Chine, avec l’invention du boulier.
 
-_Slide 2.4_
+_Slide 2.6_
 
 Le boulier devient rapidement populaire en Asie pour ses qualités pratiques. Il permet d’additionner, de soustraire, de multiplier et même de diviser, juste en glissant des billes le long de tiges. Son efficacité est telle que certains l’utilisent encore aujourd'hui !
 
@@ -65,7 +89,7 @@ Le boulier devient rapidement populaire en Asie pour ses qualités pratiques. Il
 [.text-center]
 **Prof. Calvet**
 
-_Slide 2.5_
+_Slide 2.7_
 
 Et au cours de cette quête humaine, il faut que nous nous attardions à Bagdad, au IXe siècle, dans un endroit exceptionnel… bienvenue à la Maison de la Sagesse ! Fondée sous le règne du calife Al-Ma’mun en 832, c’est ici que se trouve un des plus grands centres de connaissances de toute l’histoire. Des érudits viennent des quatre coins du monde pour traduire, étudier, et, comme vous allez le voir, inventer des concepts mathématiques révolutionnaires !
 
@@ -77,11 +101,11 @@ La Maison de la Sagesse… Un lieu majeur dans la transmission des connaissances
 [.text-center]
 **Prof. Calvet**
 
-_Slide 2.5.0_
+_Slide 2.7.0_
 
 Exactement, Jack. Et au cœur de cet environnement intellectuel intense se trouve un des plus brillants mathématiciens de l’histoire : Al-Khwarizmi. 
 
-_Slide 2.5.1_
+_Slide 2.7.1_
 
 Il écrit un ouvrage intitulé Kitab al-Jabr wa’l-Muqabala. Mon arabe est un peu bancal mais ça signifie en gros "Abrégé du calcul par la restauration et la comparaison". Dit comme ça, ça paye pas de mine, mais ce livre a posé les fondements d’une discipline mathématique totalement nouvelle à son époque.
 
@@ -107,9 +131,9 @@ Exactement ! D’ailleurs, on ne doit pas seulement à Al-Khwarizmi le concept d
 
 L'exercice est simple : il y aura à l'écran 2 calculs à résoudre. Tu dois me donner le résultat le plus vite possible. Tu es prêt ? 
 
-_Slide 2.5.2_
+_Slide 2.7.2_
 
-_Slide 2.5.3_
+_Slide 2.7.3_
 
 Merci !
 

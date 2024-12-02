@@ -1,17 +1,46 @@
 var utterance = new SpeechSynthesisUtterance();
 
 function initCompanion() {
-  window.speechSynthesis.onvoiceschanged = function () {
-    var voices = window.speechSynthesis.getVoices();
-    var frenchVoice = voices.find(function (voice) {
-      return voice.name === 'Microsoft Paul - French (France)';
+  const allowedNames = ["Microsoft Paul - French (France)", "Microsoft RemyMultilingual Online (Natural) - French (France)", "Microsoft Henri Online (Natural) - French (France)"];
+
+  function selectVoice() {
+    getFrenchVoicesByNames(allowedNames).then(({ frenchVoices, allVoices }) => {
+      if (frenchVoices.length > 0) {
+        utterance.voice = frenchVoices[0];
+        console.log(`Selected voice :`);
+        console.log(utterance.voice);
+      } else {
+        alert("No voice found for the companion. Please reload the page or check the console for available voices");
+        console.log("No voice found for the companion. Complete list of voices :");
+        allVoices.forEach(voice => console.log(voice));
+      }
     });
-    if (frenchVoice) {
-      utterance.voice = frenchVoice;
-    } else {
-      console.error("La voix spécifique n'est pas disponible.");
-    }
   }
+
+  window.speechSynthesis.onvoiceschanged = function () {
+    selectVoice();
+  }
+  selectVoice();
+}
+
+function getFrenchVoicesByNames(allowedNames) {
+  return new Promise((resolve) => {
+    const synth = window.speechSynthesis;
+
+    function checkVoices() {
+      let voices = synth.getVoices();
+      if (voices.length > 0) {
+        const frenchVoices = voices.filter(voice =>
+          voice.lang.includes('fr') && allowedNames.includes(voice.name)
+        );
+        resolve({ frenchVoices, allVoices: voices });
+      } else {
+        synth.onvoiceschanged = () => resolve(getFrenchVoicesByNames(allowedNames));
+      }
+    }
+
+    checkVoices();
+  });
 }
 
 function speak(text) {
