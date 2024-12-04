@@ -20,8 +20,8 @@
     delay: 0
     exec: audio
     args: audio/applause.mp3;2;6
-  - trigger: auto
-    delay: 15000
+  - trigger: fragment
+    delay: 1000
     exec: speak
     args: Je suis impatient, Professeur. Par où souhaitez-vous commencer ?
 1_2:
@@ -57,7 +57,7 @@
     args: "Je note d'ailleurs l'omniprésence du nombre 60 parmi les calculis. C'est très malin car il est divisible par de nombreux nombres : 2, 3, 4, 5, 6, 10, 12, 15, 20 et 30"
 2_5:
   - trigger: fragment
-    delay: 5000
+    delay: 1000
     exec: audio
     args: audio/extrait-grave-dans-la-roche.mp3;0;30
   - trigger: fragment
@@ -70,9 +70,34 @@
     args: Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes sur ces abaques. Les fondations d'Excel, en quelque sorte.
 2_6:
   - trigger: fragment
-    delay: 4000
+    delay: 1000
     exec: speak
     args: "Économie d'énergie assurée : l'abaque et le boulier fonctionnent sans électricité, ne tombent jamais en panne, et, en prime, font un joli cliquetis."
+2_7:
+  - trigger: fragment
+    delay: 1000
+    exec: speak
+    args: "La Maison de la Sagesse… Un lieu majeur dans la transmission des connaissances grecque, perse et du Moyen-Orient, mais aussi indienne, chinoise, et tant d'autres !"
+2_9:
+  - trigger: fragment
+    delay: 1000
+    exec: speak
+    args: "Il me dit quelque chose ce mot \"al-Jabr\", mais je ne le situe pas..."
+  - trigger: fragment
+    delay: 1000
+    exec: speak
+    args: Et en créant ce cadre, il invente quelque chose de plus universel, qui peut être adapté à différents types de problèmes. C'est une idée fondamentale qui influence tout ce qui va suivre, de la résolution des équations aux modèles abstraits utilisés aujourd'hui dans l'informatique.
+2_10:
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
+    delay: 1000
+    exec: speak
+    args: "En somme, Al-Khwarizmi change la manière de penser les mathématiques, mais il contribue aussi à une vision plus universelle des sciences. D'ailleurs, Professeur, son nom a même donné naissance à un autre terme fondamental : algorithme."
 5_7:
   - trigger: fragment
     delay: 0
