@@ -98,6 +98,114 @@
     delay: 1000
     exec: speak
     args: "En somme, Al-Khwarizmi change la manière de penser les mathématiques, mais il contribue aussi à une vision plus universelle des sciences. D'ailleurs, Professeur, son nom a même donné naissance à un autre terme fondamental : algorithme."
+  - trigger: fragment
+    exec: speak
+    args: "Vous avez une idée derrière la tête Professeur. Où souhaitez-vous aller ?"
+2_11:
+  - trigger: fragment
+    exec: audio
+    args: https://ia801809.us.archive.org/1/items/nathan-evans-wellerman-sea-shanty/Nathan%20Evans%20-%20Wellerman%20%28Sea%20Shanty%29.mp3;33;42
+2_12:
+  - trigger: fragment
+    exec: speak
+    args: "Et là, surprise : parmis tout le bric-à-brac, une mystérieuse boîte en bronze corrodée."
+2_15:
+  - trigger: auto
+    delay: 1000
+    exec: speak
+    args: "En terme de calculatrice, je reste quand même plus performant. Mais pour l'époque, respect."
+  - trigger: fragment
+    delay: 1000
+    exec: speak
+    args: "Et pendant ce temps-là, tout le monde faisait quoi ? Des divisions à la main ?"
+2_16:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Recherche de la séquence "Mathématiques et ses outils".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel2
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;0;5
+3_1:
+  - trigger: fragment
+    delay: 0
+    exec: audio
+    args: https://archive.org/download/AgeOfEmpires2MainMenuMusic/Age%20of%20Empires%202%20Main%20Menu%20Music.mp3;3;10
+  - trigger: fragment
+    exec: speak
+    args: "Si des personnes dans la salle travaillent aux ressources humaines, c'est pour vous !"
+3_2:
+  - trigger: fragment
+    exec: speak
+    args: "Je parie que ce titre a calmé les amateurs de mathématiques."
+3_4:
+  - trigger: fragment
+    exec: speak
+    args: "Ah, donc c'était comme un boulier, mais plus sophistiqué !"
+  - trigger: fragment
+    exec: speak
+    args: "Attendez… il faisait des démos pour impressionner ses invités ? Genre : \"Regardez comme je calcule plus vite que vous !\""
+  - trigger: fragment
+    exec: speak
+    args: "Vous parlez bien de la machine de Schickard, Professeur ?"
+3_5:
+  - trigger: fragment
+    exec: speak
+    args: "Petit problème : il n'en a fabriqué qu'un seul exemplaire, et il a été détruit dans un incendie."
+  - trigger: fragment
+    exec: speak
+    args: "Et pour finir, Wilhelm Schickard meurt prématurément en 1635, victime de la peste qui faisait rage à l'époque. Sa mort met un terme à ses travaux, tombés dans l'oubli."
+  - trigger: fragment
+    exec: speak
+    args: "Pas de marketing, pas de brevet… dans le monde d'aujourd'hui, il aurait peut-être eu plus de chance !"
+3_6:
+  - trigger: fragment
+    exec: speak
+    args: "Donc, un peu comme Schickard, mais avec un peu plus de reconnaissance, j'imagine ?"
+  - trigger: fragment
+    exec: speak
+    args: "A cet âge-là, vous jouiez aux jeux vidéos en pyjama du matin au soir, Professeur, non ?"
+3_7:
+  - trigger: fragment
+    exec: speak
+    args: "Et qu'est devenue son invention, Professeur ?"
+  - trigger: fragment
+    exec: speak
+    args: "L'histoire des calculatrices mécaniques est très diffuse. Vers quelle séquence souhaitez-vous avancer Professeur ?"
+3_8:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Recherche de la séquence "Histoire entrelacée".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel3
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;0;5
 5_7:
   - trigger: fragment
     delay: 0
