@@ -21,6 +21,12 @@ npm start
 
 Enter  `S` on any slide
 
+# OpenTTS Server
+
+```
+docker run -it -p 5500:5500 synesthesiam/opentts:fr-2.1
+```
+
 # Script
 
 ```

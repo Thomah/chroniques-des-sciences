@@ -1,7 +1,12 @@
 var utterance = new SpeechSynthesisUtterance();
 
 function initCompanion() {
-  const allowedNames = ["Microsoft Paul - French (France)", "Microsoft RemyMultilingual Online (Natural) - French (France)", "Microsoft Henri Online (Natural) - French (France)"];
+  const allowedNames = [
+    "Microsoft Paul - French (France)",
+    "Microsoft RemyMultilingual Online (Natural) - French (France)",
+    "Microsoft Henri Online (Natural) - French (France)",
+    "French (France)+Paul"
+  ];
 
   function selectVoice() {
     getFrenchVoicesByNames(allowedNames).then(({ frenchVoices, allVoices }) => {
@@ -43,21 +48,82 @@ function getFrenchVoicesByNames(allowedNames) {
   });
 }
 
-function speak(text) {
+function checkServerAvailability() {
+  return fetch('http://localhost:5500/', { method: 'GET', mode: 'cors' })
+    .then(response => response.ok)
+    .catch(() => false);
+}
+
+function useOpenTTS(text, callback) {
+
+  // Encode the text to ensure it works in the URL
+  const encodedText = encodeURIComponent(text);
+  const voice = 'larynx:tom-glow_tts';
+  const vocoder = 'high';
+  const denoiserStrength = 0.005;
+  const cache = 'true';
+
+  // Construct the URL with query parameters
+  const url = `http://localhost:5500/api/tts?voice=${voice}&text=${encodedText}&vocoder=${vocoder}&denoiserStrength=${denoiserStrength}&cache=${cache}`;
+
+  // Make the GET request to OpenTTS
+  fetch(url, { method: 'GET', headers: { 'Accept': '*/*' } })
+    .then(response => response.blob())  // Expecting the audio as a blob
+    .then(audioBlob => {
+      const audioUrl = URL.createObjectURL(audioBlob);
+      const audio = new Audio(audioUrl);
+      audio.play();
+
+      // Execute the callback when the audio finishes
+      audio.onended = () => {
+        if (callback && typeof callback === 'function') {
+          callback();  // Execute the callback after playback
+        }
+      };
+    })
+    .catch(err => {
+      console.error('Error generating voice via OpenTTS:', err);
+    });
+}
+
+function useBrowserTTS(text, callback) {
   utterance.text = text;
-  const subtitleElement = document.getElementById('companion-subtitles');
-  const textElement = subtitleElement.querySelector('.text');
+  utterance.lang = 'fr-FR';
   window.speechSynthesis.speak(utterance);
-
-  // Update subtitles when speaking
-  subtitleElement.style.visibility = 'visible';
-  textElement.textContent = text;
-
-  // Remove subtitles
-  utterance.onend = function (event) {
-    subtitleElement.style.visibility = 'hidden';
-    textElement.textContent = '';
+  utterance.onend = () => {
+    if (callback && typeof callback === 'function') {
+      callback();
+    }
   };
+}
+
+function speak(text) {
+
+  checkServerAvailability().then(isAvailable => {
+    const subtitleElement = document.getElementById('companion-subtitles');
+    const textElement = subtitleElement.querySelector('.text');
+
+    // Update subtitles when speaking
+    subtitleElement.style.visibility = 'visible';
+    textElement.textContent = text;
+
+    console.log(isAvailable);
+
+    if (isAvailable) {
+      console.log('OpenTTS server is available. Using OpenTTS API...');
+      useOpenTTS(text, () => {
+        subtitleElement.style.visibility = 'hidden';
+        textElement.textContent = '';
+      });
+    } else {
+      console.log('OpenTTS server is unavailable. Using browser speech synthesis...');
+      useBrowserTTS(text, () => {
+        subtitleElement.style.visibility = 'hidden';
+        textElement.textContent = '';
+      });
+    }
+  });
+
 }
 
 function print(text) {

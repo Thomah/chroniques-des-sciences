@@ -81,6 +81,10 @@
 		});
 		initCompanion();
 		initStates();
+		Reveal.on('ready', (event) => {
+			console.log(event);
+			runState(`${getIndexH()}_${getIndexV()}`, "auto");
+		});
 		Reveal.on('fragmentshown', (event) => {
 			console.log(event);
 			runState(`${getIndexH()}_${getIndexV()}`, "fragment");
