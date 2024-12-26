@@ -206,6 +206,72 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;0;5
+4_1:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Je suis sur le fil, Professeur ! Commençons par une plongée médiévale avec une image tirée du livre "Des cleres et nobles femmes".
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: Statistiquement, je donnerais à cette tâche un indice de ennui-o-mètre assez élevé.
+4_2:
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: Heureusement, au XVIIIe siècle, à Lyon, un homme nommé Basile Bouchon a eu une idée.
+4_3:
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: En d'autres termes, les premiers signes du codage moderne ! 1 = levé, 0 = baissé.
+4_4:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Canuts. Aujourd'hui, ça sonne comme un joli nom de festival, mais à l'époque, c'était synonyme de lutte pour la survie.
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: Ajoutez à ça de longues heures, des logements insalubres, et une concurrence féroce due aux machines comme le métier Jacquard… Voilà une recette explosive.
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: Les barricades dans les rues de Lyon, ça rappelle presque des scènes de "Les Misérables". Spoiler : ça ne finit pas mieux ici.
+4_5:
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: Ça prouve que même dans l'innovation, il faut tisser un équilibre entre technologie, économie, et société. Pas de "1" sans "0", comme on dit.
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: "Parce que la vraie question reste toujours : comment rendre l'innovation juste et bénéfique pour tous ?"
+  - trigger: fragment
+    delay: 5
+    exec: speak
+    args: Ce n'est peut-être pas le moment de répondre à ce genre de questions philosophique. Ne souhaitez-vous pas aborder une nouvelle séquence ?
+4_6:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Recherche de la séquence "Un coût des mathématiques de plus en plus important".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel4
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;0;5
 5_7:
   - trigger: fragment
     delay: 0
