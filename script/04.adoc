@@ -152,4 +152,4 @@ _Slide 4.6_
 [.text-center]
 **Jack**
 
-Recherche de la séquence "Un coût des mathématiques de plus en plus important".
+Recherche de la séquence "Des mathématiques vers la logique binaire".

@@ -48,11 +48,12 @@
 			<section data-external="modules/07.html"></section>
 			<section data-external="modules/08.html"></section>
 			<div id="companion-subtitles">
-        <span class="icon">🤖</span><span class="text"></span>
+				<span class="icon">🤖</span><span class="text"></span>
 			</div>
 		</div>
 	</div>
 	<script src="js/reveal.js"></script>
+	<script src="js/timer.js"></script>
 	<script src="js/tunnel.js"></script>
 	<script src="js/timeline.js"></script>
 	<script src="js/companion.js"></script>
@@ -87,11 +88,26 @@
 		});
 		Reveal.on('fragmentshown', (event) => {
 			console.log(event);
-			runState(`${getIndexH()}_${getIndexV()}`, "fragment");
+			runState(Reveal, `${getIndexH()}_${getIndexV()}`, "fragment");
 		});
 		Reveal.on('slidechanged', event => {
-			resetState();
-			runState(`${event.indexh}_${event.indexv}`, "auto");
+			if (event.indexh != getIndexH() || event.indexv != getIndexV()) {
+				console.log("URL is not matching the slidechanged event");
+				console.log(`${event.indexh}_${event.indexv} != ${getIndexH()}_${getIndexV()}`);
+				const stopObserving = waitForUrlChange(newUrl => {
+					console.log(event);
+					resetState();
+					runState(Reveal, `${event.indexh}_${event.indexv}`, "auto");
+				});
+				setTimeout(() => {
+					stopObserving();
+					console.log('Stopped observing URL changes.');
+				}, 10000);
+			} else {
+				console.log(event);
+				resetState();
+				runState(Reveal, `${event.indexh}_${event.indexv}`, "auto");
+			}
 		});
 	</script>
 </body>
