@@ -2,28 +2,22 @@
     <h1>Vers l'informatique à grande échelle</h1>
 </section>
 <section>
+    <h2>Alan Turing</h2>
+    <img src="images/08/alan-turing.jpg" height="400px" />
+    <p class="caption">Alan Turing (1912-1954) à l'université de Princeton (1936).</p>
+</section>
+<section>
     <h2>Peut-on tout calculer ?</h2>
-    <div class="r-stack">
-        <img class="fragment fade-out" data-fragment-index="0" src="images/alan-turing.jpg" height="400px" />
-        <img class="fragment fade-in-then-out" data-fragment-index="0" src="images/turing-machine.png"
-            height="400px" />
-        <img class="fragment fade-in-then-out" data-fragment-index="1" src="images/turing-ace.jpg"
-            height="400px" />
-    </div>
-    <div class="r-stack">
-        <p class="fragment fade-out caption" data-fragment-index="0">Alan Turing (1912-1954) à l'université de Princeton (1936).</p>
-        <p class="fragment fade-in-then-out caption" data-fragment-index="0">La machine de Turing est un objet conceptuel, une expérience de pensée.</p>
-        <p class="fragment fade-in-then-out caption" data-fragment-index="1">L'Automatic Computing Engine (ACE) est un design d'ordinateurs à programme enregistré, conçu par Alan Turing en 1950.</p>
-    </div>
+    <img src="images/08/turing-machine.jpg" height="400px" />
+    <p class="caption">La machine de Turing est un objet conceptuel, une expérience de pensée.</p>
     <aside class="notes">
         <p>1936, il démontre l'existence d'une Machine Universelle capable de simuler toute autre machine : plus de machines dédiées, mais des machines programmables</p>
-        <p>1950 : l'ACE est une machine programmable capable d'exécuter des calculs en virgule flottante.</p>
         <p>1951 : condamné à la castration chimique pour homosexualité (illégale à l'époque). Il se suicide dans l'indifférence générale en 1954, en avalant une pomme plongée dans du cyanure</p>
     </aside>
 </section>
 <section>
     <h2>L'ENIAC, premier véritable ordinateur</h2>
-    <img src="images/eniac.jpg" height="400px" />
+    <img src="images/08/eniac.jpg" height="400px" />
     <p class="caption">L'ENIAC (Electronic Numerical Integrator and Computer) en 1947.</p>
     <aside class="notes">
         <p>Projet secret de l'armée US pendant la seconde guerre mondiale pour le calcul balistique</p>
@@ -34,7 +28,7 @@
 </section>
 <section>
     <h2>Les femmes de l'ENIAC</h2>
-    <img src="images/eniac-femmes.jpg" height="400px" />
+    <img src="images/08/eniac-femmes.jpg" height="400px" />
     <p class="caption">Ces programmatrices d'élite, les « ENIAC Girls », aussi surnommées « computers », furent longtemps oubliées de l'histoire.</p>
     <aside class="notes">
         <p>Programmée pendant la WWII par 6 femmes ne disposant de très peu d'information</p>
@@ -44,12 +38,21 @@
     </aside>
 </section>
 <section>
+    <h2>Le test de Turing</h2>
     <div class="r-stack">
-        <h2 class="fragment fade-out caption" data-fragment-index="0">L'intelligence et le jeu de l'imitation</h2>
         <p class="fragment fade-in-then-out caption" data-fragment-index="0">Quel est ton plat préféré et pourquoi ?</p>
         <p class="fragment fade-in-then-out caption" data-fragment-index="1">Que ferais-tu si tu gagnais un million d'euros ?</p>
         <p class="fragment fade-in-then-out caption" data-fragment-index="2">Peux-tu me raconter un souvenir d'enfance marquant ?</p>
     </div>
+</section>
+<section>
+    <h2>John McCarthy</h2>
+    <img src="images/john-mccarthy.jpg" height="400px" />
+    <p class="caption">John McCarthy</p>
+    <aside class="notes">
+        <p>McCarthy popularise le terme "intelligence artificielle" lors de la conférence de Dartmouth en 1956. Il a proposé que l'on puisse créer des programmes capables de résoudre des problèmes de manière similaire à la pensée humaine.</p>
+        <p>Concepts : manipulation de listes, récursions, fonctions comme arguments</p>
+    </aside>
 </section>
 <section>
     <h2>Le problème de la communication</h2>
@@ -72,26 +75,9 @@ autre point.
     <p>📡 Canal de communication : un message est envoyé d'un émétteur à un récepteur</p>
 </section>
 <section>
-    <h2>Nombre de bits nécessaires</h2>
-    <p>L'information suit un modèle probabiliste.</p>
-    <p>Un télégraphiste transmet les 26 caractères de l'alphabet, les 10 chiffres et des espaces.</p>
-    <p>Combien faut-il de bits pour le transmettre ?</p>
-    <p>Si chaque caractère a la même probabilité d'apparaître, alors il a : </p>
-    <p>
-        \[\begin{aligned}
-        log_2(26 + 10 + 1) = 5,2 sh
-        \end{aligned} \]
-    </p>
-    <p>Il faut donc 6 bits pour encoder ces 37 caractères.</p>
-</section>
-<section>
-    <h2>Les nouveaux composants électroniques</h2>
-    <p>Transistor : par John Bardeen, William Shockley et Walter Brattain, chercheurs des Laboratoires Bell en 1947</p>
-    <p>Circuit intégré : par Jack Kilby, chercheur chez Texas Instruments en 1958</p>
-    <aside class="notes">
-        <p>Transistor, prix Nobel de Physique en 1956</p>
-        <p>Circuit intégré, prix Nobel de Physique en 2000</p>
-    </aside>
+    <h2>Le langage binaire</h2>
+    <h3 class="fragment">VIE</h3>
+    <h3 class="fragment">01010110 01001001 01000101</h3>
 </section>
 <section>
     <h2>Communiquer avec les machines</h2>
@@ -120,7 +106,7 @@ msg:    db      "Hello, world!", 10
 </section>
 <section>
     <h2>L'assembleur à la conquête de l'espace</h2>
-    <img src="images/margaret-hamilton.jpg" height="400px" />
+    <img src="images/08/margaret-hamilton.jpg" height="400px" />
     <p class="caption">Margaret Hamilton en 1969, à côté des logiciels qu'elle et son équipe du MIT ont produits pour le projet Apollo 11.</p>
     <aside class="notes">
         <p>Logiciel de bord du vaisseau spatial Apollo et la station spatiale Skylab</p>
@@ -129,56 +115,40 @@ msg:    db      "Hello, world!", 10
     </aside>
 </section>
 <section>
-    <h2>Soyez FORTRAN-sportés !</h2>
-    <pre><code data-trim>
-PROGRAM Sum
-  INTEGER :: a, b, result
-
-  ! Initialisation des variables
-  a = 2
-  b = 2
-
-  ! Calcul de la somme
-  result = a + b
-
-  ! Affichage du résultat
-  PRINT *, 'Le résultat de 2 + 2 est :', result
-END PROGRAM Sum
-    </code></pre>
-    <p class="caption">Programme écrit en FORTRAN affichant le résultat de 2 + 2 dans une console</p>
-    <aside class="notes">
-        <p>Créé en 1954 par John Backs (ingénieur radiophonie chez IBM), son compilateur viendra en 1957</p>
-        <p>Concepts haut niveau : variables, boucles, conditions, fonctions proches des mathématiques et de la logique humaine</p>
-    </aside>
+    <h2>Apollo 11</h2>
+    <img src="images/08/apollo11.webp" height="400px" />
+    <p class="caption">Apollo 11 décolle vers la Lune avec à son bord Neil Armstrong, Buzz Aldrin et Michael Collins le 16 juillet 1969. NASA.</p>
 </section>
 <section>
-    <h2>Les prémices de l'Intelligence Artificielle</h2>
-    <div class="r-stack">
-        <img class="fragment fade-out" data-fragment-index="0" src="images/john-mccarthy.jpg" height="400px" />
-        <pre class="fragment fade-in-then-out" data-fragment-index="0"><code data-trim>
-(defun somme (liste)
-"Calcule la somme des éléments d'une liste."
-(if (null liste)                         ; Vérifie si la liste est vide
-    0                                    ; Si oui, retourne 0
-    (+ (car liste)                       ; Sinon, ajoute le premier élément
-        (somme (cdr liste)))))           ; à la somme du reste de la liste
-
-(let ((nombres '(1 2 3 4 5)))            ; Définit une liste de nombres
-(format t "La somme des nombres est : ~d~%" (somme nombres)))      
-        </code></pre>
-    </div>
-    <div class="r-stack">
-        <p class="fragment fade-out caption" data-fragment-index="0">John McCarthy</p>
-        <p class="fragment fade-in-then-out caption" data-fragment-index="0">Programme écrit en LISP affichant la somme de plusieurs nombres dans une liste</p>
-    </div>
-    <aside class="notes">
-        <p>McCarthy popularise le terme "intelligence artificielle" lors de la conférence de Dartmouth en 1956. Il a proposé que l'on puisse créer des programmes capables de résoudre des problèmes de manière similaire à la pensée humaine.</p>
-        <p>Concepts : manipulation de listes, récursions, fonctions comme arguments</p>
-    </aside>
+    <h2>Invention du transistor</h2>
+    <img src="images/08/transistor.jpg" height="400px" />
+    <p class="caption">Le premier transistor assemblé. Bell Labs.</p>
 </section>
 <section>
-    <h2>Les nouveaux composants électroniques</h2>
-    <p>Microprocesseur : Marcian Hoff et Federico Faggin, ingénieurs chez Intel Corporation en 1971</p>
-    <aside class="notes">
-    </aside>
+    <h2>Invention du circuit intégré</h2>
+    <img src="images/08/circuit-integre.jpg" height="400px" />
+    <p class="caption">L'un des trois premiers circuits intégrés (oscillateur à décalage de phase) créés par Jack Kilby. Bell Labs.</p>
 </section>
+<section>
+    <h2>Des matériaux rares</h2>
+    <table>
+        <tr>
+            <td><img src="images/08/cobalt.jpg" height="150px" /></td>
+            <td><img src="images/08/lithium.jpg" height="150px" /></td>
+            <td><img src="images/08/silicium.jpg" height="150px" /></td>
+            <td><img src="images/08/tantale.jpg" height="150px" /></td>
+        </tr>
+    </table>
+    <p class="caption">De gauche à droite : Cobalt, Lithium, Silicium, Tantale.</p>
+</section>
+<section>
+    <h2>La réalité derrière la production en masse</h2>
+    <img src="images/08/mine-tantale.webp" height="400px" />
+    <p class="caption">Une mine de tantale en République Démocratique du Congo.</p>
+</section>
+<section>
+    <h2>Une électronique condamnée à l'obsolescence ?</h2>
+    <img src="images/08/decharge-ghana.webp" height="400px" />
+    <p class="caption">Le Ghana importe chaque année près de 40 000 tonnes de déchets électroniques dont le vaste site d'Agbogbloshie est la principale destination. © Judith Renoult</p>
+</section>
+
