@@ -21,13 +21,4 @@ function initTunnel(args) {
     // Ajouter le cercle au conteneur
     tunnel.appendChild(circle);
   }
-
-  // Relance l'animation sur clic
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.circle').forEach(circle => {
-      circle.style.animation = 'none';
-      circle.offsetHeight; // Force le reflow pour relancer l'animation
-      circle.style.animation = '';
-    });
-  });
 }

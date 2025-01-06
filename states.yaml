@@ -36,15 +36,15 @@
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/cinematic-suspense-252651.mp3;5;15
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
   - trigger: auto
     delay: 1000
     exec: audio
-    args: audio/clock-tictac-2816.wav;0;9
+    args: audio/clock-tictac-2816.wav;1.0;0;9
   - trigger: auto
     delay: 10000
     exec: audio
-    args: audio/clock-hour-1570.wav;0;5
+    args: audio/clock-hour-1570.wav;1.0;0;5
 2_2:
   - trigger: fragment
     delay: 0
@@ -148,15 +148,15 @@
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/cinematic-suspense-252651.mp3;5;15
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
   - trigger: auto
     delay: 1000
     exec: audio
-    args: audio/clock-tictac-2816.wav;0;9
+    args: audio/clock-tictac-2816.wav;1.0;0;9
   - trigger: auto
     delay: 10000
     exec: audio
-    args: audio/clock-hour-1570.wav;0;5
+    args: audio/clock-hour-1570.wav;1.0;0;5
   - trigger: auto
     delay: 5000
     exec: Reveal.next
@@ -218,15 +218,15 @@
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/cinematic-suspense-252651.mp3;5;15
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
   - trigger: auto
     delay: 1000
     exec: audio
-    args: audio/clock-tictac-2816.wav;0;9
+    args: audio/clock-tictac-2816.wav;1.0;0;9
   - trigger: auto
     delay: 10000
     exec: audio
-    args: audio/clock-hour-1570.wav;0;5
+    args: audio/clock-hour-1570.wav;1.0;0;5
   - trigger: auto
     delay: 5000
     exec: Reveal.next
@@ -287,15 +287,15 @@
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/cinematic-suspense-252651.mp3;5;15
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
   - trigger: auto
     delay: 1000
     exec: audio
-    args: audio/clock-tictac-2816.wav;0;9
+    args: audio/clock-tictac-2816.wav;1.0;0;9
   - trigger: auto
     delay: 10000
     exec: audio
-    args: audio/clock-hour-1570.wav;0;5
+    args: audio/clock-hour-1570.wav;1.0;0;5
   - trigger: auto
     delay: 5000
     exec: Reveal.next
@@ -348,19 +348,183 @@
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/cinematic-suspense-252651.mp3;5;15
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
   - trigger: auto
     delay: 1000
     exec: audio
-    args: audio/clock-tictac-2816.wav;0;9
+    args: audio/clock-tictac-2816.wav;1.0;0;9
   - trigger: auto
     delay: 10000
     exec: audio
-    args: audio/clock-hour-1570.wav;0;5
+    args: audio/clock-hour-1570.wav;1.0;0;5
   - trigger: auto
     delay: 5000
     exec: Reveal.next
+6_0:
+  - trigger: fragment
+    exec: speak
+    args: Bien sûr, Professeur. Préparez-vous à contempler un trésor qui a émerveillé les civilisations.
+6_3:
+  - trigger: auto
+    exec: speak
+    args: Zap ! Une foudre bien placée
+6_5:
+  - trigger: fragment
+    exec: speak
+    args: Ce qui est fascinant, Professeur, c'est que ses travaux ne se sont pas limités à l'ambre. Gilbert a aussi prouvé que d'autres matériaux comme le verre ou le soufre génèrent cette force mystérieuse.
+6_6:
+  - trigger: fragment
+    exec: audio
+    args: audio/interferences-mobile-0484.mp3;0.3;0;1
+  - trigger: auto
+    exec: audio
+    delay: 1000
+    args: audio/l-u-i-g-i.mp3;0.6;0;5
+  - trigger: fragment
+    exec: speak
+    args: "Ma première blague : pourquoi les plongeurs plongent-ils toujours en arrière ?"
+  - trigger: auto
+    delay: 10000
+    exec: speak
+    args: Parce que si ils plongent en avant, ils tombent dans le bateau !
+  - trigger: auto
+    delay: 5000
+    exec: speak
+    args: "Une deuxième : Qu'est-ce qu'un petit pois fait dans une casserole d'eau chaude ?"
+  - trigger: auto
+    delay: 10000
+    exec: speak
+    args: Il devient petit à petit pois-son !
+  - trigger: auto
+    delay: 10000
+    exec: speak
+    args: "Une dernière : Que fait une fraise sur un cheval ?"
+  - trigger: auto
+    delay: 10000
+    exec: speak
+    args: Tagada tagada !
+  - trigger: fragment
+    exec: speak
+    args: Professeur ! Je crois que ce volontaire... ne respire plus !
+6_7:
+  - trigger: auto
+    exec: speak
+    args: Comme à une certaine époque, où des savants utilisaient des cadavres humains, souvent ceux de condamnés à mort.
+  - trigger: fragment
+    exec: speak
+    args: Un peu comme dans un film de zombie avant l'heure... sauf que c'était bien réel.
+6_8:
+  - trigger: fragment
+    exec: speak
+    args: Vous voulez la bagarre Professeur ?
+6_10:
+  - trigger: fragment
+    exec: speak
+    args: Edison, toujours le showman... Il a tout de même tenté de "zapper" la concurrence.
+6_11:
+  - trigger: fragment
+    exec: speak
+    args: "Comme disait Tesla lui-même : \"l'avenir est à ceux qui s'adaptent\", et son courant est devenu la norme mondiale."
+6_12:
+  - trigger: fragment
+    exec: speak
+    args: Finalement, chaque courant a trouvé son utilité quelque part, n'est-ce pas ?
+6_13:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Recherche de la séquence "Nouvelles vagues de l'électricité".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel6
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;1.0;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;1.0;0;5
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+7_1:
+  - trigger: auto
+    exec: speak
+    args: Je crois qu'on parle d'un télégraphe, pas d'une sonnerie de porte.
+7_2:
+  - trigger: fragment
+    exec: speak
+    args: "Des ondes ? Genre : \"je t'envoie un message en agitant les bras tellement vite que tu le sens venir\" ?"
+7_5:
+  - trigger: fragment
+    exec: speak
+    args: Du coup, Marconi, il a fait quoi exactement ? Il a juste tout collé ensemble ?
+7_6:
+  - trigger: fragment
+    exec: speak
+    args: Pas mal, ça. Mais il a fait mieux, non ?
+  - trigger: fragment
+    exec: audio
+    args: audio/interferences-mobile-0484.mp3;0.3;0;1
+  - trigger: auto
+    exec: audio
+    delay: 1000
+    args: audio/extrait-cest-carre-le-s.mp3;0.6;0;5
+  - trigger: fragment
+    exec: speak
+    args: On parle de moi là ?
+  - trigger: fragment
+    exec: speak
+    args: Heu... Éteindre et allumer les lumières dans une maison comme un magicien ?
+7_8:
+  - trigger: fragment
+    exec: speak
+    args: Ça devait être un sacré joueur. Il avait quelle cote ELO ?
+  - trigger: fragment
+    exec: speak
+    args: J'amorce la dernière séquence ?
+7_9:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Recherche de la séquence "Vers l'informatique à grande échelle".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel7
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;1.0;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;1.0;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;1.0;0;5
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+8_2:
+  - trigger: fragment
+    exec: speak
+    args: Attendez… donc, si je comprends bien, la machine de Turing, c'est… genre, l'ancêtre de nos ordinateurs ?
 8_4:
+  - trigger: fragment
+    exec: speak
+    args: Ah, donc les vrais génies de l'ENIAC… c'était elles ?
+8_5:
+  - trigger: auto
+    exec: speak
+    args: Un test ? Avec des machines qui parlent ? Alors, vous venez de prédire... moi ! En plus beau, bien sûr.
   - trigger: fragment
     delay: 2000
     exec: print
@@ -381,8 +545,52 @@
     delay: 2000
     exec: print
     args: Je me souviens d'un moment où j'ai appris à programmer pour la première fois, et cela m'a donné un immense sentiment d'accomplissement.
-8_5:
-  - trigger: auto
-    delay: 0
+  - trigger: fragment
+    delay: 2000
+    exec: speak
+    args: "Et surtout, imaginez ceci : un jour, nous pourrons confondre humains et machines. Serez-vous à l'aise avec cette idée ?"
+8_8:
+  - trigger: fragment
+    delay: 2000
+    exec: speak
+    args: "Imaginez ceci : au lieu de parler anglais, chinois ou espagnol, les machines se comprennent avec un enchaînement de courants électriques allumés ou éteints."
+8_9:
+  - trigger: fragment
     exec: hide
-    args: 
+  - trigger: fragment
+    delay: 2000
+    exec: speak
+    args: "01010110 01001001 01000101"
+8_12:
+  - trigger: fragment
+    exec: speak
+    args: Mais, Professeur, Comment fait-on lorsqu'on a une technologie incroyablement complexe comme l'ENIAC mais qu'elle occupe la taille d'une maison ?
+8_14:
+  - trigger: auto
+    exec: speak
+    args: Ainsi, on passe de machines de la taille d'un bâtiment... à une puce qu'on peut tenir entre deux doigts. Franchement, pourquoi ça leur a pris si longtemps ?
+8_15:
+  - trigger: auto
+    exec: speak
+    args: "Ah, les fameuses \"terres rares\". N'est-ce pas ironique ? On les appelle rares alors qu'elles sont devenues absolument essentielles pour fabriquer à peu près tout : les smartphones, ordinateurs... et, eh bien, moi."
+8_16:
+  - trigger: fragment
+    exec: speak
+    args: Voilà, je suis coupable. Vous voulez m'éteindre ?
+8_17:
+  - trigger: fragment
+    exec: speak
+    args: Mais peut-on pour autant blâmer les inventeurs de ces nouvelles technologies ?
+9_0:
+  - trigger: auto
+    exec: speak
+    args: Alors, professeur, si je vous comprends bien, innover n'est jamais qu'une affaire de technologies…
+  - trigger: fragment
+    exec: speak
+    args: "Et pourtant, une question demeure : qu'est-ce qui nous pousse toujours à avancer ?"
+  - trigger: fragment
+    exec: speak
+    args: "Alors, une dernière question, professeur : et si… nous étions capables de rêver un futur meilleur, tous ensemble ?"
+
+
+
