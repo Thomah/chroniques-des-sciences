@@ -74,12 +74,12 @@ while True:
     if ser.in_waiting > 0:
         data = ser.readline().decode('utf-8').strip()
         
-        if data == "Button1":
+        if data == "ARCADE_RED_BUTTON_PRESSED":
             bring_window_to_front(window_title)
             keyboard.press('&')
             keyboard.release('&')
         
-        elif data == "Button2":
+        elif data == "ARCADE_BLUE_BUTTON_PRESSED":
             bring_window_to_front(window_title)
             keyboard.press('à')
             keyboard.release('à')

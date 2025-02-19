@@ -5,6 +5,7 @@
 
 bool strobeActive = false;
 bool rotateMinuteActive = false;
+bool allLightsActive = false;
 
 // MCP23017
 MCP23017 mcp;
@@ -23,29 +24,17 @@ const uint8_t steps[8][4] = {
 };
 
 // Arcade buttons
-const int ledPin = 2;
-const int switchPin = 3;
-unsigned long previousMillis = 0;
-const long interval = 1000;
+const int ARCADE_RED_SW_PIN = 2;
+const int ARCADE_RED_LED_PIN = 12;
+const int ARCADE_BLUE_SW_PIN = 3;
+const int ARCADE_BLUE_LED_PIN = 13;
+const long ARCADE_MIN_INTERVAL = 1000;
+unsigned long arcadeRedPreviousMillis = 0;
+unsigned long arcadeBluePreviousMillis = 0;
 
 // Initialisation du moteur
 // Les pins doivent correspondre à votre configuration de câblage
 Stepper myStepper = Stepper(1024, 8, 10, 9, 11);
-
-
-// Broches pour les boutons poussoirs
-const int boutonAvancer = 12;
-const int boutonReculer = 13;
-
-// Variables pour stocker l'état des boutons
-int etatBoutonAvancer = 0;
-int etatBoutonReculer = 0;
-
-// Variables pour stocker l'état des boutons et de détection de clic
-int etatBoutonAvancerActuel = 0;
-int etatBoutonAvancerPrecedent = 0;
-int etatBoutonReculerActuel = 0;
-int etatBoutonReculerPrecedent = 0;
 
 void setup() {
 
@@ -59,12 +48,10 @@ void setup() {
   }
 
   // Configure arcade buttons
-  pinMode(ledPin, OUTPUT);
-  pinMode(switchPin, INPUT_PULLUP);
-
-  // Configurer les broches des boutons comme entrée
-  pinMode(boutonAvancer, INPUT_PULLUP);
-  pinMode(boutonReculer, INPUT_PULLUP);
+  pinMode(ARCADE_RED_SW_PIN, INPUT_PULLUP);
+  pinMode(ARCADE_RED_LED_PIN, OUTPUT);
+  pinMode(ARCADE_BLUE_SW_PIN, INPUT_PULLUP);
+  pinMode(ARCADE_BLUE_LED_PIN, OUTPUT);
 
   // Init shift
   pinMode(SHIFT_01_DATA_PIN, OUTPUT);
@@ -110,19 +97,43 @@ void loop() {
       rotateMinuteActive = !rotateMinuteActive;
       Serial.println(rotateMinuteActive ? "Minute motor is rotating." : "Motor minute stopped.");
     }
+
+    if (command == "all-lights") {
+      allLightsActive = !allLightsActive;
+      Serial.println(allLightsActive ? "All lights activated." : "All lights deactivated.");
+    }
   }
   
   // Manage arcade buttons
-  int switchState = digitalRead(switchPin);
-  if (switchState == LOW) {
-    digitalWrite(ledPin, HIGH);
+  int arcadeRedSwState = digitalRead(ARCADE_RED_SW_PIN);
+  if (arcadeRedSwState == LOW) {
+    digitalWrite(ARCADE_RED_LED_PIN, HIGH);
     unsigned long currentMillis = millis();
-    if (currentMillis - previousMillis >= interval) {
-      previousMillis = currentMillis;
-      Serial.println("Button1");
+    if (currentMillis - arcadeRedPreviousMillis >= ARCADE_MIN_INTERVAL) {
+      arcadeRedPreviousMillis = currentMillis;
+      Serial.println("ARCADE_RED_BUTTON_PRESSED");
     }
   } else {
-    digitalWrite(ledPin, LOW);
+    if(allLightsActive) {
+      digitalWrite(ARCADE_RED_LED_PIN, HIGH);
+    } else {
+      digitalWrite(ARCADE_RED_LED_PIN, LOW);
+    }
+  }
+  int arcadeBlueSwState = digitalRead(ARCADE_BLUE_SW_PIN);
+  if (arcadeBlueSwState == LOW) {
+    digitalWrite(ARCADE_BLUE_LED_PIN, HIGH);
+    unsigned long currentMillis = millis();
+    if (currentMillis - arcadeBluePreviousMillis >= ARCADE_MIN_INTERVAL) {
+      arcadeBluePreviousMillis = currentMillis;
+      Serial.println("ARCADE_BLUE_BUTTON_PRESSED");
+    }
+  } else {
+    if(allLightsActive) {
+      digitalWrite(ARCADE_BLUE_LED_PIN, HIGH);
+    } else {
+      digitalWrite(ARCADE_BLUE_LED_PIN, LOW);
+    }
   }
   
   if (strobeActive) {
@@ -140,22 +151,17 @@ void loop() {
     myStepper.step(1024); // Avancer d'une révolution complète
     Serial.println("Le moteur avance");
   }
+
+  if (allLightsActive) {
+    fillRegisters(0b10101010);
+    writeRegisters();
+  }
   
-  
-  // // Lire l'état des boutons
-  // etatBoutonAvancer = digitalRead(boutonAvancer);
-  // etatBoutonReculer = digitalRead(boutonReculer);
 
   // // Si le bouton "Avancer" est appuyé, faire avancer le moteur d'un certain nombre de pas
   // if (rotateMinuteActive) {
   //   myStepper.step(stepsPerRevolution); // Avancer d'une révolution complète
   //   Serial.println("Le moteur avance");
-  // }
-  
-  // // Si le bouton "Reculer" est appuyé, faire reculer le moteur d'un certain nombre de pas
-  // else if (etatBoutonReculer == LOW) {
-  //   myStepper.step(-stepsPerRevolution); // Reculer d'une révolution complète
-  //   Serial.println("Le moteur recule");
   // }
   
   // Si aucun bouton n'est appuyé, ne rien faire
@@ -165,8 +171,5 @@ void loop() {
   //}
 
   delay(200);
-
-  //SHIFT_REGISTRY = 0b00000000;
-  //updateShiftRegister();
   
 }
