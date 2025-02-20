@@ -96,7 +96,7 @@
 				console.log("URL is not matching the slidechanged event");
 				console.log(`${event.indexh}_${event.indexv} != ${getIndexH()}_${getIndexV()}`);
 				const stopObserving = waitForUrlChange(newUrl => {
-					console.log(event);
+					console.log("URL changed. Reset state");
 					resetState();
 					runState(Reveal, `${event.indexh}_${event.indexv}`, "auto");
 				});

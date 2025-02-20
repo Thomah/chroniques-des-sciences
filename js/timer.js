@@ -2,6 +2,7 @@ const intervals = {}; // Store intervals for each chronometer
 
 function startChronometer(args) {
   const [elementId, initialTime] = args.split(';');
+  console.log(elementId);
   const chronoElement = document.getElementById(elementId);
   if (chronoElement) {
     let timeElapsed = parseInt(initialTime, 10) || 0;
@@ -17,20 +18,19 @@ function startChronometer(args) {
 
     chronoElement.innerText = formatTime(timeElapsed);
 
-    const interval = setInterval(() => {
+    intervals[elementId] = setInterval(() => {
       const currentTime = performance.now();
       timeElapsed = currentTime - startTime;
       chronoElement.innerText = formatTime(timeElapsed);
     }, 10); // Mettre à jour toutes les 10 ms pour plus de fluidité
 
-    // Stocker l'intervalle pour l'arrêter
-    intervals[elementId] = interval;
+    console.log(intervals[elementId]);
   }
 }
 
-function stopChronometer(elementId) {
-  if (intervals[elementId]) {
-    clearInterval(intervals[elementId]);
-    delete intervals[elementId];
+function stopChronometer(args) {
+  if (intervals[args]) {
+    clearInterval(intervals[args]);
+    delete intervals[args];
   }
 }
