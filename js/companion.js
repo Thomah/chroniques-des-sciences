@@ -100,24 +100,17 @@ function useBrowserTTS(text, callback) {
 function speak(text) {
 
   checkServerAvailability().then(isAvailable => {
-    const subtitleElement = document.getElementById('companion-subtitles');
-    const textElement = subtitleElement.querySelector('.text');
 
-    // Update subtitles when speaking
-    subtitleElement.style.visibility = 'visible';
-    textElement.textContent = text;
-
+    print(text)
     if (isAvailable) {
       console.log('OpenTTS server is available. Using OpenTTS API...');
       useOpenTTS(text, () => {
-        subtitleElement.style.visibility = 'hidden';
-        textElement.textContent = '';
+        hide();
       });
     } else {
       console.log('OpenTTS server is unavailable. Using browser speech synthesis...');
       useBrowserTTS(text, () => {
-        subtitleElement.style.visibility = 'hidden';
-        textElement.textContent = '';
+        hide();
       });
     }
   });
@@ -125,17 +118,37 @@ function speak(text) {
 }
 
 function print(text) {
-  const subtitleElement = document.getElementById('companion-subtitles');
-  const textElement = subtitleElement.querySelector('.text');
-  subtitleElement.style.visibility = 'visible';
-  textElement.textContent = text;
+
+  const section = document.querySelector("section.present");
+
+  if (section) {
+    // Create the div element
+    const div = document.createElement("div");
+    div.id = "companion-subtitles";
+
+    // Create the span elements
+    const iconSpan = document.createElement("span");
+    iconSpan.className = "icon";
+    iconSpan.textContent = "🤖";
+
+    const textSpan = document.createElement("span");
+    textSpan.className = "text";
+    textSpan.textContent = text;
+
+    // Append spans to div
+    div.appendChild(iconSpan);
+    div.appendChild(textSpan);
+
+    // Append div to the section
+    section.appendChild(div);
+  }
 }
 
 function hide() {
-  const subtitleElement = document.getElementById('companion-subtitles');
-  const textElement = subtitleElement.querySelector('.text');
-  subtitleElement.style.visibility = 'hidden';
-  textElement.textContent = '';
+  const subtitlesDiv = document.getElementById("companion-subtitles");
+  if (subtitlesDiv) {
+      subtitlesDiv.remove();
+  }
 }
 
 function audio(args) {

@@ -118,12 +118,12 @@ La théorie de l’information ! Une méthode brillante qui définit les bases
 
 Le principe, c'est que n'importe quelle information – un texte, un son, une image – pouvait être réduite à des 0 et des 1, réutilisant par la même occasion les travaux de George Boole. Ce binaire devint la langue de l’informatique. Et comme toute langue, elle doit avoir des règles.
 
+_Slide 8.8.0_
+
 [.text-center]
 **Jack**
 
 Imaginez ceci : au lieu de parler anglais, chinois ou espagnol, les machines se comprennent avec une suite infinie de courants électriques allumés ou éteints.
-
-https://www.youtube.com/watch?v=_gFwe6HiyFI
 
 _Slide 8.9_
 
