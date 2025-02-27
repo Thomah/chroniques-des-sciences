@@ -1,7 +1,7 @@
 const intervals = {}; // Store intervals for each chronometer
 
-function startChronometer(args) {
-  const [elementId, initialTime] = args.split(';');
+function startChronometer(state) {
+  const [elementId, initialTime] = state.args.split(';');
   console.log(elementId);
   const chronoElement = document.getElementById(elementId);
   if (chronoElement) {
@@ -28,9 +28,9 @@ function startChronometer(args) {
   }
 }
 
-function stopChronometer(args) {
-  if (intervals[args]) {
-    clearInterval(intervals[args]);
-    delete intervals[args];
+function stopChronometer(state) {
+  if (intervals[state.args]) {
+    clearInterval(intervals[state.args]);
+    delete intervals[state.args];
   }
 }
