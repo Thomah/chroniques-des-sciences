@@ -12,6 +12,7 @@ node_modules/
 venv
 css/reveal.min.css
 js/reveal.min.js
+script/output.adoc
 script.pdf
 
 mavhi/3d-models/gcodes
