@@ -21,12 +21,6 @@ npm start
 
 Enter  `S` on any slide
 
-# OpenTTS Server
-
-```
-docker run -it -p 5500:5500 synesthesiam/opentts:fr-2.1
-```
-
 # Generate dialogs
 
 ```
@@ -37,11 +31,23 @@ pip install -r requirements.txt
 python generate_dialogs.py
 ```
 
-# Script
+# Generate script
 
 ```
-bundle install
-ruby generate_script_pdf.rb
+sudo apt-get install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
+
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+~/.rbenv/bin/rbenv init
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 3.4.2
+rbenv global 3.4.2
+
+python -m venv venv
+venv\Scripts\activate # on Windows
+source venv/bin/activate # on Linux
+pip install -r requirements.txt
+python generate_script.py
 ```
 
 # MAVHi

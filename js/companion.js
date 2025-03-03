@@ -48,44 +48,6 @@ function getFrenchVoicesByNames(allowedNames) {
   });
 }
 
-function checkServerAvailability() {
-  return fetch('http://localhost:5500/', { method: 'GET', mode: 'cors' })
-    .then(response => response.ok)
-    .catch(() => false);
-}
-
-function useOpenTTS(text, callback) {
-
-  // Encode the text to ensure it works in the URL
-  const encodedText = encodeURIComponent(text);
-  const voice = 'larynx:tom-glow_tts';
-  const vocoder = 'high';
-  const denoiserStrength = 0.005;
-  const cache = 'true';
-
-  // Construct the URL with query parameters
-  const url = `http://localhost:5500/api/tts?voice=${voice}&text=${encodedText}&vocoder=${vocoder}&denoiserStrength=${denoiserStrength}&cache=${cache}`;
-
-  // Make the GET request to OpenTTS
-  fetch(url, { method: 'GET', headers: { 'Accept': '*/*' } })
-    .then(response => response.blob())  // Expecting the audio as a blob
-    .then(audioBlob => {
-      const audioUrl = URL.createObjectURL(audioBlob);
-      const audio = new Audio(audioUrl);
-      audio.play();
-
-      // Execute the callback when the audio finishes
-      audio.onended = () => {
-        if (callback && typeof callback === 'function') {
-          callback();  // Execute the callback after playback
-        }
-      };
-    })
-    .catch(err => {
-      console.error('Error generating voice via OpenTTS:', err);
-    });
-}
-
 function useBrowserTTS(text, callback) {
   utterance.text = text;
   utterance.lang = 'fr-FR';

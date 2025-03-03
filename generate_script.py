@@ -50,6 +50,7 @@ with open("script/output.adoc", "w", encoding="utf-8") as adoc:
                     adoc.write(f"{text}\n\n****\n")
 
 # Convert to PDF
+subprocess.run(["bundle", "install"])
 subprocess.run(["ruby", "generate_script_pdf.rb"])
 
 print("Script generated successfully.")
