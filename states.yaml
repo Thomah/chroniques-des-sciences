@@ -647,6 +647,12 @@
     exec: speak
     args: Bien sûr, Professeur. Préparez-vous à contempler un trésor qui a émerveillé les civilisations.
     id: 6_0_0
+  - trigger: auto
+    delay: 5000
+    exec: startWarning
+  - trigger: auto
+    exec: stopWarning
+    delay: 10000
 "6_1":
   - trigger: auto
     exec: human
