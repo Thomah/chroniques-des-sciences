@@ -3,6 +3,12 @@
 [![Slides](https://img.shields.io/badge/Slides-Web-white)](https://thomah.github.io/chroniques-des-sciences/)
 [![Script](https://img.shields.io/badge/Script-PDF-white)](https://thomah.github.io/chroniques-des-sciences/script.pdf)
 
+## Prerequisites
+
+```
+sudo apt-get install git-lfs
+```
+
 # Slides
 
 ## Build
@@ -66,7 +72,7 @@ python mavhi\windows-connector.py
 sudo usermod -a -G dialout $USER
 
 # Configure and launch connector
-sudo apt install xdotool
-pip install pynput pyserial
+sudo apt install python3-tk xdotool
+pip install pynput pyserial selenium
 python mavhi/linux-connector.py
 ```
