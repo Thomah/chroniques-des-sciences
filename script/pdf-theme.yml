@@ -7,15 +7,12 @@ font:
 role:
   char1:
     font_color: #0000FF
-    text_align: center
 
   char2:
     font_color: #008000
-    text_align: center
 
   transition:
     font_color: #800000
-    text_align: center
 
-  bold:
-    font_size: 20
+sidebar:
+  background_color: #FFFFFF

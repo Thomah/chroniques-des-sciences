@@ -55,7 +55,7 @@ python generate_script.py
 ## On Windows
 
 ```
-pip install pygetwindow pywin32 pyserial pynput
+pip install pygetwindow pywin32 pyserial pynput selenium
 python mavhi\windows-connector.py
 ```
 
