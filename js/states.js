@@ -151,9 +151,11 @@ function nextState() {
 
 function resetState() {
   Object.values(states).forEach(state => {
-    state.forEach(element => {
-      element.triggered = false;
-    });
+    if(Object.prototype.toString.call(state) === '[object Array]') {
+      state.forEach(element => {
+        element.triggered = false;
+      });
+    }
   });
   currentElementIndex = 0;
 }
