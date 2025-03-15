@@ -1,34 +1,24 @@
-import pygetwindow as gw
-import win32gui
-import win32con
-import win32com.client
+import subprocess
 import serial
-from pynput.keyboard import Controller, Key
+from pynput.keyboard import Controller
 from serial.tools import list_ports
 
 def bring_window_to_front(window_title):
     try:
-      window = gw.getWindowsWithTitle(window_title)
-      if not window:
-          print(f"Window with title '{window_title}' not found.")
-          return
-
-      hwnd = window[0]._hWnd
-
-      win32gui.ShowWindow(hwnd, win32con.SW_SHOWMAXIMIZED)
-      win32gui.SetWindowPos(hwnd,win32con.HWND_NOTOPMOST, 0, 0, 0, 0, win32con.SWP_NOMOVE + win32con.SWP_NOSIZE)  
-      win32gui.SetWindowPos(hwnd,win32con.HWND_TOPMOST, 0, 0, 0, 0, win32con.SWP_NOMOVE + win32con.SWP_NOSIZE)  
-      win32gui.SetWindowPos(hwnd,win32con.HWND_NOTOPMOST, 0, 0, 0, 0, win32con.SWP_SHOWWINDOW + win32con.SWP_NOMOVE + win32con.SWP_NOSIZE)
-
-      shell = win32com.client.Dispatch("WScript.Shell")
-      shell.SendKeys('%')
-      win32gui.SetForegroundWindow(hwnd)
-
-      print(f"Window '{window_title}' brought to the front.")
-      return True
+        result = subprocess.run(["xdotool", "search", "--name", window_title], capture_output=True, text=True)
+        windows = result.stdout.strip().split("\n")
+        
+        if not windows or windows[0] == '':
+            print(f"Window with title '{window_title}' not found.")
+            return False
+        
+        window_id = windows[0]
+        subprocess.run(["xdotool", "windowactivate", window_id])
+        print(f"Window '{window_title}' brought to the front.")
+        return True
     except Exception as e:
-      print(f"Error: {e}")
-      return False
+        print(f"Error: {e}")
+        return False
 
 def list_serial_ports():
     ports = list_ports.comports()

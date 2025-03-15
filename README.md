@@ -42,3 +42,15 @@ ruby generate_script_pdf.rb
 pip install pygetwindow pywin32 pyserial pynput
 python mavhi\windows-connector.py
 ```
+
+## On Linux
+
+```
+# Give access to serial port
+sudo usermod -a -G dialout $USER
+
+# Configure and launch connector
+sudo apt install xdotool
+pip install pynput pyserial
+python mavhi/linux-connector.py
+```

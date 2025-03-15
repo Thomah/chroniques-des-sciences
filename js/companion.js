@@ -107,8 +107,6 @@ function speak(text) {
     subtitleElement.style.visibility = 'visible';
     textElement.textContent = text;
 
-    console.log(isAvailable);
-
     if (isAvailable) {
       console.log('OpenTTS server is available. Using OpenTTS API...');
       useOpenTTS(text, () => {

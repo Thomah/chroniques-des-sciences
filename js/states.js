@@ -19,8 +19,8 @@ function parseYaml(yamlString) {
   return YAML.parse(yamlString);
 }
 
-function getIndexH() {
-  var url = window.location.href;
+function getIndexH(urlOverride = undefined) {
+  var url = urlOverride != undefined ? urlOverride : window.location.href;
   var segments = url.split("/");
   var numSegments = segments.length;
   var firstNumber, secondNumber, thirdNumber;
@@ -42,8 +42,8 @@ function getIndexH() {
   return firstNumber;
 }
 
-function getIndexV() {
-  var url = window.location.href;
+function getIndexV(urlOverride = undefined) {
+  var url = urlOverride != undefined ? urlOverride : window.location.href;
   var segments = url.split("/");
   var numSegments = segments.length;
   var firstNumber, secondNumber, thirdNumber;
@@ -65,8 +65,8 @@ function getIndexV() {
   return secondNumber;
 }
 
-function getFragmentIndex() {
-  var url = window.location.href;
+function getFragmentIndex(urlOverride = undefined) {
+  var url = urlOverride != undefined ? urlOverride : window.location.href;
   var segments = url.split("/");
   var numSegments = segments.length;
   var firstNumber, secondNumber, thirdNumber;
@@ -104,7 +104,7 @@ function initStates() {
 }
 
 function runState(Reveal, stateId, trigger) {
-  console.log("Run state: " + stateId);
+  console.log("Run state: " + stateId + " (" + trigger + ")");
   var state = states[stateId];
   if(window.self === window.top && state !== undefined) {
     let element = state[currentElementIndex];
@@ -154,7 +154,7 @@ function waitForUrlChange(callback, checkInterval = 100) {
   let currentUrl = window.location.href;
 
   const intervalId = setInterval(() => {
-    if (currentUrl !== window.location.href) {
+    if (getIndexH(currentUrl) != getIndexH(window.location.href) || getIndexV(currentUrl) != getIndexV(window.location.href)) {
       currentUrl = window.location.href;
       callback(currentUrl);
     }
