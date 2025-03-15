@@ -1,4 +1,4 @@
-= Chrono Byte - Histoire et techniques de l'informatique
+= Chroniques des Sciences - Des cailloux aux octets
 Thomah <5090230+Thomah@users.noreply.github.com>
 :reproducible:
 :listing-caption: Listing

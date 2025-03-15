@@ -14,12 +14,12 @@
   - trigger: auto
     delay: 3000
     exec: audio
-    args: https://www.televisiontunes.com/uploads/audio/Doctor%20Who%20-%20Series%205%20-%20I%20Am%20The%20Doctor%20-%20Extended%20Version.mp3;0;10
+    args: https://www.televisiontunes.com/uploads/audio/Doctor%20Who%20-%20Series%205%20-%20I%20Am%20The%20Doctor%20-%20Extended%20Version.mp3;0.5;0;10
 1_1:
   - trigger: auto
     delay: 0
     exec: audio
-    args: audio/applause.mp3;2;6
+    args: audio/applause.mp3;1.0;2;6
   - trigger: fragment
     delay: 1000
     exec: speak
@@ -45,27 +45,29 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;1.0;0;5
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
 2_2:
   - trigger: fragment
     delay: 0
     exec: speak
     args: Autrement dit, c'était l'ancêtre de nos reçus de caisse… en plus lourd et friable. Mais là au moins, personne ne pouvait prétendre avoir perdu son reçu.
 2_3:
-  - trigger: fragment
+  - trigger: auto
     delay: 0
     exec: speak
     args: "Je note d'ailleurs l'omniprésence du nombre 60 parmi les calculis. C'est très malin car il est divisible par de nombreux nombres : 2, 3, 4, 5, 6, 10, 12, 15, 20 et 30"
 2_5:
   - trigger: fragment
+    exec: audio
+    args: audio/interferences-mobile-0484.mp3;0.3;0;1
+  - trigger: auto
     delay: 1000
     exec: audio
-    args: audio/extrait-grave-dans-la-roche.mp3;0;30
+    args: audio/extrait-grave-dans-la-roche.mp3;1.0;0;30
   - trigger: fragment
     delay: 0
-    exec: speak
-    args: Etrange, je ne détecte rien.
-  - trigger: auto
-    delay: 4000
     exec: speak
     args: Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes sur ces abaques. Les fondations d'Excel, en quelque sorte.
 2_6:
@@ -122,7 +124,7 @@
 2_11:
   - trigger: fragment
     exec: audio
-    args: https://ia801809.us.archive.org/1/items/nathan-evans-wellerman-sea-shanty/Nathan%20Evans%20-%20Wellerman%20%28Sea%20Shanty%29.mp3;33;42
+    args: https://ia801809.us.archive.org/1/items/nathan-evans-wellerman-sea-shanty/Nathan%20Evans%20-%20Wellerman%20%28Sea%20Shanty%29.mp3;0.2;33;42
 2_12:
   - trigger: fragment
     exec: speak
@@ -161,10 +163,6 @@
     delay: 5000
     exec: Reveal.next
 3_1:
-  - trigger: fragment
-    delay: 0
-    exec: audio
-    args: https://archive.org/download/AgeOfEmpires2MainMenuMusic/Age%20of%20Empires%202%20Main%20Menu%20Music.mp3;3;10
   - trigger: fragment
     exec: speak
     args: "Si des personnes dans la salle travaillent aux ressources humaines, c'est pour vous !"

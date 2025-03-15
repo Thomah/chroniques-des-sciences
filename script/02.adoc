@@ -56,12 +56,10 @@ _Slide 2.5.0_
 
 Ce sont simplement des tablettes gravées sur lesquelles on renseignait les différentes valeurs à calculer...
 
-... C'était quoi ça ?
+_Slide 2.5.1_
 
 [.text-center]
 **Jack**
-
-Etrange, je ne détecte rien.
 
 Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes sur ces abaques. Les fondations d’Excel, en quelque sorte.
 
