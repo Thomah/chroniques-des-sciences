@@ -126,7 +126,7 @@ _Slide 5.7_
 [.text-center]
 **Jack**
 
-C'est bien sympa cet algèbre de Boole, mais il est devenu quoi Georges Boole ?
+C'est bien sympa cet algèbre de Boole, mais il est devenu quoi George Boole ?
 
 [.text-center]
 **Prof. Calvet**
@@ -138,7 +138,7 @@ Mais le 24 novembre 1864, il prend la route du Queen's college depuis sa maison 
 La famille Everest était fervent défenseuse de l'homéopathie et semble avoir appliqué sur Georges le principe de "Simile simili c’est la loi de nature ; Brûlons-nous jusqu’aux
 os pour braver la brûlure. Un froid de vingt degrés amène le dégel, et criblé de blessures on se rit du duel".
 
-Georges Boole a été retrouvé dans des draps trempé. La bronchite aura évolué en pleuropneumonie et Boole en meurt la nuit du 8 décembre 1864 à l'âge de 49 ans.
+George Boole a été retrouvé dans des draps trempé. La bronchite aura évolué en pleuropneumonie et Boole en meurt la nuit du 8 décembre 1864 à l'âge de 49 ans.
 
 _Slide 5.7.0_
 

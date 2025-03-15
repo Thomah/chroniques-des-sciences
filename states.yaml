@@ -332,7 +332,7 @@
 5_7:
   - trigger: auto
     exec: speak
-    args: C'est bien sympa cet algèbre de Boole, mais il est devenu quoi Georges Boole ?
+    args: C'est bien sympa cet algèbre de Boole, mais il est devenu quoi George Boole ?
   - trigger: fragment
     exec: speak
     args: "Entre Charles, Ada et Georges, ce sont trois destins très différents mais tous convergent vers une chose : des idées si profondes qu'elles influencent encore nos vies aujourd'hui."
