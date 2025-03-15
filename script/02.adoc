@@ -1,3 +1,5 @@
+
+
 == Acte 2
 
 === Scène 1
@@ -145,6 +147,8 @@ _Slide 2.10.2_
 
 Merci !
 
+_Slide 2.10.3_
+
 Même si ce n'est pas Al-Khwarizmi qui les a créé, les chiffres que nous utilisons aujourd’hui, dits "arabes", ont été largement popularisés par ses travaux. Avant cela, les Européens utilisaient les chiffres romains, bien plus encombrants pour les calculs complexes. Grâce à ces nouveaux chiffres, il est désormais possible d’organiser les nombres avec beaucoup plus de souplesse, ce qui ouvre la voie à des calculs bien plus avancés.
 
 [.text-center]
@@ -158,3 +162,77 @@ En somme, Al-Khwarizmi change la manière de penser les mathématiques, mais il 
 (En souriant) Oui, très juste, Jack. Le mot algorithme dérive de son nom, latinisé en "Algoritmi". C’est ainsi que ses méthodes de calcul se sont diffusées en Europe. Les mathématiques deviennent alors un langage universel, capable de traiter des concepts abstraits. C’est cette abstraction qui rend possible toutes les avancées des mathématiques et de la science aujourd’hui.
 
 Les plus grandes inventions ne sont pas toujours des objets, mais aussi des idées, des méthodes qui perdurent au-delà des siècles.
+
+Mais des grandes idées, Al-Khwarizmi n'est pas le seul à en avoir eu évidemment.
+
+=== Scène 4
+
+[.text-center]
+**Jack**
+
+Vous avez une idée derrière la tête Professeur. Où souhaitez-vous aller ?
+
+[.text-center]
+**Prof. Calvet**
+
+Tu veux dire où et quand, Jack. Allons en 150 avant notre ère. Accrochez vos neurones, direction... une épave en Grèce antique !
+
+_Slide 2.11_
+
+Nous sommes au Ie siècle avant JC. au large de l'île d'Anticythère, au Sud de la Grèce. 
+
+_Slide 2.11.0_
+
+Là, un navire marchand romain fait voile, transportant à son bord de nombreux trésors : des statues en marbre et en bronze, des amphores, monnaies, verreries et plein d'autres objets.
+
+_Slide 2.12_
+
+Ce navire n'arrivera jamais à bon port. On ignore encore la raison aujourd'hui. En 1900, un groupe de pêcheurs d’éponges découvre l'épave et plusieurs expéditions sous-marines sont organisées pour repêcher ces trésors.
+
+[.text-center]
+**Jack**
+
+Et là, surprise : parmis tout le bric-à-brac, une mystérieuse boîte en bronze corrodée.
+
+[.text-center]
+**Prof. Calvet**
+
+Exact ! Une relique qui allait défier les connaissances des archéologues : la machine d’Anticythère.
+
+_Slide 2.13_
+
+Imaginez un instant la scène : au début, personne ne comprend ce que c’est. Une masse rouillée, incrustée de coquillages. 
+
+_Slide 2.14_
+
+Ce n’est que des décennies plus tard, en 1959, que l’historien des sciences Derek de Solla Price découvre que cette boîte est bien plus qu’un amas de métal : c’est un bijou de mécanique, une calculatrice astronomique.
+
+_Slide 2.15_
+
+[.text-center]
+**Jack**
+
+En terme de calculatrice, je reste quand même plus performant. Mais pour l'époque, respect.
+
+[.text-center]
+**Prof. Calvet**
+
+Et pas n'importe quelle calculatrice ! Avec ses dizaines d’engrenages en bronze, elle était capable de prédire des phénomènes astronomiques comme les éclipses ou les cycles planétaires. Une précision hallucinante pour l’époque.
+
+Les Grecs de l’Antiquité ne disposaient peut-être pas de nos ordinateurs, mais ils avaient des esprits brillants, capables de concevoir des merveilles mécaniques avec les moyens de leur époque. 
+
+Et pour vous donner une idée, ce genre de technologie n’a pas été égalé en Europe avant... le XIVᵉ siècle, avec les horloges mécaniques.
+
+[.text-center]
+**Jack**
+
+Et pendant ce temps-là, les mathématiques ressemblaient à quoi ? Des divisions à la main ?
+
+[.text-center]
+**Prof. Calvet**
+
+(Riant) Eh bien, oui, c’était exactement ça ! Les mathématiciens médiévaux avaient de quoi transpirer, croyez-moi. Mais avançons dans le temps, jusqu’au XVIIᵉ siècle, où un homme va révolutionner le calcul. Il s’appelle John Napier.
+
+Jack, lance la séquence "Mathématiques et ses outils" !
+
+_Slide 2.16_
