@@ -1,7 +1,7 @@
 #include <Stepper.h>
 #include "74hc595.h"
 
-// Shift configuration
+bool strobeActive = false;
 
 // Arcade buttons
 const int ledPin = 2;
@@ -43,15 +43,29 @@ void setup() {
   pinMode(SHIFT_01_DATA_PIN, OUTPUT);
   pinMode(SHIFT_01_CLOCK_PIN, OUTPUT);
   pinMode(SHIFT_01_LATCH_PIN, OUTPUT);
+  clearRegisters();
+  writeRegisters();
 
   // Définir la vitesse du moteur (en tours par minute)
   myStepper.setSpeed(19);
 
   // Initialisation de la communication série (optionnel pour le débogage)
   Serial.begin(9600);
+  Serial.println("Envoyez 'strobe' pour activer le mode stroboscope.");
 }
 
 void loop() {
+
+  // Get command
+  if (Serial.available() > 0) {
+    String command = Serial.readStringUntil('\n');
+    command.trim();
+
+    if (command == "strobe") {
+      strobeActive = !strobeActive;
+      Serial.println(strobeActive ? "Stroboscope activé." : "Stroboscope désactivé.");
+    }
+  }
   
   // Manage arcade buttons
   int switchState = digitalRead(switchPin);
@@ -66,15 +80,17 @@ void loop() {
     digitalWrite(ledPin, LOW);
   }
   
-  // Control LEDs
-  InsertFirstBit();
-  delay(500);
-  for (int i = 0; i < 15; i++) {
-    Clock();
-    Latch();
-    delay(500);
-  }
+  if (strobeActive) {
+    // Turn on the LEDs
+    fillRegisters(0b10101010);
+    writeRegisters();
+    delay(100);
 
+    // Turn off the LEDs
+    fillRegisters(0b00000000);
+    writeRegisters();
+  }
+  
   // Lire l'état des boutons
   etatBoutonAvancer = digitalRead(boutonAvancer);
   etatBoutonReculer = digitalRead(boutonReculer);
