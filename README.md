@@ -27,6 +27,16 @@ Enter  `S` on any slide
 docker run -it -p 5500:5500 synesthesiam/opentts:fr-2.1
 ```
 
+# Generate dialogs
+
+```
+python -m venv venv
+venv\Scripts\activate # on Windows
+source venv/bin/activate # on Linux
+pip install -r requirements.txt
+python generate_dialogs.py
+```
+
 # Script
 
 ```
