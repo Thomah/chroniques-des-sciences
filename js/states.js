@@ -98,7 +98,7 @@ function initStates() {
 function runState(stateId, trigger) {
   console.log("Run state: " + stateId);
   var state = states[stateId];
-  if(state !== undefined) {
+  if(window.self === window.top && state !== undefined) {
     let element = state[currentElementIndex];
     if (currentElementIndex < state.length && element.trigger === trigger && !element.triggered) {
       console.log("Current element index: " + currentElementIndex);
@@ -125,5 +125,10 @@ function nextState() {
 }
 
 function resetState() {
+  Object.values(states).forEach(state => {
+    state.forEach(element => {
+      element.triggered = false;
+    });
+  });
   currentElementIndex = 0;
 }

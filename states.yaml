@@ -45,6 +45,27 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;0;5
+5_7:
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: Voici un premier exemple d'expression booléenne.
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: Dans ce nouvel exemple, A est inversé.
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: Maintenant, c'est uniquement B qui est inversé.
+  - trigger: fragment
+    delay: 0
+    exec: speak
+    args: Enfin, les 2 groupes sont inversés.
+  - trigger: fragment
+    delay: 0
+    exec: initBooleanHero
+    args: 
 8_4:
   - trigger: fragment
     delay: 2000

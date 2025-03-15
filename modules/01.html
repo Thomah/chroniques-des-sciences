@@ -1,95 +1,45 @@
-<section>
-    <h1>Premiers calculs</h1>
+<section data-timing="30">
+  <div class="dashboard">
+    <div class="widget" style="grid-column: 1; grid-row: 1 / 3; display: flex; flex-direction: column; justify-content: center;">
+      <div class="system-details" id="system1">
+        <h3>Health Monitoring System</h3>
+        <p>Biometric sensors: <span class="system-status offline">Offline</span></p>
+        <p>Cardiovascular analysis: <span class="system-status offline">Offline</span></p>
+        <p>Neural network diagnostics: <span class="system-status offline">Offline</span></p>
+      </div>
+      <div class="system-details" id="system2">
+        <h3>AI Control Matrix</h3>
+        <p>Decision-making algorithms: <span class="system-status offline">Inactive</span></p>
+        <p>Behavioral prediction models: <span class="system-status offline">Inactive</span></p>
+        <p>Self-learning capabilities: <span class="system-status offline">Inactive</span></p>
+      </div>
+      <div class="system-details" id="system3">
+        <h3>Quantum Encryption Module</h3>
+        <p>Quantum key distribution: <span class="system-status offline">Uninitialized</span></p>
+        <p>Entanglement-based protocols: <span class="system-status offline">Uninitialized</span></p>
+        <p>Decoherence mitigation: <span class="system-status offline">Uninitialized</span></p>
+      </div>
+    </div>
+    <div class="widget widget-overflow">
+      <pre id="liveCode"></pre>
+    </div>
+    <div class="widget no-padding">
+      <canvas id="matrix"></canvas>
+    </div>
+    <div class="widget" style="grid-column: 2 / 4; grid-row: 2; display: flex; justify-content: flex-end;">
+      <div class="chart-container" id="chart-container">
+      </div>
+    </div>
+    <span class="fragment"></span>
+  </div>
 </section>
 <section>
-    <h2>Bienvenue en Mésopotamie</h2>
-    <img src="images/mesopotamie-carte.jpg" height="400px" />
-    <p class="caption">Carte de la Mésopotamie </p>
-    <aside class="notes">
-        <p>Située entre le Tigre et l'Euphrate, c'est l'une des premières régions où des civilisations se sont développées.</p>
-        <p>Les plus anciennes traces d'écriture cunéiforme apparaissent vers 3300 av. J.C.</p>
-    </aside>
+  <div class="applause-container">
+    <div class="applause-sign">
+      <span>APPLAUSE</span>
+    </div>
+  </div>
 </section>
-<section>
-    <h2>Des cailloux aux calculs</h2>
-    <img src="images/bulle-enveloppe.jpg" height="400px" />
-    <p class="caption">Bulle-enveloppe et ses jetons de comptabilité, période d'Uruk récent, provenant de Suse.</p>
-    <aside class="notes">
-        <p>Les Sumériens seraient les premiers à avoir formaliser le calcul (entre 2700 - 2300 avant J.C.)</p>
-        <p>En Abyssinie (Ethyopie), les soldats partant au combat laissait un cailloux, le reprenaient au retour</p>
-    </aside>
-</section>
-<section>
-    <h2>Abaques</h2>
-    <img src="images/tablette-salamine.jpg" height="400px" />
-    <p class="caption">Photographie de la tablette de Salamine en Grèce datant du III<sup>e</sup> siècle avant J.C.</p>
-    <aside class="notes">
-        <p>Les Sumériens seraient les premiers à avoir formaliser le calcul (entre 2700 - 2300 avant J.C.)</p>
-        <p>En Abyssinie (Ethyopie), les soldats partant au combat laissait un cailloux, le reprenaient au retour</p>
-    </aside>
-</section>
-<section>
-    <h2>Abaques chinoises et bouliers</h2>
-    <img src="images/abaque-chinoise.png" height="400px" />
-    <p class="caption">Abaque chinoise indiquant le nombre 6 302 715 408</p>
-    <aside class="notes">
-        <p>Les Sumériens seraient les premiers à avoir formaliser le calcul (entre 2700 - 2300 avant J.C.)</p>
-        <p>En Abyssinie (Ethyopie), les soldats partant au combat laissait un cailloux, le reprenaient au retour</p>
-    </aside>
-</section>
-<section>
-    <h2>Algèbre et algorithme</h2>
-    <img src="images/al-khwarizmi.jpg" height="400px" />
-    <p class="caption">Un timbre spécial de 4 kopecks de l'ex-Union soviétique daté du 6 septembre 1989 à l'occasion du 1200e anniversaire de la naissance d'Abu Abdullah Muhammad bin Musa Al-Khwarizmi</p>
-    <aside class="notes">
-        <p>En l'an 800 après J.C., Al-Khwarizmi travaille à la maison de la sagesse à Bagdad</p>
-        <p>Le Calife lui demande de rédiger un livre pour aider le peuple dans des tâches du quotidien : partager des terres, gérer des stocks</p>
-        <p>Dans le livre, il résout les problèmes mathématiques via des instructions : Al-jabr (algèbre)</p>
-        <p>Façon rigoureuse décrivant un enchaînement d'instructions pour arriver à un résultat, aujourd'hui un algorithme</p>
-    </aside>
-</section>
-<section>
-    <h2>La machine d'Anticythère</h2>
-    <img src="images/anticythere.png" height="400px" />
-    <p class="caption">Principaux fragments de la machine datant du I<sup>e</sup> siècle avant J.C.</p>
-    <aside class="notes">
-        <p>Un calculateur astronomique, inventeur inconnu</p>
-    </aside>
-</section>
-<section>
-    <h2>La machine d'Anticythère reconstituée</h2>
-    <img src="images/anticythere-reconstituee.png" height="200px" />
-    <table>
-        <tr>
-            <th>Face avant</th>
-            <th>Face arrière</th>
-        </tr>
-        <tr>
-            <td>Parapegme</td>
-            <td>Calendrier métonique</td>
-        </tr>
-        <tr>
-            <td>Zodiaque</td>
-            <td>Calendrier des olympiades</td>
-        </tr>
-        <tr>
-            <td>Positions du Soleil</td>
-            <td>Cadran de Callippe</td>
-        </tr>
-        <tr>
-            <td>Position des planètes</td>
-            <td>Calendrier des eclipses solaires et lunaires</td>
-        </tr>
-        <tr>
-            <td>Position et phase de la Lune</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Calendrier civil égyptien</td>
-            <td></td>
-        </tr>
-    </table>
-    <aside class="notes">
-        <p>Un calculateur astronomique, inventeur inconnu</p>
-    </aside>
+<section class="tunnel-container">
+  <div class="tunnel" id="tunnel1"></div>
 </section>
