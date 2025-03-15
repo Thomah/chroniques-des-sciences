@@ -46,3 +46,7 @@
 .center tr td {
     text-align: center;
 }
+
+code {
+    text-align: left !important;
+}
