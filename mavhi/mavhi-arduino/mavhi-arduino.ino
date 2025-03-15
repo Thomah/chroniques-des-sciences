@@ -155,6 +155,9 @@ void loop() {
   if (allLightsActive) {
     fillRegisters(0b10101010);
     writeRegisters();
+  } else {
+    fillRegisters(0b00000000);
+    writeRegisters();
   }
   
 
