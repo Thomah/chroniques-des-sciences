@@ -36,6 +36,8 @@ function getIndexH() {
       firstNumber = parseInt(segments[numSegments - 1]);
       secondNumber = 0;
       thirdNumber = 0;
+  } else if (numSegments === 4) {
+    firstNumber = 0;
   }
   return firstNumber;
 }
@@ -57,6 +59,8 @@ function getIndexV() {
       firstNumber = parseInt(segments[numSegments - 1]);
       secondNumber = 0;
       thirdNumber = 0;
+  } else if (numSegments === 4) {
+    secondNumber = 0;
   }
   return secondNumber;
 }
@@ -78,6 +82,8 @@ function getFragmentIndex() {
       firstNumber = parseInt(segments[numSegments - 1]);
       secondNumber = 0;
       thirdNumber = 0;
+  } else if (numSegments === 4) {
+    thirdNumber = 0;
   }
   return thirdNumber;
 }
