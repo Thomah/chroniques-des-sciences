@@ -11,6 +11,7 @@ adoc_files.each do |file|
   combined_content += File.read(file) + "\n"
 end
 
-Asciidoctor.convert(combined_content, backend: 'pdf', safe: :safe, to_file: output_file, attributes: { 'stylesdir' => 'script/', 'stylesheet' => 'styles.css' })
+Asciidoctor.convert(combined_content, backend: 'pdf', safe: :unsafe, to_file: output_file, attributes: { 'pdf-theme' => 'pdf', 'pdf-themesdir' => 'script/' })
+
 
 puts "Generated PDF : #{output_file}"

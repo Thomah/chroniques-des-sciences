@@ -21,7 +21,7 @@
     id: 1_0_2
   - trigger: auto
     exec: human
-    args: "Absolument Jack ! Mais vous...\n\nPassionnés de savoir, d'aventures intellectuelles et d'expérimentations audacieuses, êtes sur le point d'assister à ce qui pourrait être l'une des avancées les plus prodigieuses de notre temps.  Oui, vous avez bien entendu ! Un moment charnière où passé, présent et futur se rencontrent, un moment où les plus grandes énigmes de notre Histoire trouvent enfin leur solution. Je vous parle d'une machine extraordinaire, une création que j'ai longtemps rêvée, patiemment pensée et qui aujourd'hui, devient réalité.\n\nVous vous demandez sans doute ce que cette mystérieuse machine peut bien faire. Eh bien, imaginez une technologie si avancée qu'elle peut défier les limites du temps et de l'espace. Imaginez un appareil capable de vous montrer, non pas un film, non pas une reconstitution théâtrale… mais l'Histoire elle-même. Oui, mesdames et messieurs, la véritable Histoire, telle qu'elle s'est déroulée.\n\nDepuis des millénaires, l'humanité a cherché à comprendre le monde qui l'entoure, à mesurer le temps, à calculer, à raisonner, à innover… À chaque époque, des esprits brillants ont forgé des outils, des idées, des machines qui, progressivement, ont changé le monde.\n\nEt ce que vous allez voir ici, mes amis, c'est bien plus qu'un simple retour en arrière. Cette Machine d'Analyse Virtuelle de l'Histoire - ou M.A.V.Hi - vous permettra de remonter le temps, et de découvrir certains des moments les plus déterminants de l'Histoire.\n\nSous ce voile se trouve la clé pour observer les erreurs, les succès, les hésitations et les triomphes qui ont façonné le monde d'aujourd'hui. Des premiers calculs sur des abaques aux prodiges algorithmiques d'Ada Lovelace, en passant par l'électrification de nos sociétés et les machines de Babbage et Turing.\n\nMesdames et messieurs… Il est temps. Préparez-vous à découvrir M.A.V.Hi… et avec elle, le fabuleux voyage à travers le temps que nous allons entreprendre ensemble !"
+    args: "Absolument Jack ! Mais vous...\n\nPassionnés de savoir, d'aventures intellectuelles et d'expérimentations audacieuses, êtes sur le point d'assister à ce qui pourrait être l'**une des avancées les plus prodigieuses** de notre temps.  Oui, vous avez bien entendu ! Un moment charnière où passé, présent et futur se rencontrent, un moment où les plus grandes énigmes de notre Histoire trouvent enfin leur solution. Je vous parle d'une machine extraordinaire, une création que j'ai longtemps rêvée, patiemment pensée et qui aujourd'hui, **devient réalité**.\n\nVous vous demandez sans doute ce que cette mystérieuse machine peut bien faire. Eh bien, imaginez une technologie si avancée qu'elle peut **défier les limites du temps et de l'espace**. Imaginez un appareil capable de vous montrer l'Histoire elle-même. Oui, mesdames et messieurs, la véritable Histoire, **telle qu'elle s'est déroulée**.\n\nDepuis des millénaires, l'humanité a cherché à **comprendre le monde qui l'entoure**, à mesurer le temps, à calculer, à raisonner, à innover... À chaque époque, des esprits brillants ont forgé des outils, des idées, des machines qui, progressivement, ont **changé le monde**.\n\nEt ce que vous allez voir ici, mes amis, c'est **bien plus qu'un simple retour en arrière**. Cette Machine d'Analyse Virtuelle de l'Histoire - ou M.A.V.Hi - vous permettra de remonter le temps, et de découvrir certains des **moments les plus déterminants de l'Histoire**.\n\nSous ce voile se trouve la clé pour observer les erreurs, les succès, les hésitations et les triomphes qui ont façonné le monde d'aujourd'hui. Des premiers calculs sur des abaques aux prodiges algorithmiques d'Ada Lovelace, en passant par l'électrification de nos sociétés et les machines de Babbage et Turing.\n\nMesdames et messieurs… Il est temps. Préparez-vous à découvrir M.A.V.Hi… et avec elle, le **fabuleux voyage à travers le temps** que nous allons entreprendre ensemble !"
 "1_1":
   - trigger: auto
     delay: 0
@@ -640,79 +640,168 @@
     delay: 5000
     exec: Reveal.next
 "6_0":
+  - trigger: auto
+    exec: human
+    args: "Mesdames, Messieurs, aujourd 'hui, nous revenons aux **origines de l'électricité**... ou plutôt, des croyances qui ont pavé son chemin. Tout commence avec une **pierre mystérieuse**. Une pierre que l 'on croyait divine. Regardez bien MAVHi..."
   - trigger: fragment
     exec: speak
     args: Bien sûr, Professeur. Préparez-vous à contempler un trésor qui a émerveillé les civilisations.
+    id: 6_0_0
+"6_1":
+  - trigger: auto
+    exec: human
+    args: "Voici l 'ambre. Une simple **résine fossilisée** sécrétée il y a des millions d'années par des conières ou des plantes à fleurs, diriez-vous ? Et pourtant... Pour les Grecs de l 'Antiquité, elle était bien plus. Ils l 'appelaient **êlektron, la pierre du Soleil**."
+"6_2":
+  - trigger: auto
+    exec: human
+    args: "Dans la mythologie grecque, **Hélios, dieu du soleil conduisait un char d'or** qui amenait le soleil à travers le ciel chaque jour depuis l'est vers l'ouest tandis que la nuit il faisait le voyage de retour en se prélassant tranquillement dans une tasse en or.\n\n**Phaéton, son fils**, n'avait qu 'un rêve : **conduire le char de son père**. Un jour il en eut l'occasion mais il perdit le contrôle. Des montagnes flambèrent, des rivières s 'asséchèrent, et Zeus… eh bien, disons qu 'il ne trouva pas ça très drôle."
 "6_3":
   - trigger: auto
     exec: speak
     args: Zap ! Une foudre bien placée
+    id: 6_3_0
+  - trigger: auto
+    exec: human
+    args: "Phaéton **chuta dans le fleuve Eridan** et mourut."
+"6_4":
+  - trigger: auto
+    exec: human
+    args: "Ses sœurs, **les Héliades**, pleurèrent amèrement sa mort ; leur douleur fut si grande qu'elles changèrent de nature et se **métamorphosèrent en peupliers**. Ces arbres laissent **couler des larmes** qui, une fois solidifiées, constituèrent l'ambre.\n\nPour les Grecs, cette pierre était donc divine et **Thalès de Milet** - oui, celui qui a donné son nom au très célèbre théorème en mathématiques - indiquait vers 600 av. J.-C. quelle \"accordait une âme même aux choses inanimées\".\n\nPar \"âme\", il désignait surtout le fait qu'en frottant l'ambre avec un tissu, il était possible d'**attirer des corps légers** (des brins de paille ou des franges de tissu). Mais c'est la 1ère personne à avoir tenté d'expliquer le phénomène.\n\nCette étincelle est l'une des premières manifestations de l 'électricité. Un phénomène qui ne prendra véritablement vie qu'avec des **siècles de curiosité et de science**. Mais rappelez-vous ceci : au début, c'était un simple mystère... **un don des dieux nommé \"élektron\"**."
 "6_5":
+  - trigger: auto
+    exec: human
+    args: "Avec le temps, sa valeur diminue, mais **son mystère persiste**. Et c 'est là que le véritable génie intervient. Il faudra attendre... quelques millénaires pour que **William Gilbert**, un médecin anglais du XVIIe siècle, observe avec méthode cette force d'attraction de l'ambre. Il donne à ce phénomène le nom d 'électricité, venant directement de \"élektron\"."
   - trigger: fragment
     exec: speak
     args: Ce qui est fascinant, Professeur, c'est que ses travaux ne se sont pas limités à l'ambre. Gilbert a aussi prouvé que d'autres matériaux comme le verre ou le soufre génèrent cette force mystérieuse.
-"6_6":
-  - trigger: fragment
-    exec: audio
-    args: audio/interferences-mobile-0484.mp3;0.3;0;1
+    id: 6_5_0
   - trigger: auto
-    exec: audio
-    delay: 1000
-    args: audio/l-u-i-g-i.mp3;0.6;0;5
+    exec: human
+    args: "Mais à cette époque, cela reste une **curiosité** : une force mystérieuse qui attire, éclate et intrigue les savants. Après Gilbert, il faudra encore attendre plus d'un siècle pour que la science avance. Les recherches stagnent, jusqu 'à ce que des phénomènes inattendus relancent l 'intérêt : des **expériences plus audacieuses** montrent que l 'électricité ne se limite pas à des étincelles ou des frottements."
+"6_6":
+  - trigger: auto
+    exec: human
+    args: "Au XVIIIe siècle, **Luigi Galvani**, médecin italien, observe quelque chose de saisissant.\n\nPeut-être l'un d'entre vous serait volontaire pour m'aider à l'illustrer ? Je vois vous brieffer à l'écart. Pendant ce temps... Jack peux-tu raconter tes meilleures blagues ?"
   - trigger: fragment
     exec: speak
     args: "Ma première blague : pourquoi les plongeurs plongent-ils toujours en arrière ?"
+    id: 6_6_2
   - trigger: auto
     delay: 10000
     exec: speak
     args: Parce que si ils plongent en avant, ils tombent dans le bateau !
+    id: 6_6_3
   - trigger: auto
     delay: 5000
     exec: speak
     args: "Une deuxième : Qu'est-ce qu'un petit pois fait dans une casserole d'eau chaude ?"
+    id: 6_6_4
   - trigger: auto
     delay: 10000
     exec: speak
     args: Il devient petit à petit pois-son !
+    id: 6_6_5
   - trigger: auto
     delay: 10000
     exec: speak
     args: "Une dernière : Que fait une fraise sur un cheval ?"
+    id: 6_6_6
   - trigger: auto
     delay: 10000
     exec: speak
     args: Tagada tagada !
+    id: 6_6_7
+  - trigger: auto
+    exec: human
+    args: "Tout est prêt ? Merci, cher... euh... comment vous appelez-vous déjà ? Ah oui, parfait. Bien, installez-vous ici... ne vous inquiétez pas, c 'est totalement indolore.\n\nCommençons par évoquer ce que Luigi Galvani a découvert tout à fait par hasard. Il **disséquait une grenouille** et remarqua que lorsqu'un nerf de la grenouille entrait en contact avec deux métaux différents (comme du cuivre et du fer), une **contraction musculaire** se produisait comme par magie. Intrigué, il refait ses essais : et à chaque fois, c 'est la même chose.\n\nMais soyons modernes ! Pas de grenouilles ici, nous avons des volontaires beaucoup plus... courageux.\n\nMaintenant... place à la science ! Attention, ça peut picoter… mais c 'est pour la bonne cause !"
   - trigger: fragment
     exec: speak
     args: Professeur ! Je crois que ce volontaire... ne respire plus !
+    id: 6_6_8
+  - trigger: auto
+    exec: human
+    args: "C'est là que ça devient intéressant."
+  - trigger: auto
+    exec: narrator
+    args: "Le professeur pique le volontaire avec 2 aiguilles dans le bras"
+  - trigger: auto
+    exec: human
+    args: "Il pensait que l'électricité provenait de la \"vie\" elle-même : il appela cela \"l'électricité animale\".\n\nAujourd'hui, nous savons que cette contraction était due à un phénomène électrochimique. Lorsque deux métaux différents sont placés en contact dans un environnement conducteur (comme le liquide des tissus biologiques), une réaction d'oxydo-réduction se produit entre les métaux. Cela génère une **différence de potentiel, un courant électrique** qui **stimule les nerfs de l'animal**, provoquant la **contraction des muscles**.\n\nEt c'est ce qu'on va observer sur notre volontaire qui est inconscient... Oui voilà ! Son bras se lève sans qu'il en ait conscience."
 "6_7":
   - trigger: auto
     exec: speak
     args: Comme à une certaine époque, où des savants utilisaient des cadavres humains, souvent ceux de condamnés à mort.
+    id: 6_7_0
+  - trigger: auto
+    exec: human
+    args: "Imaginez ceci : **une salle froide, bondée de spectateurs** avides de mystères scientifiques et d'étrangetés. Au centre, **un cadavre**. Des électrodes sont placées sur son corps. Et là... le miracle ou l'horreur (selon votre perspective) : **les muscles se contractent**, une main se lève, un visage grimace, le torse se soulève.\n\nCes démonstrations, parfois orchestrées par des scientifiques comme Giovanni Aldini, le neveu de Galvani, avaient pour but de **prouver la puissance de l 'électricité sur le vivant**... ou, dans ce cas, sur le mort. Mais, pour les populations, cela relevait plus du domaine du **surnaturel** que de la science.\n\nCes \"réanimations électriques\" marquèrent l'imaginaire collectif, inspirant plus tard des **œuvres comme Frankenstein**. Mais au-delà du spectacle, elles montrèrent l 'étendue du potentiel scientifique de l 'électricité. Les possibilités semblaient infinies : éclairer les villes, relier les continents… mais pour l 'instant, on en était encore à terrifier les foules !"
   - trigger: fragment
     exec: speak
     args: Un peu comme dans un film de zombie avant l'heure... sauf que c'était bien réel.
+    id: 6_7_1
+  - trigger: auto
+    exec: human
+    args: "Mais il est temps de ramener notre volontaire parmis nous !"
+  - trigger: auto
+    exec: narrator
+    args: "Le professeur retire les aiguille, provoquant une forte douleur chez le volontaire, le ramenant à lui"
+  - trigger: auto
+    exec: human
+    args: "Comment allez-vous ? Bien, vous allez pouvoir continuer à m'assister.\n\nVous savez, mesdames et messieurs, ces expériences avec l 'électricité vivante **ne faisaient pas l'unanimité**. Même à cette époque, la science avançait grâce aux débats... et parfois, aux désaccords les plus féroces.\n\nC 'est ici qu'apparaît **Alessandro Volta**, un homme brillant mais en profond désaccord avec Galvani. Volta pensait que cette électricité n'était **pas simplement \"intrinsèque\" au corps vivant**, mais créée par la connexion entre différents matériaux.\n\nD'ailleurs, pourquoi ne pas illustrer cela avec... notre volontaire ? Rassurez-vous, cette fois-ci, vous resterez conscient."
+  - trigger: auto
+    exec: narrator
+    args: "Le professeur sort une pomme de terre, des clous en acier galvanisé et des pièces rouge, des fils et une LED. Ils assemblent la batterie patate"
+  - trigger: auto
+    exec: human
+    args: "Et voilà ! Un humble tubercule, devenu une source d 'électricité !"
 "6_8":
+  - trigger: auto
+    exec: human
+    args: "Volta a ainsi démontré que ce n 'est pas le corps qui génère cette électricité, mais bien la **combinaison de matériaux**. Ce désaccord marquera la naissance de l 'électrochimie. Et grâce à sa pile, la science allait enfin disposer d'un **outil régulier pour expérimenter**... ouvrant la voie à des inventions et des découvertes que vous ne croiriez pas !\n\nMais comme dans toute transformation, les grandes idées ne manquent jamais de provoquer… des étincelles !"
   - trigger: fragment
     exec: speak
     args: Vous voulez la bagarre Professeur ?
+    id: 6_8_0
+"6_9":
+  - trigger: auto
+    exec: human
+    args: "Ah, cher Jack, tu n 'es pas le seul ! Mesdames et messieurs, nous sommes à la **fin du XVIIIe siècle** dans une époque où deux grands génies vont s'affronter : Thomas Edison et Nikola Tesla. Une époque connue sous le nom de… la **guerre des courants** !\n\nD'un côté, Edison est l'inventeur du phonographe, de l'ampoule électrique, et de bien d'autres merveilles ! Son courant continu est sûr, stable, et parfait pour alimenter les villes.\n\nEt de l'autre, Tesla, humble apprenti autrefois à son service... mais aujourd 'hui son rival. Car le courant continu a des limites ! Le courant alternatif a l'avantage de pouvoir transporter l'électricité sur de longues distances, à moindre coût !\n\nEt ainsi démarra un **combat politique**. Mais ne vous méprenez pas : ce n 'était pas qu'un débat de savants. Edison allait user de toutes les tactiques possibles pour discréditer Tesla et son courant alternatif.\n\nIl a en effet **électrocuté des animaux** - des chiens, chats, des chevaux, et même un éléphant ! - pour prouver que le courant alternatif était dangereux. Une **mise en scène choquante**, destinée à effrayer le public."
 "6_10":
+  - trigger: auto
+    exec: human
+    args: "Mais Edison n'en resta pas là. Non content d'électrocuter des animaux pour choquer le public, il alla encore plus loin... Il mit en œuvre une invention qui allait marquer l'histoire d 'une manière sinistre : la **chaise électrique**.\n\nPour prouver que le courant alternatif de Tesla était dangereux, Edison participa à la conception de cette \"machine de la mort\". La toute première exécution à la chaise électrique eut lieu en **1890**. Et vous savez quel courant était utilisé ? Le courant alternatif bien sûr."
   - trigger: fragment
     exec: speak
     args: Edison, toujours le showman... Il a tout de même tenté de "zapper" la concurrence.
+    id: 6_10_0
+  - trigger: auto
+    exec: human
+    args: "Cette mise en scène choquante visait à démontrer que le **courant alternatif n'était pas sûr** pour alimenter les foyers. Mais au fond, cela relevait davantage de la **stratégie commerciale** que d 'une véritable avancée scientifique."
 "6_11":
+  - trigger: auto
+    exec: human
+    args: "Et tout n'a pas tourné en sa faveur. Tesla n'a pas agi seul dans cette aventure. Un ingénieur et industriel nommé **George Westinghouse** l'a rejoint. C 'était un homme de grande vision, qui voyait dans le courant alternatif la possibilité d'acheminer l'électricité sur de grandes distances, et de changer le monde.\n\nIl **soutenait Tesla financièrement et techniquement**, et en 1888, ils ont formé une alliance qui allait bousculer l'avenir de l 'électricité aux États-Unis. Ensemble, ils ont remporté la victoire dans la grande course pour la **construction de la centrale électrique d'Edward Dean Adams** aux chutes du Niagara en **1895**."
   - trigger: fragment
     exec: speak
     args: "Comme disait Tesla lui-même : \"l'avenir est à ceux qui s'adaptent\", et son courant est devenu la norme mondiale."
+    id: 6_11_0
 "6_12":
+  - trigger: auto
+    exec: human
+    args: "Mais il faut être juste... Le courant continu d'Edison **n'a pas disparu complètement**. Aujourd'hui, il est toujours utilisé. Par exemple, les piles électriques, les circuits électroniques... ainsi, il reste indispensable dans notre vie quotidienne."
   - trigger: fragment
     exec: speak
     args: Finalement, chaque courant a trouvé son utilité quelque part, n'est-ce pas ?
+    id: 6_12_0
+  - trigger: auto
+    exec: human
+    args: "Exactement, Jack. Cette guerre nous enseigne que **le conflit ne mène pas forcément à des solutions définitives**. En fait, même des rivaux peuvent, à travers leurs batailles, laisser une trace importante et ouvrir la voie à de **nombreuses opportunités**. Après tout, tout progrès contient une part de vérité, même quand il est en concurrence avec une autre.\n\nEt au fond, la science et l'innovation… ce n'est pas une bataille de vainqueurs et de vaincus. C'est une **aventure collective** où chaque partie contribue à faire avancer l 'humanité.\n\nSes **conséquences sont démultipliées**. Après l'instauration du courant comme **source d'énergie stable**, il restait une multitude de découvertes encore à faire… Voilà pourquoi après la guerre des courants, l'exploration scientifique continue en toute logique."
 "6_13":
   - trigger: auto
     delay: 5
     exec: speak
     args: Recherche de la séquence "Nouvelles vagues de l'électricité".
+    id: 6_13_0
   - trigger: auto
     delay: 2000
     exec: initTunnel

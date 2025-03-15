@@ -9,12 +9,11 @@ with open("states.yaml", "r", encoding="utf-8") as file:
 with open("script/output.adoc", "w", encoding="utf-8") as adoc:
     adoc.write("= Chroniques des Sciences - Des cailloux aux octets\n")
     adoc.write("Thomah <5090230+Thomah@users.noreply.github.com>\n")
+    adoc.write(":homepage: https://github.com/Thomah/chroniques-des-sciences")
     adoc.write(":reproducible:\n")
     adoc.write(":listing-caption: Listing\n")
     adoc.write(":source-highlighter: rouge\n")
     adoc.write(":linkcss:\n")
-    adoc.write(":stylesdir: script/\n")
-    adoc.write(":stylesheet: styles.css\n")
     adoc.write(":toc:\n")
     adoc.write(":title-page:\n\n")
 
@@ -30,7 +29,7 @@ with open("script/output.adoc", "w", encoding="utf-8") as adoc:
             current_act = act_number
         
         slide_number = section.replace("_", ".")
-        adoc.write(f"\n_Slide {slide_number}_\n\n")
+        adoc.write(f"\n[.transition]_Slide {slide_number}_\n\n")
 
         for event in events:
             trigger = event.get("trigger")
@@ -39,16 +38,16 @@ with open("script/output.adoc", "w", encoding="utf-8") as adoc:
 
             if exec in ["narrator", "human", "speak"] and text:
                 if trigger == "fragment":
-                    adoc.write(f"\n_Fragment {slide_number}.{fragment_number}_\n\n")
+                    adoc.write(f"\n[.transition]_Fragment {slide_number}.{fragment_number}_\n\n")
                     fragment_number += 1
                 if exec == "narrator":
                     adoc.write(f"_{text}_\n\n")
                 elif exec == "human":
-                    adoc.write("[.text-center]\n**Prof. Calvet**\n\n")
-                    adoc.write(f"{text}\n\n")
+                    adoc.write("\n.Prof. Calvet\n****\n")
+                    adoc.write(f"{text}\n\n****\n")
                 elif exec == "speak":
-                    adoc.write("[.text-center]\n**Jack**\n\n")
-                    adoc.write(f"{text}\n\n")
+                    adoc.write("\n.Jack\n****\n")
+                    adoc.write(f"{text}\n\n****\n")
 
 # Convert to PDF
 subprocess.run(["ruby", "generate_script_pdf.rb"])
