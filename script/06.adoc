@@ -1,0 +1,250 @@
+== Acte 6
+
+=== Scène 1
+
+[.text-center]
+**Prof. Calvet**
+
+_Slide 6.0_
+
+Mesdames, Messieurs, aujourd’hui, nous revenons aux origines de l'électricité... ou plutôt, des croyances qui ont pavé son chemin. Tout commence avec une pierre mystérieuse. Une pierre que l’on croyait divine. Regardez bien MAVHi...
+
+Jack, si tu veux bien ?
+
+[.text-center]
+**Jack**
+
+Bien sûr, Professeur. Préparez-vous à contempler un trésor qui a émerveillé les civilisations.
+
+_MAVHi s’ouvre lentement, avec un effet lumineux et mécanique impressionnant, dévoilant un fragment d’ambre brillant au centre d’une niche parfaitement éclairée._
+
+_Slide 6.1_
+
+[.text-center]
+**Prof. Calvet**
+
+Voici l’ambre. Une simple résine fossilisée, diriez-vous ? Et pourtant… Pour les Grecs de l’Antiquité, elle était bien plus. Ils l’appelaient êlektron, la pierre du Soleil.
+
+_Slide 6.2_
+
+Dans la mythologie grecque, Hélios, dieu du soleil conduisait un char d'or qui amenait le soleil à travers le ciel chaque jour depuis l'est vers l'ouest tandis que la nuit il faisait le voyage de retour en se prélassant tranquillement dans une tasse en or.
+
+Phaéton, son fils, n’avait qu’un rêve : conduire le char de son père. Un jour il en eut l'occasion mais il perdit le contrôle. Des montagnes flambèrent, des rivières s’asséchèrent, et Zeus… eh bien, disons qu’il ne trouva pas ça très drôle.
+
+_Slide 6.3_
+
+[.text-center]
+**Jack**
+
+Zap ! Une foudre bien placée
+
+[.text-center]
+**Prof. Calvet**
+
+Phaéton chuta dans le fleuve Eridan et mourut.
+
+_Slide 6.4_
+
+Ses sœurs, les Héliades, pleurèrent amèrement sa mort ; leur douleur fut si grande qu'elles changèrent de nature et se métamorphosèrent en peupliers. Ces arbres laissent couler des larmes qui, une fois solidifiées, constituent l'ambre.
+
+Pour les Grecs, cette pierre était donc divine et Thalès de Milet - oui, celui qui a donné son nom au très célèbre théorème en mathématiques - indiquait vers 600 av. J.-C. quelle "accordait une âme même aux choses inanimées".
+
+Par "âme", il désignait surtout le fait qu'en frottant l'ambre avec un tissu, il était possible d'attirer des corps légers (des brins de paille ou des franges de tissu). Mais c'est la 1ère personne à avoir tenté d'expliquer le phénomène.
+
+_Slide 6.4.0_
+
+_Le Professeur sort un petit tissu et mime poliment un frottement sur MAVHi (sans toucher l’original, bien sûr). Dans l’obscurité partielle, un effet lumineux de petite étincelle apparaît, projetée en toute sécurité._
+
+Cette étincelle est l’une des premières manifestations de l’électricité. Un phénomène qui ne prendra véritablement vie qu’avec des siècles de curiosité et de science. Mais rappelez-vous ceci : au début, c'était un simple mystère... un don des dieux nommé "élektron".
+
+_Slide 6.5_
+
+Avec le temps, sa valeur diminue, mais son mystère persiste. Et c’est là que le véritable génie intervient. Il faudra attendre... quelques millénaires pour que William Gilbert, un médecin anglais du XVIIe siècle, observe avec méthode cette force d'attraction de l’ambre. Il donne à ce phénomène le nom d’électricité, venant directement de "êlektron".
+
+[.text-center]
+**Jack**
+
+Ce qui est fascinant, Professeur, c'est que ses travaux ne se sont pas limités à l’ambre. Gilbert a aussi prouvé que d’autres matériaux – comme le verre ou le soufre – génèrent cette force mystérieuse.
+
+[.text-center]
+**Prof. Calvet**
+
+Mais à cette époque, cela reste une curiosité : une force mystérieuse qui attire, éclate et intrigue les savants. Après Gilbert, il faudra encore attendre plus d’un siècle pour que la science avance. Les recherches stagnent, jusqu’à ce que des phénomènes inattendus relancent l’intérêt : des expériences plus audacieuses montrent que l’électricité ne se limite pas à des étincelles ou des frottements.
+
+Au XVIIIe siècle, Luigi Galvani, médecin italien, observe quelque chose de saisissant.
+
+https://www.youtube.com/watch?v=3a_8FQW8Jsg
+
+Peut-être l'un d'entre vous serait volontaire pour m'aider à l'illustrer ? Je vois vous brieffer à l'écart. Pendant ce temps... Jack peux-tu raconter tes meilleures blagues ?
+
+[.text-center]
+**Jack**
+
+Blague 1 2 3
+
+[.text-center]
+**Prof. Calvet**
+
+Tout est prêt ? Merci, cher... euh... comment vous appelez-vous déjà ? Ah oui, parfait. Bien, installez-vous ici... ne vous inquiétez pas, c’est totalement indolore.
+
+_Slide 6.6_
+
+Commençons par évoquer ce que Luigi Galvani a découvert tout à fait par hasard. Imaginez… un grenouille. Oui, une grenouille !
+
+Pendant une de ses dissections, Galvani remarque que lorsqu’il touche un nerf avec un outil métallique, les muscles de la patte se contractent comme par magie. Intrigué, il refait ses essais : et à chaque fois, c’est la même chose.
+
+Mais soyons modernes ! Pas de grenouilles ici, nous avons des volontaires beaucoup plus... courageux.
+
+Maintenant... place à la science ! Attention, ça peut picoter… mais c’est pour la bonne cause !
+
+_Le professeur fait semblant d'assomer le volontaire avec un gros livre_
+
+_Slide 6.6.0_
+
+[.text-center]
+**Jack**
+
+Professeur ! Je crois qu’il... il ne respire plus !
+
+[.text-center]
+**Prof. Calvet**
+
+C'est là que ça devient intéressant. 
+
+_Le professeur pique le volontaire avec 2 aiguilles dans le bras_
+
+Galvani constata que lorsqu'un nerf de la grenouille entrait en contact avec deux métaux différents (comme du cuivre et du fer), une contraction musculaire se produisait. Il pensait, à l'époque, que l'électricité provenait de la "vie" elle-même : il appela cela "l'électricité animale".
+
+Aujourd'hui, nous savons que cette contraction était due à un phénomène électrochimique. Lorsque deux métaux différents sont placés en contact dans un environnement conducteur (comme le liquide des tissus biologiques), une réaction d'oxydo-réduction se produit entre les métaux. Cela génère une différence de potentiel, un courant électrique qui stimule les nerfs de l'animal, provoquant la contraction des muscles.
+
+Et c'est ce qu'on va observer sur notre volontaire qui est inconscient... Oui voilà ! Son bras se lève sans qu'il en ait conscience.
+
+_Slide 6.7_
+
+[.text-center]
+**Jack**
+
+Comme à une certaine époque, où des savants utilisaient des cadavres humains, souvent ceux de condamnés à mort.
+
+[.text-center]
+**Prof. Calvet**
+
+Imaginez ceci : une salle froide, bondée de spectateurs avides de mystères scientifiques et d'étrangetés. Au centre, un cadavre. Des électrodes sont placées sur son corps. Et là... le miracle ou l’horreur (selon votre perspective) : les muscles se contractent, une main se lève, un visage grimace, le torse se soulève.
+
+Ces démonstrations, parfois orchestrées par des scientifiques comme Giovanni Aldini, le neveu de Galvani, avaient pour but de prouver la puissance de l’électricité sur le vivant… ou, dans ce cas, sur le mort. Mais, pour les populations, cela relevait plus du domaine du surnaturel que de la science.
+
+Ces "réanimations électriques" marquèrent l'imaginaire collectif, inspirant plus tard des œuvres comme Frankenstein. Mais au-delà du spectacle, elles montrèrent l’étendue du potentiel scientifique de l’électricité. Les possibilités semblaient infinies : éclairer les villes, relier les continents… mais pour l’instant, on en était encore à terrifier les foules !
+
+[.text-center]
+**Jack**
+
+Un peu comme dans un film de zombie avant l'heure... sauf que c'était bien réel.
+
+[.text-center]
+**Prof. Calvet**
+
+Mais il est temps de ramener notre volontaire parmis nous !
+
+_Le professeur retire les aiguille, provoquant une forte douleur chez le volontaire, le ramenant à lui_
+
+Comment allez-vous ? Bien, vous allez pouvoir continuer à m'assister.
+
+Vous savez, mesdames et messieurs, ces expériences avec l’électricité vivante ne faisaient pas l’unanimité. Même à cette époque, la science avançait grâce aux débats... et parfois, aux désaccords les plus féroces.
+
+C’est ici qu’apparaît Alessandro Volta, un homme brillant mais en profond désaccord avec Galvani. Volta pensait que cette électricité des muscles n'était pas simplement "intrinsèque" au corps vivant, mais créée par la connexion entre différents matériaux.
+
+D'ailleurs, pourquoi ne pas illustrer cela avec... notre volontaire ? Rassurez-vous, cette fois-ci, vous resterez conscient.
+
+_Le professeur sort une pomme de terre, des clous en acier galvanisé et sa tirelire cochon contenant des pièces rouge, des fils et une LED. Ils assemblent la batterie patate_
+
+Et voilà ! Un humble tubercule, devenu une source d’électricité !
+
+_Slide 6.8_
+
+Volta a ainsi démontré que ce n’est pas le corps qui génère cette électricité, mais bien la combinaison de matériaux. Ce désaccord marquera la naissance de l’électrochimie. Et grâce à sa pile, la science allait enfin disposer d’un outil régulier pour expérimenter… ouvrant la voie à des inventions et des découvertes que vous ne croiriez pas !
+
+Mais comme dans toute transformation, les grandes idées ne manquent jamais de provoquer… des étincelles !
+
+_Slide 6.8.0_
+
+[.text-center]
+**Jack**
+
+Vous voulez la bagarre ? Parce que je suis prêt à me battre pour le courant continu, personnellement.
+
+_Slide 6.9_
+
+[.text-center]
+**Prof. Calvet**
+
+Ah, cher Jack, tu n’es pas le seul ! Mesdames et messieurs, nous entrons dans une époque où deux grands génies vont s’affronter : Thomas Edison et Nikola Tesla. Une époque connue sous le nom de… la guerre des courants !
+
+D'un côté, Edison est l’inventeur du phonographe, de l’ampoule électrique, et de bien d'autres merveilles ! Son courant continu  est sûr, stable, et parfait pour alimenter les villes.
+
+Et de l'autre, Tesla, humble apprenti autrefois à son service… mais aujourd’hui son rival. Car le courant continu a des limites ! Le courant alternatif a l'avantage de pouvoirt transporter l’électricité sur de longues distances, à moindre coût !
+
+Et ainsi démarra un combat politique. Mais ne vous méprenez pas : ce n’était pas qu’un débat de savants. Edison allait user de toutes les tactiques possibles pour discréditer Tesla et son courant alternatif.
+
+Il a en effet électrocuté des animaux – des chevaux, des éléphants ! – pour prouver que le courant alternatif était dangereux. Une mise en scène choquante, destinée à effrayer le public.
+
+_Slide 6.10_
+
+Mais Edison n’en resta pas là. Non content d’électrocuter des animaux pour choquer le public, il alla encore plus loin... Il mit en œuvre une invention qui allait marquer l’histoire d’une manière sinistre : la chaise électrique.
+
+Imaginez : pour prouver que le courant alternatif de Tesla était dangereux, Edison participa à la conception de cette "machine de la mort". La toute première exécution à la chaise électrique eut lieu en 1890. Et vous savez quel courant était utilisé ? Le courant alternatif bien sûr.
+
+_Slide 6.10.0_
+
+[.text-center]
+**Jack**
+
+Edison, toujours le showman... Il a tout de même tenté de "zapper" la concurrence.
+
+[.text-center]
+**Prof. Calvet**
+
+Cette mise en scène choquante visait à démontrer que le courant alternatif n'était pas sûr pour alimenter les foyers. Mais au fond, cela relevait davantage de la stratégie commerciale que d’une véritable avancée scientifique.
+
+_Slide 6.11_
+
+Et tout n’a pas tourné en sa faveur. Tesla n’a pas agi seul dans cette aventure. Un ingénieur et industriel nommé George Westinghouse l’a rejoint. C’était un homme de grande vision, qui voyait dans le courant alternatif la possibilité d'acheminer l’électricité sur de grandes distances, et de changer le monde.
+
+Il soutenait Tesla financièrement et techniquement, et en 1888, ils ont formé une alliance qui allait bousculer l'avenir de l’électricité aux États-Unis. Ensemble, ils ont remporté la victoire dans la grande course pour la construction de la centrale électrique d'Edward Dean Adams aux chutes du Niagara en 1895.
+
+_Slide 6.11.0_
+
+[.text-center]
+**Jack**
+
+Comme disait Tesla lui-même : "l’avenir est à ceux qui s’adaptent", et son courant est devenu la norme mondiale.
+
+_Slide 6.12_
+
+[.text-center]
+**Prof. Calvet**
+
+Mais il faut être juste… Le courant continu d’Edison n’a pas disparu complètement. Aujourd'hui, il est toujours utilisé. Par exemple, les piles électriques, les circuits électroniques... ainsi, il reste indispensable dans notre vie quotidienne.
+
+_Slide 6.12.0_
+
+[.text-center]
+**Jack**
+
+Finalement, chaque courant a trouvé son utilité quelque part, n'est-ce pas ?
+
+[.text-center]
+**Prof. Calvet**
+
+Exactement, Jack. Cette guerre nous enseigne que le conflit ne mène pas forcément à des solutions définitives. En fait, même des rivaux peuvent, à travers leurs batailles, laisser une trace importante et ouvrir la voie à de nombreuses opportunités. Après tout, tout progrès contient une part de vérité, même quand il est en concurrence avec une autre.
+
+Et au fond, la science et l'innovation… ce n'est pas une bataille de vainqueurs et de vaincus. C'est une aventure collective où chaque partie contribue à faire avancer l’humanité.
+
+Ses conséquences sont démultipliées. Après l’instauration du courant comme source d'énergie stable, il restait une multitude de découvertes encore à faire… Voilà pourquoi après la guerre des courants, l'exploration scientifique continue en toute logique.
+
+_Slide 6.13_
+
+[.text-center]
+**Jack**   
+
+Recherche de la séquence "Nouvelles vagues de l'électricité".
+
