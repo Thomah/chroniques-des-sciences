@@ -177,7 +177,7 @@ _Slide 6.9_
 [.text-center]
 **Prof. Calvet**
 
-Ah, cher Jack, tu n’es pas le seul ! Mesdames et messieurs, nous entrons dans une époque où deux grands génies vont s’affronter : Thomas Edison et Nikola Tesla. Une époque connue sous le nom de… la guerre des courants !
+Ah, cher Jack, tu n’es pas le seul ! Mesdames et messieurs, nous sommes à la fin du XVIIIe siècle dans une époque où deux grands génies vont s’affronter : Thomas Edison et Nikola Tesla. Une époque connue sous le nom de… la guerre des courants !
 
 D'un côté, Edison est l’inventeur du phonographe, de l’ampoule électrique, et de bien d'autres merveilles ! Son courant continu  est sûr, stable, et parfait pour alimenter les villes.
 

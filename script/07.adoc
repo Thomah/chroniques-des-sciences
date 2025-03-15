@@ -1,0 +1,153 @@
+== Acte 7
+
+=== Scène 1
+
+[.text-center]
+**Prof. Calvet**
+
+_Slide 7.0_
+
+Et si je vous disais qu’avec de simples variations d’électricité, il serait possible d'envoyer des messages, de l’information... ou des sons ? Ce qui nous paraît banal aujourd'hui — la radio, le Wi-Fi, le téléphone — était autrefois de la magie pure.
+
+On pourrait dire que cette histoire commence grâce à l'électromagnétisme. Avant la guerre des courants en 1829, Joseph Henry, un scientifique américain brillant, perfectionne le principe du relais électromagnétique : une manière de contrôler l’électricité grâce à un simple interrupteur magnétique.
+
+Imaginons que cet interrupteur envoie des impulsions électriques sur une longue distance. Par exemple… un courant parcourant des kilomètres de câble pour actionner une cloche !
+
+[.text-center]
+**Jack**
+
+Je crois qu'on parle d’un télégraphe, pas d’une sonnerie de porte.
+
+_Slide 7.1_
+
+[.text-center]
+**Prof. Calvet**
+
+Exactement ! Ces concepts simples sont à la base du télégraphe. Cependant, c’est Samuel Morse qui donne toute sa popularité à cette invention en 1837, en y ajoutant son célèbre code : des points et des traits qui deviennent un langage universel.
+
+_MAVHi se met à émettre un signal en Morse_
+
+Et pourquoi s'arrêter aux fils ? C'est là qu'intervient une avancée audacieuse : la télégraphie sans fil, ou TSF. Une histoire qui commence… avec Hertz.
+
+_Slide 7.2_
+
+Le premier à décrypter ce mystère fut un Allemand nommé Heinrich Hertz (1857-1894). Entre 1886 et 1889, dans son laboratoire, il mit en évidence des ondes invisibles capables de traverser l’espace. Oui, les fameuses ondes hertziennes !
+
+[.text-center]
+**Jack**
+
+Des ondes ? Genre : "je t’envoie un message en agitant les bras tellement vite que tu le sens venir" ?
+
+_Slide 7.3_
+
+[.text-center]
+**Prof. Calvet**
+
+Patience, Jack ! En réalité, c’est bien plus subtil. Hertz démontra en 1887 qu'avec un circuit chargé d’électricité produisant des oscillations régulières, on capter et reconvertir ces oscillations à distance… si on savait comment !
+
+Cependant, il n'avait aucune idée des applications de son dispositif. Il se contenta de noter que "cela n'a aucune espèce d'application. C'est juste une expérience qui permet de prouver que nous avons simplement ces ondes électromagnétiques mystérieuses que nous ne pouvons voir à l'œil nu."
+
+_Slide 7.4_
+
+Si Hertz n'a pas vu les possibilités de la son inventions. D'autres y verront l'avenir.
+
+On cite souvent Guglielmo Marconi. Pourtant, ce serait une simplification injuste de dire qu’il a "inventé la radio". Ce qu’il a fait, c’est assembler avec ingéniosité des découvertes fondamentales réalisées par d’autres avant lui, pour créer ce qu’on appelait à l’époque la TSF : la télégraphie sans fil.
+
+_Slide 7.5_
+
+Heinrich Hertz, on l'a vu avant, confirme l'existence des ondes électromagnétiques qui avaient été théorisées par James Clerk Maxwell. Ensuite, des hommes comme Édouard Branly découvrent comment capter et amplifier ces ondes, grâce à son radioconducteur à limaille, tandis que Alexander Popov perfectionne l’antenne. Enfin, le physicien Karl Ferdinand Braun améliore la précision en adaptant les circuits aux besoins pratiques de l’émission et de la réception.
+
+_Slide 7.5.0_
+
+[.text-center]
+**Jack**
+
+Du coup, Marconi, il a fait quoi exactement ? Il a juste tout collé ensemble ?
+
+[.text-center]
+**Prof. Calvet**
+
+Pas tout à fait, Jack. Marconi était un excellent ingénieur et, surtout, un visionnaire. En 1895, il réalise un exploit pratique : utiliser toutes ces avancées pour construire le premier système de télégraphie sans fil.
+
+_Slide 7.6_
+
+En 1899, il marque un jalon important en réussissant à transmettre un signal radio à travers la Manche, prouvant que ses ondes pouvaient franchir des obstacles naturels majeurs.
+
+[.text-center]
+**Jack**
+
+Pas mal, ça. Mais il a fait mieux, non ?
+
+[.text-center]
+**Prof. Calvet**
+
+https://www.youtube.com/watch?v=_La5RaE5GF4
+
+Oui ! En 1901, Marconi réalise son exploit le plus célèbre : il transmet la lettre "S" d'un côté à l'autre de l'Atlantique, entre l'Angleterre et le Canada. Un bond prodigieux pour l’époque. Les scientifiques étaient sceptiques, car ils pensaient que les ondes radios voyageaient en ligne droite et ne pouvaient pas suivre la courbure de la Terre. Marconi a montré qu’elles pouvaient rebondir dans l’ionosphère, une couche que personne ne connaissait encore à l'époque.
+
+Mais rappelez-vous : Marconi a bâti son succès sur les travaux de nombreux autres. Il a su les unir et montrer ce qui était possible.
+
+Cependant, son héritage est aussi complexe sur le plan personnel. Plus tard dans sa vie, Marconi s’associe au régime fasciste italien. Cela ne réduit pas l’importance de ses accomplissements techniques, mais ajoute une nuance à sa postérité.
+
+Ce qu’il faut retenir, c’est que la TSF n’a pas été le fruit d’un seul homme. Elle représente la force de la collaboration et de l’innovation à travers le monde.
+
+=== Scène 2
+
+En plus de la lumière et l'énergé, l'électricité à facilité les communications. Mais elle a aussi ouvert une nouvelle ère : celle où la logique s’en mêle, et où des machines commencent à réfléchir.
+
+[.text-center]
+**Jack**
+
+On parle de moi là ?
+
+[.text-center]
+**Prof. Calvet**
+
+Non, Jack. Mais pose-toi cette question : si tu pouvais manipuler le passage de l’électricité à travers un circuit, comme ouvrir ou fermer une porte, que pourrais-tu faire ?
+
+[.text-center]
+**Jack**
+
+Heu... Éteindre et allumer les lumières dans une maison comme un magicien ?
+
+[.text-center]
+**Prof. Calvet**
+
+Intéressant… Mais imagine qu'au lieu d’une simple porte, tu en as des milliers, voire des millions. Et qu’en les ouvrant ou fermant dans un ordre précis, tu peux effectuer des calculs, résoudre des problèmes, et même… jouer aux échecs !
+
+_Slide 7.7_
+
+Pour cela, nous allons parler de Leonardo Torres Quevedo. C'était un ingénieur espagnol touche-à-tout.  Quevedo, c’est bien ça : un ingénieur, mais aussi un mathématicien, un physicien, un inventeur... et c'est en mélangeant les technologies mécaniques avec l'électricité parvient à créer la fameuse machine analytique et réaliser le rêve de Charles Babbage. 
+
+_Slide 7.8_
+
+En 1912, il va réaliser une prouesse : il construira un automate capable de jouer aux échecs, basé sur des principes simples mais incroyablement astucieux. Cet automate – appelé le Turc Méchanique de Torres Quevedo – pouvait jouer une partie et ne perdait jamais.
+
+[.text-center]
+**Jack**
+
+Ça devait être un sacré joueur. Il avait quelle cote ELO ?
+
+[.text-center]
+**Prof. Calvet**
+
+[Sourit.] Aucune idée, Jack, mais crois-moi, cela a laissé tout le monde bouche bée. Cela montrait qu’une machine pouvait imiter un raisonnement humain, un concept qui ouvrira la voie à l’informatique moderne et aux jeux électroniques.
+
+Visionnaire et passionné par des domaines variés, Quevedo démontrait qu'il ne fallait pas se limiter à une seule discipline pour comprendre le monde. Il posait ainsi les bases d’un futur où les machines seraient capables de penser, en puisant dans la mécanique et les signaux électriques.
+
+Ce cheminement ne s'arrête pas là. À mesure que les années passent, des visions nouvelles se dessinent : des machines capables d’apprendre et de dialoguer avec nous, et une question centrale qui se fait de plus en plus pressante : jusqu'où pouvons-nous aller, vraiment ?
+
+[.text-center]
+**Jack**
+
+J'amorce la dernière séquence ?
+
+[.text-center]
+**Prof. Calvet**
+
+Et comment Jack ! Il est temps de retrouver notre modernité !
+
+[.text-center]
+**Jack**
+
+Recherche de la séquence "Vers l'informatique à grande échelle".
