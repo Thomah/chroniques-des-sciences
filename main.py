@@ -4,8 +4,10 @@ import time
 import platform
 import os
 import threading
+import yaml
 import tkinter as tk
 from tkinter import scrolledtext
+from urllib.parse import urlparse
 
 # Import modules common to both platforms
 import serial
@@ -136,13 +138,51 @@ def run_http_server():
     proc = subprocess.Popen([sys.executable, "-m", "http.server", "8080", "--directory", script_dir])
     return proc
 
-# Global variables to be accessed in the GUI update loop
-driver = None
-ser = None
-keyboard = Controller()
-window_title = "Des cailloux aux octets — Mozilla Firefox"
+# Load states from YAML file
+def load_states():
+    try:
+        print(os.path.isfile("states.yaml"))
+        with open("states.yaml", "r", encoding="utf-8") as file:
+            return yaml.safe_load(file)
+    except Exception as e:
+        print(f"Error loading states.yaml: {e}")
+        return {}
 
-def update_gui(url_label, serial_text):
+# Function to parse URL and extract state
+def get_current_state(url):
+    parsed_url = urlparse(url)
+    path_parts = parsed_url.fragment.strip('/').split('/')
+    state = [int(part) for part in path_parts if part.isdigit()]
+    if len(state) < 2:
+        state = state + [0] * (2 - len(state))  # Ensure at least two elements
+    state_key = "_".join(map(str, state[:2]))  # Use only first two elements as state key
+    fragment_index = state[2] if len(state) > 2 else None  # Last number is fragment index, None if not set
+    return state_key, fragment_index
+
+def get_next_speak_message(state_key, fragment_index):
+    state_data = STATES.get(state_key, [])
+    
+    # If fragment_index is None, default to 0
+    if fragment_index is None:
+        next_fragment_index = 0
+    else:
+        next_fragment_index = fragment_index + 1
+    
+    # Initialize a counter for fragments
+    fragment_count = 0
+    
+    for i, entry in enumerate(state_data):
+        if entry.get("trigger") == "fragment":
+            if fragment_count == next_fragment_index:
+                for j in range(i, len(state_data)):
+                    next_entry = state_data[j]
+                    if next_entry.get("trigger") == "fragment":
+                        return f"{state_key}_{next_fragment_index} : {next_entry.get('exec', '')}\n{next_entry.get('args', '')}"
+            fragment_count+= 1
+    
+    return "No more fragment on current slide."
+
+def update_gui(url_label, state_label, speak_text, serial_text):
     """Update the Tkinter label with the current URL and process serial input."""
     global driver, ser
 
@@ -150,6 +190,14 @@ def update_gui(url_label, serial_text):
     try:
         current_url = driver.current_url
         url_label.config(text="Current URL: " + current_url)
+        state_key, fragment_index = get_current_state(current_url)
+        state_info = STATES.get(state_key, "No state data available")
+        state_label.config(text=f"Current State: {state_key} | Fragment Index: {fragment_index}")
+        next_speak_message = get_next_speak_message(state_key, fragment_index)
+        speak_text.config(state=tk.NORMAL)
+        speak_text.delete(1.0, tk.END)
+        speak_text.insert(tk.END, next_speak_message)
+        speak_text.config(state=tk.DISABLED)
     except Exception as e:
         url_label.config(text="Error retrieving current URL: " + str(e))
     
@@ -175,7 +223,7 @@ def update_gui(url_label, serial_text):
             print("Error reading from serial port:", e)
     
     # Schedule next update after 1000 ms
-    url_label.after(1000, update_gui, url_label, serial_text)
+    url_label.after(1000, update_gui, url_label, state_label, speak_text, serial_text)
 
 def send_strobe():
     def worker():
@@ -230,12 +278,18 @@ def main():
     strobe_button = tk.Button(root, text="Send 'strobe'", font=("Arial", 12), command=send_strobe)
     strobe_button.pack(pady=5)
 
+    state_label = tk.Label(root, text="Current State: Loading...", font=("Arial", 12), justify="left")
+    state_label.pack(fill='x', padx=10, pady=5)
+    
+    speak_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, font=("Arial", 24), height=5, state=tk.DISABLED)
+    speak_text.pack(expand=True, fill='both', padx=10, pady=5)
+    
     # Scrolled text widget to display incoming serial data
     serial_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, font=("Arial", 12), height=10)
     serial_text.pack(expand=True, fill='both', padx=10, pady=10)
     
     # Start the periodic update loop
-    root.after(1000, update_gui, url_label, serial_text)
+    root.after(1000, update_gui, url_label, state_label, speak_text, serial_text)
 
     print("Interface launched. Close the window or press Ctrl+C in the terminal to exit.")
     try:
@@ -244,6 +298,13 @@ def main():
         print("Exiting program...")
     finally:
         http_server_proc.terminate()
+
+# Global variables to be accessed in the GUI update loop
+driver = None
+ser = None
+keyboard = Controller()
+window_title = "Des cailloux aux octets — Mozilla Firefox"
+STATES = load_states()
 
 if __name__ == '__main__':
     main()

@@ -740,7 +740,7 @@
     id: 6_7_0
   - trigger: auto
     exec: human
-    args: "Imaginez ceci : **une salle froide, bondée de spectateurs** avides de mystères scientifiques et d'étrangetés. Au centre, **un cadavre**. Des électrodes sont placées sur son corps. Et là... le miracle ou l'horreur (selon votre perspective) : **les muscles se contractent**, une main se lève, un visage grimace, le torse se soulève.\n\nCes démonstrations, parfois orchestrées par des scientifiques comme Giovanni Aldini, le neveu de Galvani, avaient pour but de **prouver la puissance de l 'électricité sur le vivant**... ou, dans ce cas, sur le mort. Mais, pour les populations, cela relevait plus du domaine du **surnaturel** que de la science.\n\nCes \"réanimations électriques\" marquèrent l'imaginaire collectif, inspirant plus tard des **œuvres comme Frankenstein**. Mais au-delà du spectacle, elles montrèrent l 'étendue du potentiel scientifique de l 'électricité. Les possibilités semblaient infinies : éclairer les villes, relier les continents… mais pour l 'instant, on en était encore à terrifier les foules !"
+    args: "Imaginez ceci : **une salle froide, bondée de spectateurs** avides de mystères scientifiques et d'étrangetés. Au centre, **un cadavre**. Des électrodes sont placées sur son corps. Et là... le miracle ou l'horreur (selon votre perspective) : **les muscles se contractent**, une main se lève, un visage grimace, le torse se soulève.\n\nCes démonstrations, parfois orchestrées par des scientifiques comme Giovanni Aldini, le neveu de Galvani, avaient pour but de **prouver la puissance de l 'électricité sur le vivant**... ou, dans ce cas, sur le mort. Mais, pour les populations, cela relevait plus du domaine du **surnaturel** que de la science.\n\nCes \"réanimations électriques\" marquèrent l'imaginaire collectif, inspirant plus tard des **œuvres comme Frankenstein**. Mais au-delà du spectacle, elles montrèrent l 'étendue du potentiel scientifique de l'électricité. Les possibilités semblaient infinies : éclairer les villes, relier les continents... mais pour l 'instant, on en était encore à terrifier les foules !"
   - trigger: fragment
     exec: speak
     args: Un peu comme dans un film de zombie avant l'heure... sauf que c'était bien réel.
@@ -753,26 +753,40 @@
     args: "Le professeur retire les aiguille, provoquant une forte douleur chez le volontaire, le ramenant à lui"
   - trigger: auto
     exec: human
-    args: "Comment allez-vous ? Bien, vous allez pouvoir continuer à m'assister.\n\nVous savez, mesdames et messieurs, ces expériences avec l 'électricité vivante **ne faisaient pas l'unanimité**. Même à cette époque, la science avançait grâce aux débats... et parfois, aux désaccords les plus féroces.\n\nC 'est ici qu'apparaît **Alessandro Volta**, un homme brillant mais en profond désaccord avec Galvani. Volta pensait que cette électricité n'était **pas simplement \"intrinsèque\" au corps vivant**, mais créée par la connexion entre différents matériaux.\n\nD'ailleurs, pourquoi ne pas illustrer cela avec... notre volontaire ? Rassurez-vous, cette fois-ci, vous resterez conscient."
+    args: "Comment allez-vous ? Bien, vous allez pouvoir continuer à m'assister.\n\nVous savez, mesdames et messieurs, ces expériences avec l'électricité vivante **ne faisaient pas l'unanimité**. Même à cette époque, la science avançait grâce aux débats... et parfois, aux désaccords les plus féroces."
+"6_8":
+  - trigger: auto
+    exec: human
+    args: "\nC 'est ici qu'apparaît **Alessandro Volta**, un homme brillant mais en profond désaccord avec Galvani. Volta pensait que cette électricité n'était **pas simplement \"intrinsèque\" au corps vivant**, mais créée par la connexion entre différents matériaux. C'est ainsi qu'il va créer la première pile électrique"
+"6_9":
+  - trigger: auto
+    exec: human
+    args: "Volta a ainsi démontré que ce n'est pas le corps qui génère cette électricité, mais bien la **combinaison de matériaux**. Ce désaccord marquera la naissance de l'électrochimie. Et grâce à sa pile, la science allait enfin disposer d'un **outil régulier pour expérimenter**... \n\nD'ailleurs, pourquoi ne pas illustrer cela avec... notre volontaire ?"
+"6_10":
   - trigger: auto
     exec: narrator
     args: "Le professeur sort une pomme de terre, des clous en acier galvanisé et des pièces rouge, des fils et une LED. Ils assemblent la batterie patate"
   - trigger: auto
     exec: human
-    args: "Et voilà ! Un humble tubercule, devenu une source d 'électricité !"
-"6_8":
-  - trigger: auto
+    args: "Ici, nous avons une réaction d'oxydoréduction entre deux métaux : le zinc et le cuivre. La pomme de terre joue le rôle d'électrolyte en permettant aux charges de circuler."
+  - trigger: fragment
     exec: human
-    args: "Volta a ainsi démontré que ce n 'est pas le corps qui génère cette électricité, mais bien la **combinaison de matériaux**. Ce désaccord marquera la naissance de l 'électrochimie. Et grâce à sa pile, la science allait enfin disposer d'un **outil régulier pour expérimenter**... ouvrant la voie à des inventions et des découvertes que vous ne croiriez pas !\n\nMais comme dans toute transformation, les grandes idées ne manquent jamais de provoquer… des étincelles !"
+    args: "À l'anode, le zinc perd des électrons et se transforme en ions Zn²⁺. C'est ce qu'on appelle une oxydation."
+  - trigger: fragment
+    exec: human
+    args: "Ces électrons circulent dans le circuit et arrivent à la cathode, où le cuivre capte ces électrons pour être réduit."
+  - trigger: fragment
+    exec: human
+    args: "Ce transfert d'électrons crée un courant électrique, assez faible mais suffisant pour allumer une LED ! Et voilà ! Un humble tubercule, devenu une source d'électricité ! Mais comme dans toute transformation, les grandes idées ne manquent jamais de provoquer... des étincelles !"
   - trigger: fragment
     exec: speak
     args: Vous voulez la bagarre Professeur ?
     id: 6_8_0
-"6_9":
+"6_11":
   - trigger: auto
     exec: human
     args: "Ah, cher Jack, tu n 'es pas le seul ! Mesdames et messieurs, nous sommes à la **fin du XVIIIe siècle** dans une époque où deux grands génies vont s'affronter : Thomas Edison et Nikola Tesla. Une époque connue sous le nom de… la **guerre des courants** !\n\nD'un côté, Edison est l'inventeur du phonographe, de l'ampoule électrique, et de bien d'autres merveilles ! Son courant continu est sûr, stable, et parfait pour alimenter les villes.\n\nEt de l'autre, Tesla, humble apprenti autrefois à son service... mais aujourd 'hui son rival. Car le courant continu a des limites ! Le courant alternatif a l'avantage de pouvoir transporter l'électricité sur de longues distances, à moindre coût !\n\nEt ainsi démarra un **combat politique**. Mais ne vous méprenez pas : ce n 'était pas qu'un débat de savants. Edison allait user de toutes les tactiques possibles pour discréditer Tesla et son courant alternatif.\n\nIl a en effet **électrocuté des animaux** - des chiens, chats, des chevaux, et même un éléphant ! - pour prouver que le courant alternatif était dangereux. Une **mise en scène choquante**, destinée à effrayer le public."
-"6_10":
+"6_12":
   - trigger: auto
     exec: human
     args: "Mais Edison n'en resta pas là. Non content d'électrocuter des animaux pour choquer le public, il alla encore plus loin... Il mit en œuvre une invention qui allait marquer l'histoire d 'une manière sinistre : la **chaise électrique**.\n\nPour prouver que le courant alternatif de Tesla était dangereux, Edison participa à la conception de cette \"machine de la mort\". La toute première exécution à la chaise électrique eut lieu en **1890**. Et vous savez quel courant était utilisé ? Le courant alternatif bien sûr."
@@ -783,7 +797,7 @@
   - trigger: auto
     exec: human
     args: "Cette mise en scène choquante visait à démontrer que le **courant alternatif n'était pas sûr** pour alimenter les foyers. Mais au fond, cela relevait davantage de la **stratégie commerciale** que d 'une véritable avancée scientifique."
-"6_11":
+"6_13":
   - trigger: auto
     exec: human
     args: "Et tout n'a pas tourné en sa faveur. Tesla n'a pas agi seul dans cette aventure. Un ingénieur et industriel nommé **George Westinghouse** l'a rejoint. C 'était un homme de grande vision, qui voyait dans le courant alternatif la possibilité d'acheminer l'électricité sur de grandes distances, et de changer le monde.\n\nIl **soutenait Tesla financièrement et techniquement**, et en 1888, ils ont formé une alliance qui allait bousculer l'avenir de l 'électricité aux États-Unis. Ensemble, ils ont remporté la victoire dans la grande course pour la **construction de la centrale électrique d'Edward Dean Adams** aux chutes du Niagara en **1895**."
@@ -791,7 +805,7 @@
     exec: speak
     args: "Comme disait Tesla lui-même : \"l'avenir est à ceux qui s'adaptent\", et son courant est devenu la norme mondiale."
     id: 6_11_0
-"6_12":
+"6_14":
   - trigger: auto
     exec: human
     args: "Mais il faut être juste... Le courant continu d'Edison **n'a pas disparu complètement**. Aujourd'hui, il est toujours utilisé. Par exemple, les piles électriques, les circuits électroniques... ainsi, il reste indispensable dans notre vie quotidienne."
@@ -802,7 +816,7 @@
   - trigger: auto
     exec: human
     args: "Exactement, Jack. Cette guerre nous enseigne que **le conflit ne mène pas forcément à des solutions définitives**. En fait, même des rivaux peuvent, à travers leurs batailles, laisser une trace importante et ouvrir la voie à de **nombreuses opportunités**. Après tout, tout progrès contient une part de vérité, même quand il est en concurrence avec une autre.\n\nEt au fond, la science et l'innovation… ce n'est pas une bataille de vainqueurs et de vaincus. C'est une **aventure collective** où chaque partie contribue à faire avancer l 'humanité.\n\nSes **conséquences sont démultipliées**. Après l'instauration du courant comme **source d'énergie stable**, il restait une multitude de découvertes encore à faire… Voilà pourquoi après la guerre des courants, l'exploration scientifique continue en toute logique."
-"6_13":
+"6_15":
   - trigger: auto
     delay: 5
     exec: speak

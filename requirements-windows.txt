@@ -1,0 +1,7 @@
+pyyaml
+requests
+pygetwindow
+pywin32
+pyserial
+pynput
+selenium

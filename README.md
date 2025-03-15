@@ -5,8 +5,17 @@
 
 ## Prerequisites
 
+```bash
+sudo apt install git-lfs python3-tk xdotool
+sudo apt install 
 ```
-sudo apt-get install git-lfs
+
+## Run
+
+```bash
+source venv/bin/activate
+pip install -r requirements-<os>.txt
+python main.py
 ```
 
 # Slides
