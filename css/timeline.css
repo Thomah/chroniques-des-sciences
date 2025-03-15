@@ -1,0 +1,75 @@
+.timeline {
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+.timeline .interval {
+  width: 100%;
+  height: 20px;
+  /* Spacing between lines */
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.timeline .event {
+  position: absolute;
+  width: 20px;
+  /* Size of markers */
+  height: 20px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: blinkRed 1s infinite alternate;
+  /* Red blinking animation */
+}
+
+.timeline .event.green {
+  background-color: green;
+  /* Green marker color */
+  animation: none;
+  /* Disable red animation */
+}
+
+.timeline .date {
+  position: absolute;
+  top: calc(50% + 25px);
+  /* Position dates below the bottom line */
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #555;
+}
+
+/* Arrowhead */
+.timeline .arrowhead {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #ccc;
+  /* Arrowhead color */
+  top: calc(50% - 10px);
+  /* Vertical center position */
+  right: -10px;
+  /* Right position */
+}
+
+/* Red blinking animation */
+@keyframes blinkRed {
+  0% {
+    background-color: red;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: red;
+  }
+}
