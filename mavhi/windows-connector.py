@@ -5,6 +5,14 @@ import win32com.client
 import serial
 from pynput.keyboard import Controller, Key
 from serial.tools import list_ports
+import time
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.firefox.options import Options
+import shutil
+
+GECKODRIVER_PATH = "D:\\Dev\\Outils\\geckodriver.exe"
+FIREFOX_PATH = "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
 
 def bring_window_to_front(window_title):
     try:
@@ -30,58 +38,89 @@ def bring_window_to_front(window_title):
       print(f"Error: {e}")
       return False
 
+def open_localhost():
+    options = Options()
+    options.binary_location = FIREFOX_PATH
+
+    # Enable audio autoplay
+    options.set_preference("media.autoplay.default", 0)  # 0 = allow all, 1 = block audio, 5 = block all
+    options.set_preference("media.autoplay.allow-extension-background-pages", True)
+    options.set_preference("media.autoplay.block-webaudio", False)
+    
+    # Disable Firefox popup asking for permission
+    options.set_preference("media.volume_scale", "1.0")
+
+    service = Service(GECKODRIVER_PATH)
+    driver = webdriver.Firefox(service=service, options=options)
+    
+    try:
+        driver.get("http://localhost:8080")
+        print("Opened http://localhost:8080 in Firefox")
+        return driver
+    except Exception as e:
+        print(f"Error opening localhost: {e}")
+        driver.quit()
+        return None
+
 def list_serial_ports():
     ports = list_ports.comports()
     return [port.device for port in ports]
 
 def choose_serial_port():
     available_ports = list_serial_ports()
+    print("Available serial ports:")
     if not available_ports:
         print("No serial ports available.")
-        return None
+    else:
+        for i, port in enumerate(available_ports, start=1):
+            print(f"{i}: {port}")
     
-    print("Available serial ports:")
-    for i, port in enumerate(available_ports, start=1):
-        print(f"{i}: {port}")
+    print("0: Proceed without a serial port")
     
     choice = input("Choose a serial port (number): ")
     
     try:
         choice = int(choice)
-        if 1 <= choice <= len(available_ports):
+        if choice == 0:
+            return None
+        elif 1 <= choice <= len(available_ports):
             return available_ports[choice - 1]
         else:
-            print("Invalid choice. Using the first port.")
-            return available_ports[0]
+            print("Invalid choice. Using no serial port.")
+            return None
     except ValueError:
-        print("Invalid choice. Using the first port.")
-        return available_ports[0]
+        print("Invalid input. Using no serial port.")
+        return None
 
 port = choose_serial_port()
-if port is None:
-    exit()
-
-ser = serial.Serial(port, 9600)
 keyboard = Controller()
 
-window_title = "Des cailloux aux octets — Mozilla Firefox"
+driver = open_localhost()
+if driver is None:
+    print("Failed to open localhost. Exiting program.")
+    exit()
 
+window_title = "Des cailloux aux octets — Mozilla Firefox"
 if not bring_window_to_front(window_title):
     print(f"Window '{window_title}' not found. Exiting program.")
     exit()
 
-while True:
-    if ser.in_waiting > 0:
-        data = ser.readline().decode('utf-8').strip()
-        
-        if data == "ARCADE_RED_BUTTON_PRESSED":
-            print("Arcade Red Button pressed")
-            bring_window_to_front(window_title)
-            keyboard.press('&')
-            keyboard.release('&')
-        
-        elif data == "ARCADE_BLUE_BUTTON_PRESSED":
-            print("Arcade Blue Button pressed")
-            bring_window_to_front(window_title)
-            keyboard.press('à')
-            keyboard.release('à')
+if port:
+    ser = serial.Serial(port, 9600)
+    while True:
+        if ser.in_waiting > 0:
+            data = ser.readline().decode('utf-8').strip()
+            
+            if data == "ARCADE_RED_BUTTON_PRESSED":
+                print("Arcade Red Button pressed")
+                bring_window_to_front(window_title)
+                keyboard.press('&')
+                keyboard.release('&')
+            
+            elif data == "ARCADE_BLUE_BUTTON_PRESSED":
+                print("Arcade Blue Button pressed")
+                bring_window_to_front(window_title)
+                keyboard.press('à')
+                keyboard.release('à')
+else:
+    print("No serial port selected. Serial-related features are disabled.")

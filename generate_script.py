@@ -1,5 +1,6 @@
 import yaml
 import subprocess
+import shutil
 
 # Charger le fichier YAML
 with open("states.yaml", "r", encoding="utf-8") as file:
@@ -43,14 +44,21 @@ with open("script/output.adoc", "w", encoding="utf-8") as adoc:
                 if exec == "narrator":
                     adoc.write(f"_{text}_\n\n")
                 elif exec == "human":
-                    adoc.write("\n.Prof. Calvet\n****\n")
+                    adoc.write("\n.Prof. Calvet\n[role=\"char1\"]\n****\n")
                     adoc.write(f"{text}\n\n****\n")
                 elif exec == "speak":
-                    adoc.write("\n.Jack\n****\n")
+                    adoc.write("\n.Jack\n[role=\"char2\"]\n****\n")
                     adoc.write(f"{text}\n\n****\n")
 
+# Find the full path of the executables
+bundle_path = shutil.which("bundle")
+ruby_path = shutil.which("ruby")
+
+if not bundle_path or not ruby_path:
+    raise FileNotFoundError("Could not find 'bundle' or 'ruby' in the system PATH")
+
 # Convert to PDF
-subprocess.run(["bundle", "install"])
-subprocess.run(["ruby", "generate_script_pdf.rb"])
+subprocess.run([bundle_path, "install"])
+subprocess.run([ruby_path, "generate_script_pdf.rb"])
 
 print("Script generated successfully.")

@@ -948,18 +948,48 @@
   - trigger: auto
     delay: 5000
     exec: Reveal.next
+"8_0":
+  - trigger: auto
+    exec: human
+    args: "Grâce au travail de Quevedo, les machines sont désormais capables d'effectuer des calculs complexes mais il continuait à rêver d'un monde où des machines, non seulement exécutent, mais **apprennent, anticipent, ou même raisonnent**.\n\nEt à mesure que les nouveaux composants électroniques se développent, les rêves d'hier sont devenus les bases d'une révolution.\n\nEt cette révolution a trouvé son origine au XXe siècle, dans des **laboratoires d'universités et des hangars militaires**, là où l'informatique moderne a commencé."
+"8_1":
+  - trigger: auto
+    exec: human
+    args: "Voici Alan Turing, un esprit brillant du XXe siècle. Matheux, logicien, mais surtout visionnaire."
 "8_2":
+  - trigger: auto
+    exec: human
+    args: "Il a conçu un **modèle théorique** capable de résoudre n'importe quel problème calculable, une machine idéale, composée de **bandes de papier** et de **têtes de lecture-écriture**. Une idée révolutionnaire : avec des instructions simples et une mémoire, cette machine abstraite pouvait imiter **n'importe quelle autre machine**..."
   - trigger: fragment
     exec: speak
     args: Attendez… donc, si je comprends bien, la machine de Turing, c'est… genre, l'ancêtre de nos ordinateurs ?
+    id: 8_2_0
+  - trigger: auto
+    exec: human
+    args: "Exactement ! Elle ne \"fonctionnait\" pas au sens matériel, mais elle posait de **solides bases théoriques**."
+"8_3":
+  - trigger: auto
+    exec: human
+    args: "Et ces bases théoriques ont été rapidement mises en pratiques sur de véritables ordinateurs électroniques. Le premier colosse ? L'**ENIAC, construit en 1945**. Imaginez : **27 tonnes de circuits et d'ampoules** pour faire moins que ce que vous faites aujourd'hui avec un simple smartphone !"
 "8_4":
+  - trigger: auto
+    exec: human
+    args: "Mais derrière cette merveille technique, un **groupe de six femmes remarquables**, souvent oubliées de l'histoire : les **ENIAC Girls**. Programmant avec des câbles et des fiches, elles ont défini le fonctionnement de cette machine tentaculaire sans aucune documentation ni assistance technique."
   - trigger: fragment
     exec: speak
     args: Ah, donc les vrais génies de l'ENIAC… c'était elles ?
+    id: 8_4_0
+  - trigger: auto
+    exec: human
+    args: "Elles ont eu un **rôle crucial**, mais hélas sous-estimé pendant des décennies.\n\nMais que signifient toutes ces avancées ? Pour Alan Turing, c'était l'idée qu'un jour, les **machines pourraient peut-être... penser**. Il a imaginé un test : le jeu de l'imitation. Si une machine peut **convaincre un humain** qu'elle pense, peut-on dire qu'**elle est intelligente** ?"
 "8_5":
   - trigger: auto
     exec: speak
     args: Un test ? Avec des machines qui parlent ? Alors, vous venez de prédire... moi ! En plus beau, bien sûr.
+    id: 8_5_0
+  - trigger: auto
+    exec: human
+    args: "Pour mieux comprendre, nous allons **réaliser l'un de ces tests**. J'aurais besoin de 2 volontaires.\n\nL'un de vous aura les yeux bandés.\n\nIl y aura 3 questions qui vont s'afficher à l'écran. L'un de nous y répondra honnêtement et l'autre se contentera de lire les réponses de Jack, qu'on n'entendra pas pour cette expérience.\n\nLa personne ayant les yeux bandés devra identifier qui de nous deux parle au nom de Jack.\n\nN'oubliez pas : le but de Turing n'était pas de démontrer que les machines pensent, mais qu'elles **imitent si bien les humains** que nous devons nous poser une question fascinante : où commence réellement la pensée ?"
   - trigger: fragment
     delay: 2000
     exec: print
@@ -967,7 +997,6 @@
   - trigger: fragment
     delay: 0
     exec: hide
-    args: 
   - trigger: auto
     delay: 2000
     exec: print
@@ -975,57 +1004,122 @@
   - trigger: fragment
     delay: 0
     exec: hide
-    args: 
   - trigger: auto
     delay: 2000
     exec: print
     args: Je me souviens d'un moment où j'ai appris à programmer pour la première fois, et cela m'a donné un immense sentiment d'accomplissement.
   - trigger: fragment
+    delay: 0
+    exec: hide
+  - trigger: fragment
     delay: 2000
     exec: speak
-    args: "Et surtout, imaginez ceci : un jour, nous pourrons confondre humains et machines. Serez-vous à l'aise avec cette idée ?"
-"8_8":
+    args: "Êtes-vous à l'aise avec l'idée que les machines puissent simuler la pensée humaine ?"
+    id: 8_5_6
+  - trigger: auto
+    exec: human
+    args: "Et je dirais même : **que signifie \"penser\"** pour vous ? Alan Turing lui-même ne cherchait pas qu'une réponse scientifique… mais une réflexion sur ce que nous sommes !"
+"8_6":
+  - trigger: auto
+    exec: human
+    args: "Mais attention : il ne suffit pas que les machines pensent, il faut aussi **qu'elles communiquent**. Des chercheurs comme Claude Shannon s'y sont attelés.\n\nIl commence par poser ceci :\n\n“Le problème fondamental de la communication est de reproduire en un point, soit exactement, soit approximativement, un message recueilli en un autre point.”\n\nImaginez : vous devez **transmettre un message à distance**. Des obstacles peuvent altérer ce message : bruit, interférences, erreurs… Shannon ne veut pas simplement éviter la confusion, il cherche à codifier l'information pour qu'elle puisse résister à tout cela. Et c'est ainsi qu'il crée..."
+"8_7":
+  - trigger: auto
+    exec: human
+    args: "La **théorie de l'information** ! Une méthode brillante qui définit les **bases de la communication moderne** : des téléphones portables aux satellites, des ordinateurs à l'Internet, tout repose sur ses travaux.\n\nLe principe, c'est que n'importe quelle information - un texte, un son, une image - pouvait être **réduite à des 0 et des 1**, réutilisant par la même occasion les **travaux de George Boole**. Ce binaire devint la **langue de l'informatique**. Et comme toute langue, elle doit avoir des règles."
   - trigger: fragment
     delay: 2000
     exec: speak
     args: "Imaginez ceci : au lieu de parler anglais, chinois ou espagnol, les machines se comprennent avec un enchaînement de courants électriques allumés ou éteints."
-"8_9":
+    id: 8_8_0
+"8_8":
+  - trigger: auto
+    exec: human
+    args: "En anglais, ça se dit \"life\". Eh bien en binaire, ça se dit... Jack tu veux bien ?"
   - trigger: fragment
     exec: hide
   - trigger: fragment
     delay: 2000
     exec: speak
     args: "01010110 01001001 01000101"
-"8_12":
+    id: 8_9_1
+  - trigger: auto
+    exec: human
+    args: "Vous imaginez qu'écrire des 1 et des 0 à la chaîne, les programmeurs de l'époques n'en étaient pas fan. C'est pour ça qu'a été a inventé un premier langage : l'**assembleur**."
+"8_9":
+  - trigger: auto
+    exec: human
+    args: "Un programme en assembleur ressemble à ça. Plus facile que des 0 et 1 à lire et facilement traduisible pour les machines."
+"8_10":
+  - trigger: auto
+    exec: human
+    args: "Ce langage a permis de grandes choses. Un exemple parmis tant d'autres : **Margaret Hamilton** et son équipe ont écrit pendant les années 1960 les logiciels de **pilotage pour la fusée Apollo 11** qui a emmené les 1ers astronautes sur la lune.\n\nC'était une véritable prouesse car à l'époque, il n'y avait pas de formations, de cours, ou même de documentation sur le génie logiciel."
+"8_11":
+  - trigger: auto
+    exec: human
+    args: "Et lorsqu'on envoit une fusée dans l'espace, on n'a pas le droit à l'erreur."
   - trigger: fragment
     exec: speak
     args: Mais, Professeur, Comment fait-on lorsqu'on a une technologie incroyablement complexe comme l'ENIAC mais qu'elle occupe la taille d'une maison ?
-"8_14":
+    id: 8_12_0
+"8_12":
+  - trigger: auto
+    exec: human
+    args: "Eh bien, Jack, je crois qu'il est temps de **penser petit** ! La miniaturisation est au cœur de ce qui nous attend. Bienvenue dans la **révolution des semi-conducteurs**, une étape essentielle pour rendre tout ce progrès... portable.\n\nTout cela commence **dans les années 1940**, avec un composant électronique à peine visible à l'œil nu : le **transistor**. Inventé par John Bardeen, Walter Brattain et William Shockley, ce petit composant a changé la donne. A tel point qu'ils ont reçu un prix Nobel de Physique en 1956.\n\nLes transistors se sont vite retrouvés **intégrés dans puces électroniques**, rendant les machines de plus en plus petites et rapides."
+"8_13":
   - trigger: auto
     exec: speak
     args: Ainsi, on passe de machines de la taille d'un bâtiment... à une puce qu'on peut tenir entre deux doigts. Franchement, pourquoi ça leur a pris si longtemps ?
-"8_15":
+    id: 8_14_0
+  - trigger: auto
+    exec: human
+    args: "La patience, Jack. **En 1958, l'Américain Jack Kilby** met au point le **premier circuit intégré**. À partir de là, le développement est exponentiel ! Et c'est grâce à cela que nous avons pu donner naissance à des ordinateurs vraiment personnels, mais tout cela a un coût.\n\n Saviez-vous que pour produire ces fameuses puces électroniques, on a besoin de **matériaux rares** comme **le lithium, le tantale, ou encore le cobalt** ?"
+"8_14":
   - trigger: auto
     exec: speak
     args: "Ah, les fameuses \"terres rares\". N'est-ce pas ironique ? On les appelle rares alors qu'elles sont devenues absolument essentielles pour fabriquer à peu près tout : les smartphones, ordinateurs... et, eh bien, moi."
-"8_16":
+    id: 8_15_0
+  - trigger: auto
+    exec: human
+    args: "Tu marques un point. Mais leur extraction n'est **pas sans conséquences**. Prenons le silicium. C'est vrai, il est abondant dans le sable, mais sa purification nécessite de **hautes températures et beaucoup d'énergie**."
+"8_15":
+  - trigger: auto
+    exec: human
+    args: "Et pour alimenter nos besoins toujours croissants en technologies, on creuse. Et ces mines, souvent situées en Afrique ou en Amérique du Sud, **détruisent des écosystèmes, polluent les eaux et affectent la vie des communautés locales**."
   - trigger: fragment
     exec: speak
     args: Voilà, je suis coupable. Vous voulez m'éteindre ?
-"8_17":
+    id: 8_16_0
+"8_16":
+  - trigger: auto
+    exec: human
+    args: "Pas question, Jack. Ce serait trop simple. Ce qu'il faut, c'est **repenser comment on fabrique**, utilise et recycle ces technologies. Car on produit presque **50 millions de tonnes de déchets électroniques** par an ! Imaginez une montagne de vieux téléphones et d'ordinateurs. Et seulement **une fraction de tout cela est recyclée correctement**. Le reste ? Brûlé, envoyé dans des décharges... Des déchets qui contiennent pourtant encore beaucoup de ces fameux matériaux précieux."
   - trigger: fragment
     exec: speak
     args: Mais peut-on pour autant blâmer les inventeurs de ces nouvelles technologies ?
+    id: 8_17_0
+  - trigger: auto
+    exec: human
+    args: "Bien sûr que non. Mais l'Histoire et les conséquences qu'on en tire doivent **nous servir de leçon**. Lorsqu'on innove, qu'on créé, sans même parler d'inventer quelque chose de révolutionnaire, **tous les impacts doivent être réfléchis en tant que société** : technologiques bien sûr, mais aussi humains et environnementaux."
 "9_0":
   - trigger: auto
     exec: speak
     args: Alors, professeur, si je vous comprends bien, innover n'est jamais qu'une affaire de technologies…
+    id: 9_0_0
+  - trigger: auto
+    exec: human
+    args: "Exactement, Jack. Toute avancée doit **s'accompagner d'une réflexion sur ses conséquences**. C'est le rôle de l'Histoire des sciences : nous montrer qu'il ne suffit pas d'inventer. Il faut **penser à l'après**."
   - trigger: fragment
     exec: speak
     args: "Et pourtant, une question demeure : qu'est-ce qui nous pousse toujours à avancer ?"
+    id: 9_0_1
+  - trigger: auto
+    exec: human
+    args: "La curiosité, Jack. Ce besoin de **comprendre et d'aller plus loin**. Mais aussi la conviction que chaque question que nous posons - aussi simple soit-elle - peut changer le monde.\n\n\"Pourquoi ?\" \"Comment ?\" \"Et si ?\" Ces **petites questions qui mènent à de grandes réponses**... ou parfois, à d'autres questions encore plus passionnantes.\n\nEt c'est très bien ainsi. Car le vrai progrès n'est jamais figé. Il continue, génération après génération. Mais ce progrès repose sur une condition essentielle : que nous **apprenions de nos erreurs**, que nous **protégions notre humanité**, et que nous soyons les **gardiens du monde** que nous construisons."
   - trigger: fragment
     exec: speak
     args: "Alors, une dernière question, professeur : et si… nous étions capables de rêver un futur meilleur, tous ensemble ?"
-
-
-
+    id: 9_0_2
+  - trigger: auto
+    exec: human
+    args: "Eh bien, Jack... Je crois que **cela dépend d'eux**."
