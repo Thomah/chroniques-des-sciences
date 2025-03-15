@@ -93,6 +93,8 @@ _Slide 2.7_
 
 Et au cours de cette quête humaine, il faut que nous nous attardions à Bagdad, au IXe siècle, dans un endroit exceptionnel… bienvenue à la Maison de la Sagesse ! Fondée sous le règne du calife Al-Ma’mun en 832, c’est ici que se trouve un des plus grands centres de connaissances de toute l’histoire. Des érudits viennent des quatre coins du monde pour traduire, étudier, et, comme vous allez le voir, inventer des concepts mathématiques révolutionnaires !
 
+_Slide 2.7.0_
+
 [.text-center]
 **Jack**
 
@@ -101,13 +103,15 @@ La Maison de la Sagesse… Un lieu majeur dans la transmission des connaissances
 [.text-center]
 **Prof. Calvet**
 
-_Slide 2.7.0_
+_Slide 2.8_
 
 Exactement, Jack. Et au cœur de cet environnement intellectuel intense se trouve un des plus brillants mathématiciens de l’histoire : Al-Khwarizmi. 
 
-_Slide 2.7.1_
+_Slide 2.9_
 
 Il écrit un ouvrage intitulé Kitab al-Jabr wa’l-Muqabala. Mon arabe est un peu bancal mais ça signifie en gros "Abrégé du calcul par la restauration et la comparaison". Dit comme ça, ça paye pas de mine, mais ce livre a posé les fondements d’une discipline mathématique totalement nouvelle à son époque.
+
+_Slide 2.9.0_
 
 [.text-center]
 **Jack**
@@ -119,6 +123,8 @@ Il me dit quelque chose ce mot "al-Jabr", mais je ne le situe pas...
 
 Mais c’est parce qu'il est à l’origine du mot que nous utilisons aujourd’hui pour désigner toute une branche des mathématiques : l'algèbre. Au dela des simples outils mathématiques, c'est toute une méthode que Al-Khwarizmi propose. Il structure la résolution des problèmes en étapes simples et structurées.
 
+_Slide 2.9.1_
+
 [.text-center]
 **Jack**
 
@@ -127,17 +133,19 @@ Et en créant ce cadre, il invente quelque chose de plus universel, qui peut êt
 [.text-center]
 **Prof. Calvet**
 
-Exactement ! D’ailleurs, on ne doit pas seulement à Al-Khwarizmi le concept d’al-jabr. Il a aussi popularisé quelque chose de très utile... Ca me fait penser : j'ai besoin de vérifier votre vivacité d'esprit. J'aurais besoin d'un volontaire un peu à l'aise avec les additions et les multiplications.
+D’ailleurs, on ne doit pas seulement à Al-Khwarizmi le concept d’al-jabr. Il a aussi popularisé quelque chose de très utile... Ca me fait penser : j'ai besoin de vérifier votre vivacité d'esprit. Qui connait les chiffres romains dans la salle ?
+
+_Slide 2.10_
 
 L'exercice est simple : il y aura à l'écran 2 calculs à résoudre. Tu dois me donner le résultat le plus vite possible. Tu es prêt ? 
 
-_Slide 2.7.2_
+_Slide 2.10.1_
 
-_Slide 2.7.3_
+_Slide 2.10.2_
 
 Merci !
 
-Même si ce n'est pas Al-Khwarizmi qui les a créé, les chiffres que nous utilisons aujourd’hui, dits "indo-arabes", ont été largement popularisés par ses travaux. Avant cela, les Européens utilisaient les chiffres romains, bien plus encombrants pour les calculs complexes. Grâce à ces nouveaux chiffres, il est désormais possible d’organiser les nombres avec beaucoup plus de souplesse, ce qui ouvre la voie à des calculs bien plus avancés.
+Même si ce n'est pas Al-Khwarizmi qui les a créé, les chiffres que nous utilisons aujourd’hui, dits "arabes", ont été largement popularisés par ses travaux. Avant cela, les Européens utilisaient les chiffres romains, bien plus encombrants pour les calculs complexes. Grâce à ces nouveaux chiffres, il est désormais possible d’organiser les nombres avec beaucoup plus de souplesse, ce qui ouvre la voie à des calculs bien plus avancés.
 
 [.text-center]
 **Jack**
