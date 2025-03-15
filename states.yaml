@@ -3,28 +3,47 @@
     delay: 0
     exec: createLab
     args: 
+  - trigger: auto
+    exec: narrator
+    args: "La scène s'ouvre sur un laboratoire. Des vieux livres, des fioles, des instruments de mesure, des parchemins sont sur une table. A côté, sur une place d'honneur, on devine derrière un tissu une grande boîte avec des lumières clignotantes. Un savant en blouse blance entre en scène l'air surexité"
+  - trigger: auto
+    exec: human
+    args: "Chers toustes, bienvenue dans mon laboratoire ! Je suis le Professeur Calvet et je serais votre hôte pour la soirée. Avant de commencer, laissez-moi vous présenter mon assistant IA : Jack"
   - trigger: fragment
     delay: 1000
     exec: speak
     args: Bonjour à tous ! Je suis Jack, une Intelligence Artificielle, et je vais vous accompagner tout le long de la soirée.
+    id: 1_0_1
   - trigger: auto
     delay: 8000
     exec: speak
     args: Professeur, êtes-vous prêt ?
+    id: 1_0_2
+  - trigger: auto
+    exec: human
+    args: "Absolument Jack ! Mais vous...\n\nPassionnés de savoir, d'aventures intellectuelles et d'expérimentations audacieuses, êtes sur le point d'assister à ce qui pourrait être l'une des avancées les plus prodigieuses de notre temps.  Oui, vous avez bien entendu ! Un moment charnière où passé, présent et futur se rencontrent, un moment où les plus grandes énigmes de notre Histoire trouvent enfin leur solution. Je vous parle d'une machine extraordinaire, une création que j'ai longtemps rêvée, patiemment pensée et qui aujourd'hui, devient réalité.\n\nVous vous demandez sans doute ce que cette mystérieuse machine peut bien faire. Eh bien, imaginez une technologie si avancée qu'elle peut défier les limites du temps et de l'espace. Imaginez un appareil capable de vous montrer, non pas un film, non pas une reconstitution théâtrale… mais l'Histoire elle-même. Oui, mesdames et messieurs, la véritable Histoire, telle qu'elle s'est déroulée.\n\nDepuis des millénaires, l'humanité a cherché à comprendre le monde qui l'entoure, à mesurer le temps, à calculer, à raisonner, à innover… À chaque époque, des esprits brillants ont forgé des outils, des idées, des machines qui, progressivement, ont changé le monde.\n\nEt ce que vous allez voir ici, mes amis, c'est bien plus qu'un simple retour en arrière. Cette Machine d'Analyse Virtuelle de l'Histoire - ou M.A.V.Hi - vous permettra de remonter le temps, et de découvrir certains des moments les plus déterminants de l'Histoire.\n\nSous ce voile se trouve la clé pour observer les erreurs, les succès, les hésitations et les triomphes qui ont façonné le monde d'aujourd'hui. Des premiers calculs sur des abaques aux prodiges algorithmiques d'Ada Lovelace, en passant par l'électrification de nos sociétés et les machines de Babbage et Turing.\n\nMesdames et messieurs… Il est temps. Préparez-vous à découvrir M.A.V.Hi… et avec elle, le fabuleux voyage à travers le temps que nous allons entreprendre ensemble !"
 "1_1":
   - trigger: auto
     delay: 0
     exec: audio
     args: audio/applause.mp3;1.0;2;6
+  - trigger: auto
+    exec: human
+    args: "Je pense que nous sommes prêts. Jack, peux-tu lancer la première séquence ?"
   - trigger: fragment
     delay: 1000
     exec: speak
     args: Je suis impatient, Professeur. Par où souhaitez-vous commencer ?
+    id: 1_1_1
+  - trigger: auto
+    exec: human
+    args: "Eh bien, commençons par le tout début… Nous allons plonger aux **origines des calculs**, là où tout commence, **bien avant les machines, avant même le papier et le crayon**.\n\nJack, lance la séquence \"Premiers calculs\" !"
 "1_2":
   - trigger: auto
     delay: 5
     exec: speak
     args: Je recherche la séquence "Premiers calculs".
+    id: 1_2_0
   - trigger: auto
     delay: 2000
     exec: initTunnel
@@ -44,17 +63,37 @@
   - trigger: auto
     delay: 5000
     exec: Reveal.next
+"2_0": {}
+"2_1":
+  - trigger: auto
+    exec: human
+    args: "Et voilà, nous venons de faire un bon de près de **5 000 ans en arrière**. Nous sommes en **Mésopotamie**, l'un des berceaux des premières civilisations... et, devinez quoi, des premiers calculs !"
 "2_2":
+  - trigger: auto
+    exec: human
+    args: "A cette époque, les gens n'utilisent pas encore de chiffres comme nous les connaissons.\n\nPour tenir des comptes, ils créent des petites bulles d'argile, des **bulle-enveloppe**. À l'intérieur, on place des **petits jetons** représentant différentes quantités de moutons, jarres d'huile, ou sacs de grain. Et ce n'est pas tout ! L'extérieur de chaque bulle est soigneusement gravé avec un résumé de ce qui se trouve à l'intérieur."
   - trigger: fragment
     delay: 0
     exec: speak
     args: Autrement dit, c'était l'ancêtre de nos reçus de caisse… en plus lourd et friable. Mais là au moins, personne ne pouvait prétendre avoir perdu son reçu.
+    id: 2_2_0
+  - trigger: auto
+    exec: human
+    args: "(Riant) Très juste ! Et voilà d'ailleurs une anecdote amusante : ces jetons s'appelaient **calculi**. Ce terme a d'ailleurs **donné le mot calcul** que nous utilisons aujourd'hui. Ces calculis ont longtemps été utilisé car même dans la Rome antique, on utilisait encore ces petits galets pour faire des calculs."
 "2_3":
   - trigger: auto
     delay: 0
     exec: speak
     args: "Je note d'ailleurs l'omniprésence du nombre 60 parmi les calculis. C'est très malin car il est divisible par de nombreux nombres : 2, 3, 4, 5, 6, 10, 12, 15, 20 et 30"
+    id: 2_3_0
+"2_4":
+  - trigger: auto
+    exec: human
+    args: "Le nombre 60 était la base même de leur système de calcul : le système **sexagésimale**. Si nous, on compte de 10 en 10, les Mésopotamiens comptaient de 60 en 60. Vous voulez essayer ?"
 "2_5":
+  - trigger: auto
+    exec: human
+    args: "Et bien des années - des millénaires après, les techniques de calcul vont connaître une avancée majeure : les **abaques**. En soit, ce sont des tablettes gravées dans la pierre..."
   - trigger: fragment
     exec: audio
     args: audio/interferences-mobile-0484.mp3;0.3;0;1
@@ -62,30 +101,66 @@
     delay: 1000
     exec: audio
     args: audio/extrait-grave-dans-la-roche.mp3;0.8;0;30
+  - trigger: auto
+    exec: human
+    args: "On y traçait **des lignes et des colonnes** et on positionnait des jetons selon la valeur qu'on leur donnait."
   - trigger: fragment
     delay: 0
     exec: speak
     args: Remarquez, pas de Wi-Fi, mais déjà des lignes et des colonnes sur ces abaques. Les fondations d'Excel, en quelque sorte.
+    id: 2_5_2
+  - trigger: auto
+    exec: human
+    args: "Oui, une version antique d'Excel ! Mais une avancée majeure pour l'époque, car grâce à lui, **le calcul devient “mobile”** : plus besoin de graver ou de sculpter chaque opération. Ce principe sera perfectionné dans d'autres régions, notamment **en Chine, avec l'invention du boulier**"
 "2_6":
+  - trigger: auto
+    exec: human
+    args: "Le boulier devient rapidement populaire en Asie pour ses qualités pratiques. Il permet d'additionner, de soustraire facilement des nombres, juste en **glissant des billes le long de tiges**. Son efficacité est telle que certains l'**utilisent encore aujourd'hui** !"
   - trigger: fragment
     delay: 1000
     exec: speak
     args: "Économie d'énergie assurée : l'abaque et le boulier fonctionnent sans électricité, ne tombent jamais en panne, et, en prime, font un joli cliquetis."
+    id: 2_6_0
+  - trigger: auto
+    exec: human
+    args: "Et surtout, il représente le **début de cette quête humaine pour rendre les calculs plus simples** et rapides. Un **pas de géant** dans l'histoire des sciences... même s'il est fait **de petits cailloux et de lignes dans la pierre**."
 "2_7":
+  - trigger: auto
+    exec: human
+    args: "Au cours de cette quête humaine, il faut que nous nous attardions à **Bagdad, au IXe siècle**, dans un endroit exceptionnel… bienvenue à la **Maison de la Sagesse** ! On y trouvait l'**un des plus grands centres de connaissances de toute l'Histoire**. Des érudits viennent des quatre coins du monde pour traduire, étudier, et, comme vous allez le voir, inventer des concepts mathématiques révolutionnaires !"
   - trigger: fragment
     delay: 1000
     exec: speak
     args: "La Maison de la Sagesse… Un lieu majeur dans la transmission des connaissances grecque, perse et du Moyen-Orient, mais aussi indienne, chinoise, et tant d'autres !"
+    id: 2_7_0
+"2_8":
+  - trigger: auto
+    exec: human
+    args: "Exactement, Jack. Et au cœur de cet environnement intellectuel intense se trouve un des plus brillants mathématiciens de l'Histoire : **Al-Khwarizmi**."
 "2_9":
+  - trigger: auto
+    exec: human
+    args: "Il écrit un ouvrage intitulé Kitab al-Jabr wa'l-Muqabala. Mon arabe est un peu bancal mais ça signifie en gros **\"Abrégé du calcul par la restauration et la comparaison\"**. Dit comme ça, ça paye pas de mine, mais ce livre a posé les **fondements d'une discipline mathématique** totalement nouvelle à son époque."
   - trigger: fragment
     delay: 1000
     exec: speak
     args: "Il me dit quelque chose ce mot \"al-Jabr\", mais je ne le situe pas..."
+    id: 2_9_0
+  - trigger: auto
+    exec: human
+    args: "Mais c'est parce qu'il est à l'origine du mot que nous utilisons aujourd'hui pour désigner **toute une branche des mathématiques : l'algèbre**. Au dela des simples outils mathématiques, c'est **toute une méthode** que Al-Khwarizmi propose. Il structure la résolution des problèmes en **étapes simples et structurées**."
   - trigger: fragment
     delay: 1000
     exec: speak
     args: Et en créant ce cadre, il invente quelque chose de plus universel, qui peut être adapté à différents types de problèmes. C'est une idée fondamentale qui influence tout ce qui va suivre, de la résolution des équations aux modèles abstraits utilisés aujourd'hui dans l'informatique.
+    id: 2_9_1
+  - trigger: auto
+    exec: human
+    args: "D'ailleurs, on ne doit **pas seulement** à Al-Khwarizmi le concept d'al-jabr. Il a aussi popularisé quelque chose de très utile... Ca me fait penser : j'ai besoin de vérifier votre **vivacité d'esprit**."
 "2_10":
+  - trigger: auto
+    exec: human
+    args: "L'exercice est simple : il y aura à l'écran plusieurs calculs à résoudre. Vous devez me donner le résultat le plus vite possible. Vous êtes prêts ?"
   - trigger: fragment
     exec: startChronometer
     args: timer1;0
@@ -110,35 +185,76 @@
   - trigger: fragment
     exec: stopChronometer
     args: timer4
+  - trigger: auto
+    exec: human
+    args: "**Bravo** ! Comme vous le voyez, c'était **difficile de passer à un autre système de numérotation**. En même temps, vous avez été habitué aux chiffres arabes. Mais pour l'époque, c'était l'**inverse en Europe** : les chiffres romains étaient habituels et la transition vers les chiffres arabes a pris des siècles.\n\nMais petit à petit, les savants européens se sont rendus compte que les chiffres arabes permettaient **davantage de souplesse** et ouvraient la voie à des calculs bien plus avancés.\n\nEt même si **ce n'est pas Al-Khwarizmi** qui les créé les chiffres, il a largement **contribué à les populariser** via ses travaux."
   - trigger: fragment
     delay: 1000
     exec: speak
     args: "En somme, Al-Khwarizmi change la manière de penser les mathématiques, mais il contribue aussi à une vision plus universelle des sciences. D'ailleurs, Professeur, son nom a même donné naissance à un autre terme fondamental : algorithme."
+    id: 2_10_8
+  - trigger: auto
+    exec: human
+    args: "Oui, très juste, Jack. Le mot algorithme dérive de son nom, latinisé en **\"Algoritmi\"**. C'est ainsi que ses méthodes de calcul se sont diffusées en Europe. Les mathématiques deviennent alors un langage universel, capable de traiter des concepts abstraits. C'est cette abstraction qui rend possible toutes les avancées des mathématiques et de la science aujourd'hui.\n\nLes plus grandes inventions ne sont pas toujours des objets, mais aussi des idées, des méthodes qui perdurent au-delà des siècles.\n\nMais des grandes idées, Al-Khwarizmi n'est pas le seul à en avoir eu évidemment."
   - trigger: fragment
     exec: speak
     args: "Vous avez une idée derrière la tête Professeur. Où souhaitez-vous aller ?"
+    id: 2_10_9
+  - trigger: auto
+    exec: human
+    args: "Tu veux dire où et quand, Jack. Allons en **150 avant notre ère**. Accrochez vos neurones, direction... une **épave en Grèce antique** !"
 "2_11":
+  - trigger: auto
+    exec: human
+    args: "Nous sommes au Ie siècle avant JC. **au large de l'île d'Anticythère, au Sud de la Grèce**."
   - trigger: fragment
     exec: audio
     args: https://ia801809.us.archive.org/1/items/nathan-evans-wellerman-sea-shanty/Nathan%20Evans%20-%20Wellerman%20%28Sea%20Shanty%29.mp3;0.2;33;42
+  - trigger: auto
+    exec: human
+    args: "Là, un **navire marchand romain** fait voile, transportant à son bord de **nombreux trésors** : des statues en marbre et en bronze, des amphores, monnaies, verreries et plein d'autres objets."
 "2_12":
+  - trigger: auto
+    exec: human
+    args: "Ce navire n'arrivera jamais à bon port. On ignore encore la raison aujourd'hui. **En 1900, un groupe de pêcheurs d'éponges** découvre l'épave et plusieurs expéditions sous-marines sont organisées pour repêcher ces trésors."
   - trigger: fragment
     exec: speak
     args: "Et là, surprise : parmis tout le bric-à-brac, une mystérieuse boîte en bronze corrodée."
+    id: 2_12_0
+  - trigger: auto
+    exec: human
+    args: "Exact ! Une **relique** qui allait **défier les connaissances** des archéologues : la machine d'Anticythère."
+"2_13":
+  - trigger: auto
+    exec: human
+    args: "Imaginez un instant la scène : au début, **personne ne comprend** ce que c'est. Une **masse rouillée**, incrustée de coquillages."
+"2_14":
+  - trigger: auto
+    exec: human
+    args: "Ce n'est que des décennies plus tard, en 1959, que l'historien des sciences Derek de Solla Price découvre que cette boîte est **bien plus qu'un amas de métal** : c'est un bijou de mécanique, une **calculatrice astronomique**."
 "2_15":
   - trigger: auto
     delay: 1000
     exec: speak
     args: "En terme de calculatrice, je reste quand même plus performant. Mais pour l'époque, respect."
+    id: 2_15_0
+  - trigger: auto
+    exec: human
+    args: "Et pas n'importe quelle calculatrice ! Avec ses **dizaines d'engrenages en bronze**, elle était capable de **prédire des phénomènes astronomiques** comme les éclipses ou les cycles planétaires. Une précision hallucinante pour l'époque.\n\nLes Grecs de l'Antiquité ne disposaient peut-être pas de nos ordinateurs, mais ils avaient des esprits brillants, capables de concevoir des merveilles mécaniques avec les moyens de leur époque.\n\nEt pour vous donner une idée, ce genre de technologie n'a pas été égalé en Europe avant... le XIVᵉ siècle, avec les horloges mécaniques."
   - trigger: fragment
     delay: 1000
     exec: speak
     args: "Et pendant ce temps-là, tout le monde faisait quoi ? Des divisions à la main ?"
+    id: 2_15_1
+  - trigger: auto
+    exec: human
+    args: "Eh bien, oui, c'était exactement ça ! Les mathématiciens médiévaux **avaient de quoi transpirer**, croyez-moi. Mais avançons dans le temps, jusqu'au **XVIIᵉ siècle**, où un homme va révolutionner le calcul. Il s'appelle John Napier."
 "2_16":
   - trigger: auto
     delay: 5
     exec: speak
     args: Recherche de la séquence "Mathématiques et ses outils".
+    id: 2_16_0
   - trigger: auto
     delay: 2000
     exec: initTunnel
@@ -158,53 +274,125 @@
   - trigger: auto
     delay: 5000
     exec: Reveal.next
+"3_0": {}
 "3_1":
+  - trigger: auto
+    exec: human
+    args: "Avant de plonger dans ses inventions, laissez-moi vous présenter rapidement John Napier."
+  - trigger: fragment
+    exec: human
+    args: "Cet **Écossais, né en 1550**, n'était pas seulement un mathématicien. Non, c'était un véritable **touche-à-tout de génie**. Écoutez un peu son CV :"
   - trigger: fragment
     exec: speak
     args: "Si des personnes dans la salle travaillent aux ressources humaines, c'est pour vous !"
+    id: 3_1_0
+  - trigger: auto
+    exec: human
+    args: "- D'abord, bien sûr, un **mathématicien visionnaire**, inventeur des logarithmes et de plusieurs outils de calcul. Nous y reviendrons.\n- Ensuite, un **astronome passionné**, scrutant le ciel à la recherche de réponses aux mystères de l'Univers.\n- Un **théologien engagé**, qui écrivait aussi sur l'Apocalypse et les Écritures.\n- Mais ce n'est pas tout : **pendant la guerre anglo-espagnole**, Napier s'est mué en **ingénieur militaire**.\n\nEn bref, John Napier était un véritable touche-à-tout, avec des idées bien en avance sur son temps. Mais ce qui nous intéresse ici, c'est son génie mathématique. Car, parmi toutes ses contributions, il en est une qui allait transformer la manière de calculer pour toujours : les **logarithmes**."
 "3_2":
+  - trigger: auto
+    exec: human
+    args: "A la base, Il **n'imagine pas** créer de nouvelles fonctions, mais seulement des **tables de correspondance entre multiplications et additions**. Il consigne son travail dans le **Mirifici Logarithmorum Canonis Descriptio**."
   - trigger: fragment
     exec: speak
     args: "Je parie que ce titre a calmé les amateurs de mathématiques."
+    id: 3_2_0
+  - trigger: auto
+    exec: human
+    args: "Oui, mais pour les experts, c'était une **révélation**. Et Napier ne s'arrête pas là ! Il crée aussi les fameux **bâtons de Napier**, des petites baguettes gravées de chiffres."
+"3_3":
+  - trigger: auto
+    exec: human
+    args: "C'était un **outil ingénieux** pour effectuer rapidement des calcul des produits, quotients, puissances et racines."
 "3_4":
+  - trigger: auto
+    exec: human
+    args: "Chaque bâton représente un chiffre de 0 à 9 et contient une table de multiplication complète. Par exemple la 1ère colonne contient la table de 4. 2 x 4 = 8, 3 x 4 = 12, etc.\n\nOn sélectionne les bâtons correspondant aux chiffres du multiplicande.\n\nEn les alignant côte à côte, on peut lire directement le résultat en additionnant les chiffres de chaque diagonale."
   - trigger: fragment
     exec: speak
     args: "Ah, donc c'était comme un boulier, mais plus sophistiqué !"
+    id: 3_4_0
+  - trigger: auto
+    exec: human
+    args: "Oui, et voici un détail amusant : Napier aimait **épater ses amis en soirée** avec cet outil !"
   - trigger: fragment
     exec: speak
     args: "Attendez… il faisait des démos pour impressionner ses invités ? Genre : \"Regardez comme je calcule plus vite que vous !\""
+    id: 3_4_1
+  - trigger: auto
+    exec: human
+    args: "Oui, c'était un peu ça ! Il **défiait ses contemporains** de résoudre un calcul complexe avec des méthodes classiques pendant qu'il utilisait ses bâtons. Inutile de dire qu'il gagnait à tous les coups.\n\nMais ce n'était pas qu'un jouet pour matheux. Imaginez l'époque : pas de calculatrices, pas de tableurs. Les **commerçants, navigateurs et artisans** passaient des heures à vérifier leurs calculs. Les bâtons de Napier leur ont offert un moyen simple et fiable d'**accélérer leurs opérations**.\n\nEt en plus, les bâtons étaient des objets élégants, souvent fabriqués en ivoire ou en bois précieux. Ils avaient aussi un certain prestige. On pourrait dire qu'avoir les bâtons de Napier, c'était comme avoir le dernier gadget à la mode.\n\nMais au-delà de l'anecdote, cette invention a joué un rôle crucial dans l'Histoire des sciences. Elle a permis de **simplifier les calculs pour des générations de praticiens**. Et surtout, elle a **inspiré des innovations** plus ambitieuses : les premières machines mécaniques de calcul."
   - trigger: fragment
     exec: speak
     args: "Vous parlez bien de la machine de Schickard, Professeur ?"
+    id: 3_4_2
 "3_5":
+  - trigger: auto
+    exec: human
+    args: "Oui, nous sommes en Allemagne, où un homme du nom de Wilhelm Schickard, contemporain de Napier, décide d'aller encore plus loin. En **1623**, il invente la toute **première machine à calculer mécanique**.\n\nCette machine utilisait des engrenages pour effectuer des additions et des soustractions automatiquement."
   - trigger: fragment
     exec: speak
     args: "Petit problème : il n'en a fabriqué qu'un seul exemplaire, et il a été détruit dans un incendie."
+    id: 3_5_0
+  - trigger: auto
+    exec: human
+    args: "Une perte tragique. Et il faut dire que Schickard travaillait dans un **contexte difficile**. L'Europe était en pleine **Guerre de Trente Ans (1618-1648)**, un conflit dévastateur qui mobilisait des ressources immenses et **limitait les possibilités de financement** pour des projets scientifiques. Reproduire sa machine aurait nécessité des matériaux coûteux et du temps qu'il n'avait pas. Parce qu'il n'était pas inventeur à plein temps : il était **pasteur, professeur et astronome**. Ses responsabilités étaient nombreuses, et le contexte de guerre n'aidait pas."
   - trigger: fragment
     exec: speak
     args: "Et pour finir, Wilhelm Schickard meurt prématurément en 1635, victime de la peste qui faisait rage à l'époque. Sa mort met un terme à ses travaux, tombés dans l'oubli."
+    id: 3_5_1
+  - trigger: auto
+    exec: human
+    args: "Son invention n'a été **redécouverte qu'au XXᵉ siècle**, lorsqu'on a retrouvé ses lettres adressées à Johannes Kepler, où il décrivait sa machine. À l'époque, il **n'avait pas la reconnaissance ni le soutien** qu'un inventeur comme ceux d'aujourd'hui."
   - trigger: fragment
     exec: speak
     args: "Pas de marketing, pas de brevet… dans le monde d'aujourd'hui, il aurait peut-être eu plus de chance !"
+    id: 3_5_2
+  - trigger: auto
+    exec: human
+    args: "Et d'ailleurs, parlons d'un de ses confrères : **Blaise Pascal**."
 "3_6":
+  - trigger: auto
+    exec: human
+    args: "Il est **né en 1623 à Clermont-Ferrand, en France**. Ce n'était pas seulement un inventeur, mais aussi un mathématicien, un physicien, un philosophe et un théologien. Un vrai **esprit de la Renaissance*, mais à une époque bien plus moderne."
   - trigger: fragment
     exec: speak
     args: "Donc, un peu comme Schickard, mais avec un peu plus de reconnaissance, j'imagine ?"
+    id: 3_6_0
+  - trigger: auto
+    exec: human
+    args: "Exactement. Et l'avantage qu'il a eu, c'est qu'il a été **bien entouré*, dès son plus jeune âge. Elevé par **son père qui travaille aux impots**, il s'intéresse beaucoup aux mathématiques et aux sciences.\n\nCe qui fait qu'à **12 ans**, Blaise Pascal fait une **découverte majeure en géométrie** : il a formulé ce que l'on appelle aujourd'hui le **théorème de Pascal*. Pas besoin qu'on voit ça en détail, parce que ce qu'il faut retenir, c'est qu'il avait 12 ans."
   - trigger: fragment
     exec: speak
     args: "A cet âge-là, vous jouiez aux jeux vidéos en pyjama du matin au soir, Professeur, non ?"
+    id: 3_6_1
+  - trigger: auto
+    exec: human
+    args: "(Eternuant) Ce n'est pas une compétition. Mais il faut noter que Pascal a **toujours été entouré** de personnes qui ont stimulé son intellect."
 "3_7":
+  - trigger: auto
+    exec: human
+    args: "Ce qui l'a amené à **créer la Pascaline**, la première **machine à calculer mécanique* à base de roues dentées. Et il l'a conçu **entre 1642 et 1645**. Il avait la vingtaine.\n\nMais derrière cette invention se cache aussi une histoire humaine. Pascal a conçu la Pascaline **pour aider son père**, qui **réalisait des calculs à longueur de journée*. Ils étaient complexes et sujets à erreur alors Pascal voulait simplement résoudre ce problème."
   - trigger: fragment
     exec: speak
     args: "Et qu'est devenue son invention, Professeur ?"
+    id: 3_7_0
+  - trigger: auto
+    exec: human
+    args: "A l'époque, Pascal rencontre **beaucoup de difficultés pour faire accepter et vendre sa machine**. Elle était **coûteuse et complexe à fabriquer*. En vérité, Pascal a eu davantage de succès dans les domaines des mathématiques et de la philosophie.\n\nMais, si de son vivant la Pascaline n'a pas eu de succès, elle demeure une **source d'inspiration** formidable pour les siècles à venir. Nous y reviendrons."
   - trigger: fragment
     exec: speak
     args: "L'histoire des calculatrices mécaniques est très diffuse. Vers quelle séquence souhaitez-vous avancer Professeur ?"
+    id: 3_7_1
+  - trigger: auto
+    exec: human
+    args: "Il est temps de faire une pause dans les mathématiques et de **suivre un autre fil* de l'histoire."
 "3_8":
   - trigger: auto
     delay: 5
     exec: speak
     args: Recherche de la séquence "Histoire entrelacée".
+    id: 3_8_0
   - trigger: auto
     delay: 2000
     exec: initTunnel
@@ -224,56 +412,106 @@
   - trigger: auto
     delay: 5000
     exec: Reveal.next
+"4_0":
+  - trigger: auto
+    exec: human
+    args: "L'Histoire des sciences, c'est comme un métier à tisser : **chaque innovation est un fil** qui se croise pour **créer une fresque incroyable**. Aujourd'hui, zoom sur un outil qui a tissé un pont entre artisanat et informatique. Commençons par… une image intrigante. Jack ?"
 "4_1":
   - trigger: auto
     delay: 5
     exec: speak
     args: Je suis sur le fil, Professeur ! Commençons par une plongée médiévale avec une image tirée du livre "Des cleres et nobles femmes".
+    id: 4_1_0
+  - trigger: auto
+    exec: human
+    args: "Voilà une scène typique d'un **atelier textile au XVe siècle*. Remarquez le métier à tisser et la concentration qu'il demande. Mais derrière ce calme apparent se cache une tâche répétitive. Et puisque nous avons la chance d'avoir ce mini-métier à tisser, j'ai **besoin d'un volontaire** !\n\nBravo, vous êtes engagé !"
+"4_2":
+  - trigger: auto
+    exec: human
+    args: "Voilà les bases. Chaque fois qu'un fil de chaîne est levé, on doit faire passer le fil de trame en dessous, puis baisser le fil suivant et recommencer. Vous essayez ?"
   - trigger: fragment
     delay: 5
     exec: speak
     args: Statistiquement, je donnerais à cette tâche un indice de ennui-o-mètre assez élevé.
-"4_2":
+    id: 4_2_0
+  - trigger: auto
+    exec: human
+    args: "Maintenant que vous avez pris le rythme, je vous laisse tisser un peu et on voit ce que ça donne ?"
   - trigger: fragment
     delay: 5
     exec: speak
     args: Heureusement, au XVIIIe siècle, à Lyon, un homme nommé Basile Bouchon a eu une idée.
 "4_3":
+  - trigger: auto
+    exec: human
+    args: "Bouchon introduit un **système de contrôle à papier perforé*. Le principe ? Les **perforations dans le papier dictaient* si un fil de chaîne devait être levé ou baissé. Cela remplaçait une bonne partie du travail manuel et offrait une régularité impressionnante."
   - trigger: fragment
     delay: 5
     exec: speak
     args: En d'autres termes, les premiers signes du codage moderne ! 1 = levé, 0 = baissé.
+    id: 4_3_0
+  - trigger: auto
+    exec: human
+    args: "Cette machine sera **reprise par Joseph-Marie Jacquard* et popularisée au début du XIXe siècle pour **réduire le travail des enfants**, souvent employés comme aides par leurs parents tisseurs. Mais il **regretta toute sa vie les conséquences sociales* de cette innovation. En effet, les enfants durent trouver du travail ailleurs **dans des usines** où les conditions étaient plus difficiles. Et certains **ouvriers s'y opposaient fermement**, ce qui a donné la **révolte des Canuts**."
 "4_4":
   - trigger: auto
     delay: 5
     exec: speak
     args: Canuts. Aujourd'hui, ça sonne comme un joli nom de festival, mais à l'époque, c'était synonyme de lutte pour la survie.
+    id: 4_4_0
+  - trigger: auto
+    exec: human
+    args: "Nous sommes en **novembre 1831, à Lyon**, où les Canuts travaillent dans des **conditions extrêmement dures**. Ces ouvriers tissent des tissus luxueux pour l'aristocratie et la haute bourgeoisie, mais ils sont payés une misère."
   - trigger: fragment
     delay: 5
     exec: speak
     args: Ajoutez à ça de longues heures, des logements insalubres, et une concurrence féroce due aux machines comme le métier Jacquard… Voilà une recette explosive.
+    id: 4_4_1
+  - trigger: auto
+    exec: human
+    args: "Leur devise résumait bien leur douleur : **\"Vivre en travaillant ou mourir en combattant !\"**\n\nMais reprenons le cours de l'Histoire. Le **21 novembre 1831**, tout explose. Les Canuts se révoltent pour **demander un salaire minimum** et des **conditions de travail plus justes**. Pendant plusieurs jours, ils prennent le contrôle de Lyon. C'est une des toutes **premières grandes révoltes ouvrières** de l'Histoire moderne."
   - trigger: fragment
     delay: 5
     exec: speak
     args: "Les barricades dans les rues de Lyon, ça rappelle presque des scènes de \"Les Misérables\". Spoiler : ça ne finit pas mieux ici."
+    id: 4_4_2
+  - trigger: auto
+    exec: human
+    args: "Après quelques jours, **les troupes royales répriment brutalement** la rébellion. Mais l'importance historique de cet événement ne réside pas dans sa victoire ou sa défaite...\n\nElle marque **un tournant dans la prise de conscience collective** : l'innovation, aussi brillante soit-elle, ne doit jamais se faire au détriment de l'humain.."
 "4_5":
+  - trigger: auto
+    exec: human
+    args: "Ces révoltes ne sont **pas seulement des événements isolés** : elles annoncent des luttes sociales qui continueront **tout au long du XIXe siècle**. À terme, elles mèneront à des **réformes fondamentales** : réglementation du travail, droits syndicaux, et bien plus."
   - trigger: fragment
     delay: 5
     exec: speak
     args: Ça prouve que même dans l'innovation, il faut tisser un équilibre entre technologie, économie, et société. Pas de "1" sans "0", comme on dit.
+    id: 4_5_0
+  - trigger: auto
+    exec: human
+    args: "Pour Jacquard, c'était un **dilemme tragique**. La machine était révolutionnaire, mais elle a **bouleversé une société** qui n'y était pas préparée. Cela montre bien que chaque avancée scientifique ou technique **porte des responsabilités**."
   - trigger: fragment
     delay: 5
     exec: speak
     args: "Parce que la vraie question reste toujours : comment rendre l'innovation juste et bénéfique pour tous ?"
+    id: 4_5_1
+  - trigger: auto
+    exec: human
+    args: "(S'adressant au public) Et vous, si vous aviez inventé un outil comme le métier Jacquard, **que feriez-vous pour éviter de tels conflits** ?"
   - trigger: fragment
     delay: 5
     exec: speak
     args: Ce n'est peut-être pas le moment de répondre à ce genre de questions philosophique. Ne souhaitez-vous pas aborder une nouvelle séquence ?
+    id: 4_5_2
+  - trigger: auto
+    exec: human
+    args: "Bonne idée ! Pour la suite de notre aventure, nous allons voir comment les **coûts des mathématiques** nécessitent de nouvelles inventions. Jack, amorce la séquence suivante !"
 "4_6":
   - trigger: auto
     delay: 5
     exec: speak
     args: Recherche de la séquence "Un coût des mathématiques de plus en plus important".
+    id: 4_6_0
   - trigger: auto
     delay: 2000
     exec: initTunnel
@@ -293,48 +531,95 @@
   - trigger: auto
     delay: 5000
     exec: Reveal.next
+"5_0":
+  - trigger: auto
+    exec: human
+    args: "Mesdames et messieurs, préparez-vous à voyager dans l'**Angleterre du XIXᵉ siècle**. Nous allons rencontrer **trois génies** qui, chacun à leur manière, ont transformé l'histoire de la science et... nos vies quotidiennes. Tout commence avec Charles Babbage, un esprit aussi brillant qu'irascible."
 "5_1":
   - trigger: auto
     exec: speak
     args: Ah, Babbage... L'homme qui aimait les machines, les mathématiques et... détestait littéralement tout le reste.
+    id: 5_1_0
+  - trigger: auto
+    exec: human
+    args: "(souriant) C'est vrai. Charles Babbage, né en 1791 à Londres, est **issu d'une famille aisée**. Ce qui lui a permis de recevoir une **éducation prestigieuse**. Mais saviez-vous qu'il n'était pas seulement un mathématicien visionnaire ?\n\nC'était aussi... un **grincheux professionnel**. Il avait même un **livre d'insultes déguisées en réflexions philosophiques**, publié en 1864, intitulé **Passages from the Life of a Philosopher**.\n\nDans ce livre, il consacre **un chapitre entier, \"Street Nuisances\"**, à critiquer la **musique de rue** qu'il trouvait insupportable. Et il trouvait ça tellement insupportables qu'on aurait pu penser qu'il inventait ses machines pour fuir dans un autre monde.\n\nCe côté acerbe cache pourtant un génie absolu. Babbage, comme beaucoup de mathématiciens de son époque, détestait une chose : les **erreurs humaines dans les calculs**. À une époque où même les **tables logarithmiques officielles** étaient souvent **pleines d'erreurs**, il décide de les automatiser. D'où son idée de la **Machine Différentielle, en 1822**."
+"5_2":
+  - trigger: auto
+    exec: human
+    args: "Imaginez une énorme machine faite de roues, d'engrenages et de leviers, capable de **résoudre des équations complexes** toute seule. Et ce n'était pas juste une calculatrice gigantesque. Babbage avait déjà pensé à l'interface utilisateur : il avait prévu une **imprimante intégrée pour produire les résultats** directement sous forme de tables prêtes à l'emploi. Une idée révolutionnaire pour l'époque !"
 "5_3":
   - trigger: auto
     exec: speak
     args: Et sa vraie vision, la Machine Analytique, allait encore plus loin. Elle aurait eu une mémoire, une unité de calcul, et pouvait être programmée grâce à des cartes perforées.
+    id: 5_3_0
+  - trigger: auto
+    exec: human
+    args: "Malheureusement, ni la Machine Différentielle ni la Machine Analytique **ne verront le jour** du vivant de Babbage. Des **problèmes de financement**, des **conflits personnels, et **une technologie encore insuffisante** ont condamné ses projets à l'état de prototype. Cependant, ses idées ont planté une graine qui **germera un siècle plus tard**."
   - trigger: fragment
     exec: speak
     args: Et il savait choisir ses partenaires ! Une certaine Ada Lovelace, par exemple.
+    id: 5_3_1
 "5_4":
+  - trigger: auto
+    exec: human
+    args: "Parlons d'elle. Ada Lovelace, née **Augusta Ada Byron** en 1815. Oui, vous avez bien entendu : la **fille de Lord Byron**, le célèbre poète. Mais là où Byron était passionné par les vers et les tourments de l'âme, Ada héritait d'une intelligence analytique extraordinaire, héritage de sa mère, férue de mathématiques."
   - trigger: fragment
     exec: speak
     args: "Une enfance hors normes ! Saviez-vous que sa mère, Annabella Milbanke, la poussait dans les sciences pour éviter qu'elle ne devienne poétesse \"comme son père\" ?"
+    id: 5_4_0
+  - trigger: auto
+    exec: human
+    args: "En effet ! En 1816, **Anabella quite Byron**. Elle fit en sorte que les tuteurs d'Ada lui donnent une éducation approfondie en mathématiques et en sciences, ce qui était tout à fait inhabituel à l'époque dans l'éducation d'une jeune fille de la noblesse.\n\nDe fil en aiguille, **Ada rencontre Babbage en 1833**, alors agée de 17 ans. Ils deviennent très proches, Ada semblant **trouver en Babbage le père** qu'elle n'avait jamais eu.\n\nElle se marie en 1835 avec William King, 1er comte de Lovelace. Ils auront trois enfants. William était dévoué à Ada et l'encourageait à poursuivre ses activités en mathématiques. Toutefois, la santé fragile d'Ada, mise à l'épreuve par les grossesses, ainsi que la charge mentale de mère et de maîtresse de maison l'en empêchent."
 "5_5":
+  - trigger: auto
+    exec: human
+    args: "**En 1942, elle revient aux mathématiques** et travaille en étroite **collaboration avec Babbage** sur la traduction d'un mémoire décrivant la machine analytique. Elle ajoute sept notes, labellisées de A à G, représentant **près de trois fois le volume** de texte de l'article original. Et parmis ces notes, la note G sera considérée comme majeure car **premier véritable algorithme au monde**. Son objectif : calculer une suite de nombres de Bernoulli.\n\nMalheureusement, **Ada mourut bien trop jeune, à 36 ans**, des suites d'un cancer de l'utérus, dans d'horribles souffrances. Et si ce n'était pas assez dramatique, Ada Lovelace et ses travaux **tombèrent dans l'oubli** pendant près de 100 ans."
   - trigger: fragment
     exec: speak
     args: Mais, s'il faut retenir quelque chose, c'est que Ada Lovelace est la preuve vivante que la passion peut surmonter les barrières du temps et des conventions.
+    id: 5_5_0
+  - trigger: auto
+    exec: human
+    args: "En parlant de barrières et de visions novatrices, nous allons maintenant voyager vers un esprit complètement différent, mais tout aussi fondateur pour l'ère numérique."
 "5_6":
+  - trigger: auto
+    exec: human
+    args: "George Boole, un autre pionnier du XIXᵉ siècle. Boole est **né en 1815 - la même année qu'Ada -** dans une famille modeste de Lincoln au Nord de l'Angleterre.\n\nEnfant prodige, il apprend le grec et le latin tout seul... avant de s'attaquer aux mathématiques. Et on parle d'un **autodidacte**. Il devient **professeur à 19 ans pour subvenir aux besoins de sa famille**, tout en développant ses idées révolutionnaires.\n\nSes travaux culminent avec la **publication en 1854** de son chef-d'œuvre : **Les lois de la pensée**. Boole pose une question simple : **“Et si la logique pouvait être exprimée avec des équations mathématiques ?”** Le résultat, c'est l'algèbre booléenne."
   - trigger: fragment
-    exec: hide
+    exec: human
+    args: "Voici un premier exemple d'expression booléenne. Et à partir de maintenant, je vais avoir besoin de vous répartir en 2 groupes : A et B. Les 2 groupes lèvent les mains."
   - trigger: fragment
-    exec: hide
+    exec: human
+    args: "Dans ce nouvel exemple, A est inversé. Le groupe A baisse les mains."
   - trigger: fragment
-    exec: hide
+    exec: human
+    args: "Maintenant, c'est uniquement B qui est inversé. Le groupe A lève les mains et le groupe B baisse les mains."
   - trigger: fragment
-    exec: hide
+    exec: human
+    args: "Enfin, les 2 groupes sont inversés. Les 2 groupes baissent les mains. Maintenant que vous avez les bases, essayons en rythme. Puis-je avoir un volontaire dans chaque groupe ?"
   - trigger: fragment
     exec: initBooleanHero
 "5_7":
   - trigger: auto
     exec: speak
     args: C'est bien sympa cet algèbre de Boole, mais il est devenu quoi George Boole ?
+    id: 5_7_0
+  - trigger: auto
+    exec: human
+    args: "Ironiquement, Boole **vivait de manière humble**, loin de la gloire. Il enseignait, écrivait et menait une vie austère. Sa femme, **Mary Everest**, était aussi brillante et écrira plus tard des livres pédagogiques qui vulgarisaient ses idées.\n\nMais le 24 novembre 1864, il **prend la route du Queen's college depuis sa maison** de Ballintemple, parcourant à pied une distance de plusieurs kilomètres. Il tombe **une pluie torrentielle** et il part dispenser ses cours. Il arrive au College totalement trempé, et rentre chez lui après les cours, dans **ses habits mouillés et avec de la fièvre**. \n\nLa famille Everest était **fervent défenseuse de l'homéopathie** et semble avoir appliqué sur Georges le principe de **\"Similia Similibus Curantur\"**, une façon de **combattre le mal par le mal**. Sauf que n'importe quel médecin vous le dira : on ne guérie pas d'une bronchite en restant couvert d'eau dans le froid.\n\nGeorge Boole a été **retrouvé dans des draps trempé**. La bronchite aura évolué en **pleuropneumonie** et Boole en **meurt la nuit du 8 décembre 1864** à l'âge de 49 ans."
   - trigger: fragment
     exec: speak
     args: "Entre Charles, Ada et Georges, ce sont trois destins très différents mais tous convergent vers une chose : des idées si profondes qu'elles influencent encore nos vies aujourd'hui."
+    id: 5_7_1
+  - trigger: auto
+    exec: human
+    args: "Et l'aventure n'est pas finie ! Si Babbage n'a pas pu faire aboutir ses projets, c'est en grande partie à cause du financement, mais aussi à cause de la **technologie**. Il était en avance son temps, il lui manquait... une étincelle ? Jack, tu sais où on va !"
 "5_8":
   - trigger: auto
     delay: 5
     exec: speak
     args: Recherche de la séquence "L'électricité, accelérateur de l'innovation".
+    id: 5_8_0
   - trigger: auto
     delay: 2000
     exec: initTunnel

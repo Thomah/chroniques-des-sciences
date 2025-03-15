@@ -108,7 +108,9 @@ function runState(Reveal, stateId, trigger) {
   var state = states[stateId];
   if(window.self === window.top && state !== undefined) {
     let element = state[currentElementIndex];
-    element.id = `${stateId}_${currentElementIndex}`
+    if(element.id == undefined) {
+      element.id = `${stateId}_${currentElementIndex}`
+    }
     if (currentElementIndex < state.length && element.trigger === trigger && !element.triggered) {
       console.log("Current element id : " + element.id);
       console.log("Current element index: " + currentElementIndex);
@@ -120,6 +122,10 @@ function runState(Reveal, stateId, trigger) {
         switch(element.exec) {
           case 'Reveal.next':
             Reveal.next();
+            break;
+          case 'narrator':
+            break;
+          case 'human':
             break;
           default:
             window[element.exec](element);
