@@ -2,7 +2,7 @@ require 'asciidoctor'
 require 'asciidoctor-pdf'
 
 input_dir = 'script'
-output_file = 'output.pdf'
+output_file = 'script.pdf'
 
 adoc_files = Dir.glob("#{input_dir}/*.adoc")
 

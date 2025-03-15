@@ -1,5 +1,8 @@
 # Chrononiques des Sciences - Des cailloux aux octets
 
+[![Slides](https://img.shields.io/badge/Slides-Web-white)](https://thomah.github.io/chroniques-des-sciences/)
+[![Script](https://img.shields.io/badge/Script-PDF-white)](https://thomah.github.io/chroniques-des-sciences/script.pdf)
+
 # Slides
 
 ## Build
