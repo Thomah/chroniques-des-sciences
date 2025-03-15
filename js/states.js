@@ -90,6 +90,8 @@ function getFragmentIndex() {
 
 var states = {};
 var currentElementIndex = 0;
+var elementsTriggered = [];
+
 function initStates() {
   fetchAndParseYaml('states.yaml')
     .then(data => {
@@ -101,7 +103,7 @@ function initStates() {
     });
 }
 
-function runState(stateId, trigger) {
+function runState(Reveal, stateId, trigger) {
   console.log("Run state: " + stateId);
   var state = states[stateId];
   if(window.self === window.top && state !== undefined) {
@@ -111,12 +113,21 @@ function runState(stateId, trigger) {
       console.log("Current element trigger : " + element.trigger);
       console.log("Current element triggered : " + element.triggered);
       console.log("Current element exec : " + element.exec);
-      setTimeout(() => {
+      elementsTriggered[currentElementIndex] = setTimeout(() => {
         console.log(element.exec);
-        window[element.exec](element.args);
+        switch(element.exec) {
+          case 'Reveal.next':
+            Reveal.next();
+            break;
+          default:
+            window[element.exec](element.args);
+            break;
+        }
         element.triggered = true;
         nextState();
-        runState(stateId, "auto");
+        if(`${getIndexH()}_${getIndexV()}` == stateId) {
+          runState(Reveal, stateId, "auto");
+        }
       }, element.delay);
     }
   }
@@ -137,4 +148,18 @@ function resetState() {
     });
   });
   currentElementIndex = 0;
+}
+
+function waitForUrlChange(callback, checkInterval = 100) {
+  let currentUrl = window.location.href;
+
+  const intervalId = setInterval(() => {
+    if (currentUrl !== window.location.href) {
+      currentUrl = window.location.href;
+      callback(currentUrl);
+    }
+  }, checkInterval);
+
+  // Stop observing if needed
+  return () => clearInterval(intervalId);
 }

@@ -135,21 +135,35 @@ Et en créant ce cadre, il invente quelque chose de plus universel, qui peut êt
 [.text-center]
 **Prof. Calvet**
 
-D’ailleurs, on ne doit pas seulement à Al-Khwarizmi le concept d’al-jabr. Il a aussi popularisé quelque chose de très utile... Ca me fait penser : j'ai besoin de vérifier votre vivacité d'esprit. Qui connait les chiffres romains dans la salle ?
+D’ailleurs, on ne doit pas seulement à Al-Khwarizmi le concept d’al-jabr. Il a aussi popularisé quelque chose de très utile... Ca me fait penser : j'ai besoin de vérifier votre vivacité d'esprit.
 
 _Slide 2.10_
 
-L'exercice est simple : il y aura à l'écran 2 calculs à résoudre. Tu dois me donner le résultat le plus vite possible. Tu es prêt ? 
+L'exercice est simple : il y aura à l'écran plusieurs calculs à résoudre. Vous devez me donner le résultat le plus vite possible. Vous êtes prêts ? 
+
+_Slide 2.10.0_
 
 _Slide 2.10.1_
 
 _Slide 2.10.2_
 
-Merci !
-
 _Slide 2.10.3_
 
-Même si ce n'est pas Al-Khwarizmi qui les a créé, les chiffres que nous utilisons aujourd’hui, dits "arabes", ont été largement popularisés par ses travaux. Avant cela, les Européens utilisaient les chiffres romains, bien plus encombrants pour les calculs complexes. Grâce à ces nouveaux chiffres, il est désormais possible d’organiser les nombres avec beaucoup plus de souplesse, ce qui ouvre la voie à des calculs bien plus avancés.
+_Slide 2.10.4_
+
+_Slide 2.10.5_
+
+_Slide 2.10.6_
+
+_Slide 2.10.7_
+
+Bravo et merci ! Comme vous le voyez, c'était difficile de passer à un autre système de numérotation. En même temps, vous avez été habitué aux chiffres arabes. Mais pour l'époque, c'était l'inverse en Europe : les chiffres romains étaient habituels et la transition vers les chiffres arabes a pris des siècles.
+
+Mais petit à petit, les savants européens se sont rendus compte que les chiffres arabes permettaient davantage de souplesse et ouvraient la voie à des calculs bien plus avancés.
+
+Et même si ce n'est pas Al-Khwarizmi qui les créé les chiffres, il a largement contribué à les populariser via ses travaux.
+
+_Slide 2.10.8_
 
 [.text-center]
 **Jack**

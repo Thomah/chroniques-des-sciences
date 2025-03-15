@@ -89,11 +89,29 @@
     args: Et en créant ce cadre, il invente quelque chose de plus universel, qui peut être adapté à différents types de problèmes. C'est une idée fondamentale qui influence tout ce qui va suivre, de la résolution des équations aux modèles abstraits utilisés aujourd'hui dans l'informatique.
 2_10:
   - trigger: fragment
-    exec: hide
+    exec: startChronometer
+    args: timer1;0
   - trigger: fragment
-    exec: hide
+    exec: stopChronometer
+    args: timer1
   - trigger: fragment
-    exec: hide
+    exec: startChronometer
+    args: timer2;0
+  - trigger: fragment
+    exec: stopChronometer
+    args: timer2
+  - trigger: fragment
+    exec: startChronometer
+    args: timer3;0
+  - trigger: fragment
+    exec: stopChronometer
+    args: timer3
+  - trigger: fragment
+    exec: startChronometer
+    args: timer4;0
+  - trigger: fragment
+    exec: stopChronometer
+    args: timer4
   - trigger: fragment
     delay: 1000
     exec: speak
@@ -139,6 +157,9 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;0;5
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
 3_1:
   - trigger: fragment
     delay: 0
@@ -206,6 +227,9 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;0;5
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
 4_1:
   - trigger: auto
     delay: 5
@@ -237,7 +261,7 @@
   - trigger: fragment
     delay: 5
     exec: speak
-    args: Les barricades dans les rues de Lyon, ça rappelle presque des scènes de "Les Misérables". Spoiler : ça ne finit pas mieux ici.
+    args: "Les barricades dans les rues de Lyon, ça rappelle presque des scènes de \"Les Misérables\". Spoiler : ça ne finit pas mieux ici."
 4_5:
   - trigger: fragment
     delay: 5
@@ -272,27 +296,70 @@
     delay: 10000
     exec: audio
     args: audio/clock-hour-1570.wav;0;5
-5_7:
-  - trigger: fragment
-    delay: 0
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+5_1:
+  - trigger: auto
     exec: speak
-    args: Voici un premier exemple d'expression booléenne.
-  - trigger: fragment
-    delay: 0
+    args: Ah, Babbage... L'homme qui aimait les machines, les mathématiques et... détestait littéralement tout le reste.
+5_3:
+  - trigger: auto
     exec: speak
-    args: Dans ce nouvel exemple, A est inversé.
+    args: Et sa vraie vision, la Machine Analytique, allait encore plus loin. Elle aurait eu une mémoire, une unité de calcul, et pouvait être programmée grâce à des cartes perforées.
   - trigger: fragment
-    delay: 0
     exec: speak
-    args: Maintenant, c'est uniquement B qui est inversé.
+    args: Et il savait choisir ses partenaires ! Une certaine Ada Lovelace, par exemple.
+5_4:
   - trigger: fragment
-    delay: 0
     exec: speak
-    args: Enfin, les 2 groupes sont inversés.
+    args: "Une enfance hors normes ! Saviez-vous que sa mère, Annabella Milbanke, la poussait dans les sciences pour éviter qu'elle ne devienne poétesse \"comme son père\" ?"
+5_5:
   - trigger: fragment
-    delay: 0
+    exec: speak
+    args: Mais, s'il faut retenir quelque chose, c'est que Ada Lovelace est la preuve vivante que la passion peut surmonter les barrières du temps et des conventions.
+5_6:
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
+    exec: hide
+  - trigger: fragment
     exec: initBooleanHero
-    args: 
+5_7:
+  - trigger: auto
+    exec: speak
+    args: C'est bien sympa cet algèbre de Boole, mais il est devenu quoi Georges Boole ?
+  - trigger: fragment
+    exec: speak
+    args: "Entre Charles, Ada et Georges, ce sont trois destins très différents mais tous convergent vers une chose : des idées si profondes qu'elles influencent encore nos vies aujourd'hui."
+5_8:
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Recherche de la séquence "L'électricité, accelérateur de l'innovation".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel5
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;0;5
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
 8_4:
   - trigger: fragment
     delay: 2000
