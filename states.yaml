@@ -1,0 +1,22 @@
+1_0:
+  - trigger: auto
+    delay: 0
+    exec: createLab
+    args: 
+  - trigger: fragment
+    delay: 1000
+    exec: speak
+    args: Je suis là Professeur. Bonjour chers volontaires.
+  - trigger: auto
+    delay: 4500
+    exec: speak
+    args: Je suis Jake, l'assistant du Professeur. A votre service.
+1_1:
+  - trigger: auto
+    delay: 10
+    exec: createTimeline
+    args: 
+  - trigger: auto
+    delay: 5
+    exec: speak
+    args: Il semblerait que la ligne temporelle ait été affectée. Je vous ai mis sur l'écran les principaux événements qu'il va falloir restaurer.

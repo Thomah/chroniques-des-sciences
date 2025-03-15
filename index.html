@@ -17,7 +17,9 @@
 	<link rel="stylesheet" href="lib/css/monokai.css">
 
 	<link rel="stylesheet" href="css/presentation.css">
+	<link rel="stylesheet" href="css/companion.css">
 	<link rel="stylesheet" href="css/timeline.css">
+	<link rel="stylesheet" href="css/lab.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -33,7 +35,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>?</h1>
+				<h1>INSERER AFFICHE ICI</h1>
 			</section>
 			<section data-external="modules/00.html"></section>
 			<section data-external="modules/01.html"></section>
@@ -43,14 +45,22 @@
 			<section data-external="modules/05.html"></section>
 			<section data-external="modules/06.html"></section>
 			<section data-external="modules/07.html"></section>
+			<div id="companion-subtitles">
+        <span class="icon">🤖</span><span class="text"></span>
+			</div>
 		</div>
 	</div>
 	<script src="js/reveal.js"></script>
 	<script src="js/timeline.js"></script>
 	<script src="js/companion.js"></script>
+	<script src="js/states.js"></script>
+	<script src="js/lab.js"></script>
 	<script src="plugin/highlight/highlight.min.js"></script>
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/math/math.js"></script>
+	<script src="lib/js/chart.js"></script>
+	<script src="lib/js/three.min.js"></script>
+	<script src="lib/js/yaml.min.js"></script>
 	<script>
 		Reveal.initialize({
 			controls: false,
@@ -66,11 +76,15 @@
 				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external]'); } }
 			]
 		});
+		initCompanion();
+		initStates();
+		Reveal.on('fragmentshown', (event) => {
+			console.log(event);
+			runState(`${getIndexH()}_${getIndexV()}`, "fragment");
+		});
 		Reveal.on('slidechanged', event => {
-			if (event.indexh == 1 && event.indexv == 0) {
-				speakText("Il semblerait que la ligne temporelle ait été affectée. Je vous ai mis sur l'écran les principaux événements qu'il va falloir restaurer.")
-				createTimeline();
-			}
+			resetState();
+			runState(`${event.indexh}_${event.indexv}`, "auto");
 		});
 	</script>
 </body>
