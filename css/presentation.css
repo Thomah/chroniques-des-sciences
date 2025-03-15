@@ -56,3 +56,35 @@ p,
 code {
     text-align: left !important;
 }
+
+.applause-container {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.applause-sign {
+    padding: 20px 60px;
+    background-color: darkred;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    border: 2px solid gold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    position: relative;
+    box-shadow: 0px 0px 30px rgba(255, 215, 0, 0.7);
+    animation: blink 2s infinite;
+    border-radius: 20px;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
