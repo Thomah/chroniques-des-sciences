@@ -2,7 +2,68 @@
 
 === Scène 1
 
+_Le plateau s’assombrit légèrement, tandis qu'un écran derrière la machine s'illumine. Des sons légers de cliquetis résonnent, rappelant le bruit des pierres et du bois._
+
+[Sur l'écran, une scène apparaît : nous sommes dans une civilisation ancienne, peut-être la Mésopotamie. Des scribes assis près d'une table de comptage utilisent des abaques rudimentaires et des bouliers.]
+
 [.text-center]
 **Prof. Calvet**
 
-Nous y sommes ! Au début de l'humanité, où en tout cas, on a commencé à compter. Mais à cette époque, les chiffres tels que nous les connaissons n'existaient pas encore.
+Regardez bien. Ces hommes-là ne connaissaient pas encore les chiffres comme nous les utilisons aujourd’hui. Ils se servaient d’abaques, de tablettes et de bouliers pour effectuer des calculs. Le principe ? Très simple et pourtant, d'une ingéniosité surprenante. Chaque colonne de l’abaque représente une unité, une dizaine, une centaine, et ainsi de suite. Il suffit de déplacer les billes ou les galets pour effectuer des additions ou des soustractions.
+
+Au même moment, une voix douce et grave raconte en fond, accompagnant l'image.
+
+[.text-center]
+**Prof. Calvet**
+
+L’abaque a traversé les siècles. Même à l'époque des Romains, ou plus tard dans la civilisation islamique, il était un compagnon fidèle des marchands, des comptables et des savants. Sa simplicité est sa force. Un outil qu’on pourrait croire rudimentaire, et pourtant, si efficace qu'il est encore utilisé aujourd'hui, dans certaines régions du monde.
+
+[.text-center]
+**Jack**
+
+Professeur, une question fascinante se pose : Pourquoi, avec tant de limitations, ces outils ont-ils duré si longtemps, alors que des méthodes plus sophistiquées existaient déjà à certaines époques ?
+
+[.text-center]
+**Prof. Calvet**
+
+Excellente question, Jack ! La réponse tient à la praticité et à la portée universelle de ces outils. Vous voyez, le calcul n'était pas réservé aux savants ; il touchait aussi les marchands, les artisans. Le boulier, par exemple, pouvait être utilisé par n’importe qui, peu importe son niveau d’instruction, dans un marché animé comme dans un temple.
+
+_Avec un sourire complice._
+
+Mais, les choses évoluent, bien sûr. Et à mesure que les civilisations grandissent, les besoins de calcul deviennent plus complexes. Nous n’allons pas rester sur les abaques éternellement, n’est-ce pas ? Il est temps de voyager un peu plus loin dans l’Histoire.
+
+Il se tourne vers Jack.
+
+Jack, où devrions-nous aller ensuite ? Quelle est la prochaine étape de notre grand voyage ?
+
+[.text-center]
+**Jack**
+
+Si nous voulons explorer une avancée mathématique majeure, pourquoi ne pas faire un saut vers le 9ème siècle, en plein cœur de la Perse, là où un certain Al-Khwarizmi est en train de poser les fondations d’une discipline qui révolutionnera le monde des sciences : l’algèbre.
+
+[.text-center]
+**Prof. Calvet**
+
+Excellente idée, Jack ! Mesdames et messieurs, accrochez-vous bien, car nous allons maintenant traverser les déserts et les cités dorées de la civilisation islamique, pour rencontrer un des plus grands esprits de l’histoire des mathématiques.
+
+Jack, lance la séquence "Algèbre et Al-Khwarizmi" !
+
+Les lumières s’adoucissent, et l’écran projette une image d’une ville médiévale, scintillant sous un soleil brûlant. Des hommes en robes, des parchemins entre les mains, se réunissent autour d’une table ornée de figures géométriques complexes.
+
+[.text-center]
+**Prof. Calvet**
+
+Nous sommes à Bagdad, au début du IXe siècle. Sous le califat abbasside, la Maison de la Sagesse est un centre de savoirs où convergent les plus grands érudits du monde. Ici, on traduit, on étudie, on invente. Et parmi ces grands esprits, un homme va marquer son époque : Al-Khwarizmi.
+
+Il est le père de ce que nous appelons aujourd’hui l’algèbre. À une époque où le calcul repose sur des méthodes géométriques et pratiques, Al-Khwarizmi introduit une approche abstraite et symbolique des mathématiques. Il pose les bases d’une nouvelle façon de résoudre des équations, une approche qui transcende les nombres pour manier des variables, des inconnues.
+
+Le terme 'algèbre' vient du mot arabe 'al-jabr', signifiant 'restauration'. Al-Khwarizmi, dans son ouvrage 'Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala', propose de résoudre des équations en réarrangeant et en simplifiant des termes pour les rendre plus accessibles. Cette méthode, à la fois pratique et théorique, est à l'origine de toute l'algèbre moderne.
+
+[.text-center]
+**Prof. Calvet**
+
+Et c’est là, mesdames et messieurs, que tout commence : cette idée que l'on peut résoudre des problèmes sans connaître immédiatement la valeur de tous les éléments. Cette abstraction ouvrira la porte aux mathématiques modernes, et plus tard, aux ordinateurs eux-mêmes, qui manipulent des symboles pour exécuter des tâches.
+
+Il se tourne à nouveau vers le public, un sourire triomphant sur les lèvres.
+
+Imaginez, sans Al-Khwarizmi, pas d’équations modernes, pas de programmation, pas d’algorithmes. À vrai dire… pas même cette machine que vous voyez ici devant vous !

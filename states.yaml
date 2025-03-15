@@ -6,20 +6,45 @@
   - trigger: fragment
     delay: 1000
     exec: speak
-    args: Je suis là Professeur. Bonjour chers volontaires.
+    args: Bonjour à tous ! Je suis Jack, une Intelligence Artificielle, et je vais vous accompagner tout le long de la soirée.
   - trigger: auto
-    delay: 4500
+    delay: 8000
     exec: speak
-    args: Je suis Jake. A votre service.
+    args: Professeur, êtes-vous prêt ?
+  - trigger: auto
+    delay: 3000
+    exec: audio
+    args: https://www.televisiontunes.com/uploads/audio/Doctor%20Who%20-%20Series%205%20-%20I%20Am%20The%20Doctor%20-%20Extended%20Version.mp3;0;10
 1_1:
   - trigger: auto
-    delay: 10
-    exec: createTimeline
-    args: 
+    delay: 0
+    exec: audio
+    args: audio/applause.wav;2;6
+  - trigger: auto
+    delay: 15000
+    exec: speak
+    args: Je suis impatient, Professeur. Par où souhaitez-vous commencer ?
+1_2:
   - trigger: auto
     delay: 5
     exec: speak
-    args: Il semblerait que la ligne temporelle ait été affectée. Je vous ai mis sur l'écran les principaux événements qu'il va falloir restaurer.
+    args: Recherche de la séquence "Premiers calculs".
+  - trigger: auto
+    delay: 2000
+    exec: initTunnel
+    args: tunnel1
+  - trigger: auto
+    delay: 0
+    exec: audio
+    args: audio/cinematic-suspense-252651.mp3;5;15
+  - trigger: auto
+    delay: 1000
+    exec: audio
+    args: audio/clock-tictac-2816.wav;0;9
+  - trigger: auto
+    delay: 10000
+    exec: audio
+    args: audio/clock-hour-1570.wav;0;5
 8_4:
   - trigger: fragment
     delay: 2000

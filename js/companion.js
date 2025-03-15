@@ -24,7 +24,7 @@ function speak(text) {
   textElement.textContent = text;
 
   // Remove subtitles
-  utterance.onend = function(event) {
+  utterance.onend = function (event) {
     subtitleElement.style.visibility = 'hidden';
     textElement.textContent = '';
   };
@@ -42,4 +42,44 @@ function hide() {
   const textElement = subtitleElement.querySelector('.text');
   subtitleElement.style.visibility = 'hidden';
   textElement.textContent = '';
+}
+
+function audio(args) {
+  const [url, startTimeStr, endTimeStr] = args.split(';');
+
+  const startTime = parseFloat(startTimeStr) || 0;
+  const endTime = endTimeStr ? parseFloat(endTimeStr) : null;
+
+  const audio = new Audio(url);
+  audio.volume = 1.0;
+
+  audio.addEventListener('loadeddata', () => {
+    audio.currentTime = startTime;
+    audio.play().catch(error => {
+      console.error('Erreur lors de la lecture de l\'audio :', error);
+    });
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    if (audio.currentTime >= endTime) {
+      fonduEnFermeture(audio, audio.volume, 0.0, 4000);
+    }
+  });
+}
+
+function fonduEnFermeture(audio, volumeInitial, volumeFinal, duree) {
+  const pas = (volumeInitial - volumeFinal) / (duree / 100);
+  let volume = volumeInitial;
+
+  const interval = setInterval(() => {
+    volume -= pas;
+
+    if (volume <= volumeFinal) {
+      volume = volumeFinal;
+      clearInterval(interval);
+      audio.pause();
+    }
+
+    audio.volume = volume;
+  }, 100);
 }
