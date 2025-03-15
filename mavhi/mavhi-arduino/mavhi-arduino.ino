@@ -1,4 +1,7 @@
 #include <Stepper.h>
+#include "74hc595.h"
+
+// Shift configuration
 
 // Arcade buttons
 const int ledPin = 2;
@@ -36,6 +39,11 @@ void setup() {
   pinMode(boutonAvancer, INPUT_PULLUP);
   pinMode(boutonReculer, INPUT_PULLUP);
 
+  // Init shift
+  pinMode(SHIFT_01_DATA_PIN, OUTPUT);
+  pinMode(SHIFT_01_CLOCK_PIN, OUTPUT);
+  pinMode(SHIFT_01_LATCH_PIN, OUTPUT);
+
   // Définir la vitesse du moteur (en tours par minute)
   myStepper.setSpeed(19);
 
@@ -56,6 +64,15 @@ void loop() {
     }
   } else {
     digitalWrite(ledPin, LOW);
+  }
+  
+  // Control LEDs
+  InsertFirstBit();
+  delay(500);
+  for (int i = 0; i < 15; i++) {
+    Clock();
+    Latch();
+    delay(500);
   }
 
   // Lire l'état des boutons
@@ -80,6 +97,9 @@ void loop() {
     Serial.println("Moteur en pause");
   }
 
-  // Petite pause pour éviter la détection multiple lors de l'appui d'un bouton
-  delay(100);
+  delay(200);
+
+  //SHIFT_REGISTRY = 0b00000000;
+  //updateShiftRegister();
+  
 }
