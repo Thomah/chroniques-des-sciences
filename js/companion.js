@@ -97,27 +97,23 @@ function useBrowserTTS(text, callback) {
   };
 }
 
-function speak(text) {
+function speak(state) {
+  print(state);
 
-  checkServerAvailability().then(isAvailable => {
+  audioState = state;
+  audioState.args = `audio/dialogs/${state.id}.mp3;1.0;0;1000`
 
-    print(text)
-    if (isAvailable) {
-      console.log('OpenTTS server is available. Using OpenTTS API...');
-      useOpenTTS(text, () => {
-        hide();
-      });
-    } else {
-      console.log('OpenTTS server is unavailable. Using browser speech synthesis...');
-      useBrowserTTS(text, () => {
-        hide();
-      });
-    }
+  audio(audioState, () => {
+    console.log('TTS audio file not available. Using browser speech synthesis...');
+    useBrowserTTS(text, () => {
+      hide();
+    });
+  }, () => {
+    hide();
   });
-
 }
 
-function print(text) {
+function print(state) {
 
   const section = document.querySelector("section.present");
 
@@ -133,7 +129,7 @@ function print(text) {
 
     const textSpan = document.createElement("span");
     textSpan.className = "text";
-    textSpan.textContent = text;
+    textSpan.textContent = state.args;
 
     // Append spans to div
     div.appendChild(iconSpan);
@@ -151,8 +147,8 @@ function hide() {
   }
 }
 
-function audio(args) {
-  const [url, volume, startTimeStr, endTimeStr] = args.split(';');
+function audio(state, onError, onEnd) {
+  const [url, volume, startTimeStr, endTimeStr] = state.args.split(';');
 
   const startTime = parseFloat(startTimeStr) || 0;
   const endTime = endTimeStr ? parseFloat(endTimeStr) : null;
@@ -172,6 +168,18 @@ function audio(args) {
       fonduEnFermeture(audio, audio.volume, 0.0, 4000);
     }
   });
+
+  audio.onerror = () => {
+      if (onError) {
+        onError(new Error("Failed to load audio"));
+      }
+  };
+  
+  audio.onended = () => {
+      if (onEnd) {
+        onEnd();
+      }
+  };
 }
 
 function fonduEnFermeture(audio, volumeInitial, volumeFinal, duree) {

@@ -1,7 +1,7 @@
 
 // Fonction pour initialiser le tunnel
-function initTunnel(args) {
-  const tunnel = document.getElementById(args);
+function initTunnel(state) {
+  const tunnel = document.getElementById(state.args);
   const numberOfCircles = 30; // Nombre de cercles pour l'effet de profondeur
 
   // Création dynamique des cercles
