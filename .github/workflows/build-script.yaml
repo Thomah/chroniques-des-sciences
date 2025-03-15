@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Ruby Command
         run: |
-          ruby generate_script_pdf.rb
+          bundle exec ruby generate_script_pdf.rb
 
       - name: Store artifact's name
         id: artifact-name
