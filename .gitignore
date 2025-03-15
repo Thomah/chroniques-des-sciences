@@ -15,3 +15,4 @@ script.pdf
 
 mavhi/3d-models/gcodes
 mavhi/3d-models/*.FCBak
+mavhi/mavhi-hardware/mavhi-hardware/*.lck
