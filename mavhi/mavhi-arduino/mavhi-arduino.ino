@@ -79,7 +79,6 @@ void loop() {
   // Test motor
   for (int i = 0; i < 8; i++) {
     stepMotor(i);
-    Serial.println("Rotating");
     delay(5);  // Ajustez selon la vitesse désirée
   }
 
@@ -87,6 +86,7 @@ void loop() {
   if (Serial.available() > 0) {
     String command = Serial.readStringUntil('\n');
     command.trim();
+    Serial.println("Command received : " + command);
 
     if (command == "strobe") {
       strobeActive = !strobeActive;
