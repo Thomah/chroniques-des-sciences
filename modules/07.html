@@ -114,6 +114,9 @@ msg:    db      "Hello, world!", 10
     </code></pre>
     <p class="caption">Programme écrit en assembleur affichant "Hello, world!" dans une console</p>
     <p class="caption">Code source sur <a href="https://github.com/mschwartz/assembly-tutorial/blob/58aaee71b88b0bac80a4eb5e180a453b8fad8530/hello-world/hello-linux.asm">github.com/mschwartz/assembly-tutorial/</a></p>
+    <aside class="notes">
+        <p>Chaque instruction correspond à une opération machine</p>
+    </aside>
 </section>
 <section>
     <h2>L'assembleur à la conquête de l'espace</h2>
@@ -123,6 +126,54 @@ msg:    db      "Hello, world!", 10
         <p>Logiciel de bord du vaisseau spatial Apollo et la station spatiale Skylab</p>
         <p>Logiciels de détection et de récupération d'erreurs</p>
         <p>Les cours de génie logiciel n'existaient pas</p>
+    </aside>
+</section>
+<section>
+    <h2>Soyez FORTRAN-sportés !</h2>
+    <pre><code data-trim>
+PROGRAM Sum
+  INTEGER :: a, b, result
+
+  ! Initialisation des variables
+  a = 2
+  b = 2
+
+  ! Calcul de la somme
+  result = a + b
+
+  ! Affichage du résultat
+  PRINT *, 'Le résultat de 2 + 2 est :', result
+END PROGRAM Sum
+    </code></pre>
+    <p class="caption">Programme écrit en FORTRAN affichant le résultat de 2 + 2 dans une console</p>
+    <aside class="notes">
+        <p>Créé en 1954 par John Backs (ingénieur radiophonie chez IBM), son compilateur viendra en 1957</p>
+        <p>Concepts haut niveau : variables, boucles, conditions, fonctions proches des mathématiques et de la logique humaine</p>
+    </aside>
+</section>
+<section>
+    <h2>Les prémices de l'Intelligence Artificielle</h2>
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="images/john-mccarthy.jpg" height="400px" />
+        <pre class="fragment fade-in-then-out" data-fragment-index="0"><code data-trim>
+(defun somme (liste)
+"Calcule la somme des éléments d'une liste."
+(if (null liste)                         ; Vérifie si la liste est vide
+    0                                    ; Si oui, retourne 0
+    (+ (car liste)                       ; Sinon, ajoute le premier élément
+        (somme (cdr liste)))))           ; à la somme du reste de la liste
+
+(let ((nombres '(1 2 3 4 5)))            ; Définit une liste de nombres
+(format t "La somme des nombres est : ~d~%" (somme nombres)))      
+        </code></pre>
+    </div>
+    <div class="r-stack">
+        <p class="fragment fade-out caption" data-fragment-index="0">John McCarthy</p>
+        <p class="fragment fade-in-then-out caption" data-fragment-index="0">Programme écrit en LISP affichant la somme de plusieurs nombres dans une liste</p>
+    </div>
+    <aside class="notes">
+        <p>McCarthy popularise le terme "intelligence artificielle" lors de la conférence de Dartmouth en 1956. Il a proposé que l'on puisse créer des programmes capables de résoudre des problèmes de manière similaire à la pensée humaine.</p>
+        <p>Concepts : manipulation de listes, récursions, fonctions comme arguments</p>
     </aside>
 </section>
 <section>

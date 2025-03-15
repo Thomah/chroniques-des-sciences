@@ -22,7 +22,7 @@
     args: Il semblerait que la ligne temporelle ait été affectée. Je vous ai mis sur l'écran les principaux événements qu'il va falloir restaurer.
 8_4:
   - trigger: fragment
-    delay: 500
+    delay: 2000
     exec: print
     args: J'aime la pizza car elle est facile à personnaliser avec différents ingrédients et on peut la partager avec des amis.
   - trigger: fragment
@@ -30,7 +30,7 @@
     exec: hide
     args: 
   - trigger: auto
-    delay: 500
+    delay: 2000
     exec: print
     args: Je ferais des investissements intelligents pour assurer une sécurité financière à long terme et donnerais une partie à des œuvres de charité.
   - trigger: fragment
@@ -38,7 +38,7 @@
     exec: hide
     args: 
   - trigger: auto
-    delay: 500
+    delay: 2000
     exec: print
     args: Je me souviens d'un moment où j'ai appris à programmer pour la première fois, et cela m'a donné un immense sentiment d'accomplissement.
 8_5:
