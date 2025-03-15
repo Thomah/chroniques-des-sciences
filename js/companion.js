@@ -141,13 +141,13 @@ function hide() {
 }
 
 function audio(args) {
-  const [url, startTimeStr, endTimeStr] = args.split(';');
+  const [url, volume, startTimeStr, endTimeStr] = args.split(';');
 
   const startTime = parseFloat(startTimeStr) || 0;
   const endTime = endTimeStr ? parseFloat(endTimeStr) : null;
 
   const audio = new Audio(url);
-  audio.volume = 1.0;
+  audio.volume = volume;
 
   audio.addEventListener('loadeddata', () => {
     audio.currentTime = startTime;

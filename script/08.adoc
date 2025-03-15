@@ -7,9 +7,9 @@
 
 _Slide 8.0_
 
-Grâce au travail de Quevedo, les machines sont désormais capables d’effectuer des calculs complexes mais il continuait à rêvaer d’un monde où des machines, non seulement exécutent, mais apprennent, anticipent, ou même raisonnent.
+Grâce au travail de Quevedo, les machines sont désormais capables d’effectuer des calculs complexes mais il continuait à rêver d’un monde où des machines, non seulement exécutent, mais apprennent, anticipent, ou même raisonnent.
 
-Et à mesure que les nouveaux composants électroniques – diodes, triodes, puis transistors – remplaçaient les engrenages et les contacts physiques, les rêves d'hier sont devenus les bases d'une révolution.
+Et à mesure que les nouveaux composants électroniques se développent, les rêves d'hier sont devenus les bases d'une révolution.
 
 Et cette révolution a trouvé son origine au XXe siècle, dans des laboratoires d’universités et des hangars militaires, là où l’informatique moderne a commencé.
 
@@ -19,7 +19,9 @@ Voici Alan Turing, un esprit brillant du XXe siècle. Matheux, logicien, mais su
 
 _Slide 8.2_
 
-Il a conçu un modèle théorique capable de résoudre n’importe quel problème calculable, une simple machine idéale, composée de bandes de papier et de têtes de lecture-écriture. Une idée révolutionnaire : avec des instructions simples et une mémoire, cette machine abstraite pouvait imiter n’importe quelle autre machine…
+Il a conçu un modèle théorique capable de résoudre n’importe quel problème calculable, une machine idéale, composée de bandes de papier et de têtes de lecture-écriture. Une idée révolutionnaire : avec des instructions simples et une mémoire, cette machine abstraite pouvait imiter n’importe quelle autre machine…
+
+_Slide 8.2.0_
 
 [.text-center]
 **Jack**
@@ -49,9 +51,9 @@ Ah, donc les vrais génies de l’ENIAC… c’était elles ?
 
 Exactement ! Elles ont eu un rôle crucial, mais hélas sous-estimé pendant des décennies.
 
-_Slide 8.5_
-
 Mais que signifient toutes ces avancées ? Pour Alan Turing, c’était l’idée qu’un jour, les machines pourraient peut-être… penser. Il a imaginé un test : le jeu de l’imitation. Si une machine peut convaincre un humain qu’elle pense, peut-on dire qu’elle est intelligente ?
+
+_Slide 8.5_
 
 [.text-center]
 **Jack**
@@ -65,11 +67,17 @@ Pour mieux comprendre, nous allons réaliser l'un de ces tests. J'aurais besoin 
 
 L'un de vous aura les yeux bandés.
 
-Il y aura 3 questions qui vont s'afficher à l'écran. L'un de nous y répondra honnêtement et l'autre se contentera de lire les réponses de Jack, qui sera muet pour cette expérience.
+Il y aura 3 questions qui vont s'afficher à l'écran. L'un de nous y répondra honnêtement et l'autre se contentera de lire les réponses de Jack, qu'on n'entendra pas pour cette expérience.
 
 La personne ayant les yeux bandés devra identifier qui de nous deux parle au nom de Jack.
 
 N’oubliez pas : le but de Turing n’était pas de démontrer que les machines pensent, mais qu’elles imitent si bien les humains que nous devons nous poser une question fascinante : où commence réellement la pensée ?
+
+_Slide 8.5.0_
+
+_Slide 8.5.1_
+
+_Slide 8.5.2_
 
 [.text-center]
 **Jack**
@@ -96,9 +104,10 @@ McCarthy a lancé l’intelligence artificielle. C'est en 1956, qu'il invente ce
 
 _Slide 8.7_
 
-Mais attention : il ne suffit pas que les machines pensent. Pour les comprendre et les guider, il fallait aussi résoudre des problèmes liés à la communication des données, et aux montagnes d'informations qu’elles manipulent. Des chercheurs comme Claude Shannon et des ingénieurs comme ceux de l’ENIAC s'y sont attelés. 
+Mais attention : il ne suffit pas que les machines pensent. Pour les comprendre et les guider, il fallait aussi résoudre des problèmes liés à la communication des données, et aux montagnes d'informations qu’elles manipulent. Des chercheurs comme Claude Shannon s'y sont attelés.
 
 Il commence par poser ceci :
+
 “Le problème fondamental de la communication est de reproduire en un point, soit exactement, soit approximativement, un message recueilli en un autre point.”
 
 Imaginez : vous devez transmettre un message à distance. Des obstacles peuvent altérer ce message : bruit, interférences, erreurs… Shannon ne veut pas simplement éviter la confusion, il cherche à codifier l'information pour qu'elle puisse résister à tout cela. Et c'est ainsi qu'il crée...
@@ -112,7 +121,7 @@ Le principe, c'est que n'importe quelle information – un texte, un son, une im
 [.text-center]
 **Jack**
 
-Imaginez ceci : au lieu de parler anglais, chinois ou espagnol, les machines se comprennent avec une suite infinie des courants électriques allumés ou éteints. lumières allumées ou éteintes.
+Imaginez ceci : au lieu de parler anglais, chinois ou espagnol, les machines se comprennent avec une suite infinie de courants électriques allumés ou éteints.
 
 https://www.youtube.com/watch?v=_gFwe6HiyFI
 
@@ -137,11 +146,11 @@ _Slide 8.9.1_
 [.text-center]
 **Prof. Calvet**
 
-Vous imaginez qu'écrire des 1 et des 0 à la chaîne, les programmeurs de l'époques n'en étaient pas fan. C'est pour ça qu'on a inventé un premier langage : l'assembleur.
+Vous imaginez qu'écrire des 1 et des 0 à la chaîne, les programmeurs de l'époques n'en étaient pas fan. C'est pour ça qu'a été a inventé un premier langage : l'assembleur.
 
 _Slide 8.10_
 
-Un programme en assembleur ressemble à ça. Plus facile que des 0 et 1 à lire pour les humains et facilement traduisible pour les machines.
+Un programme en assembleur ressemble à ça. Plus facile que des 0 et 1 à lire et facilement traduisible pour les machines.
 
 _Slide 8.11_
 
@@ -155,12 +164,14 @@ Et lorsqu'on envoit une fusée dans l'espace, on n'a pas le droit à l'erreur.
 
 === Scène 3
 
+_Slide 8.12.0_
+
 [.text-center]
 **Jack**
 
 Mais, Professeur, Comment fait-on lorsqu'on a une technologie incroyablement complexe comme l'ENIAC mais qu'elle occupe la taille d'une maison ?
 
-_Slide 8.12_
+_Slide 8.13_
 
 [.text-center]
 **Prof. Calvet**
@@ -171,14 +182,12 @@ Tout cela commence dans les années 1940, avec un composant électronique à pei
 
 Les transistors se sont vite retrouvés intégrés dans des circuits intégrés ou puces électroniques, rendant les machines de plus en plus petites et rapides.
 
-_Slide 8.12.0_
+_Slide 8.14_
 
 [.text-center]
 **Jack**
 
 Ainsi, on passe de machines de la taille d’un bâtiment... à une puce qu’on peut tenir entre deux doigts. Franchement, pourquoi ça leur a pris si longtemps ?
-
-_Slide 8.13_
 
 [.text-center]
 **Prof. Calvet**
@@ -187,7 +196,7 @@ La patience, Jack. En 1958, l’Américain Jack Kilby met au point le premier ci
 
 (Se tournant vers l’audience.) Saviez-vous que pour produire ces fameuses puces électroniques, on a besoin de matériaux rares comme le lithium, le tantale, ou encore le cobalt ?
 
-_Slide 8.14_
+_Slide 8.15_
 
 [.text-center]
 **Jack**
@@ -197,11 +206,13 @@ Ah, les fameux "terres rares". N’est-ce pas ironique ? On les appelle rares al
 [.text-center]
 **Prof. Calvet**
 
-Exactement. Mais leur extraction n’est pas sans conséquences. Prenons le silicium. C’est vrai, il est abondant dans le sable, mais sa purification nécessite de hautes températures et beaucoup d’énergie.
+Tu marques un point. Mais leur extraction n’est pas sans conséquences. Prenons le silicium. C’est vrai, il est abondant dans le sable, mais sa purification nécessite de hautes températures et beaucoup d’énergie.
 
-_Slide 8.15_
+_Slide 8.16_
 
 Et pour alimenter nos besoins toujours croissants en technologies, on creuse. Et ces mines, souvent situées en Afrique ou en Amérique du Sud, détruisent des écosystèmes, polluent les eaux et affectent la vie des communautés locales.
+
+_Slide 8.16.0_
 
 [.text-center]
 **Jack**
@@ -211,7 +222,7 @@ Voilà, je suis coupable. Vous voulez m’éteindre ?
 [.text-center]
 **Prof. Calvet**
 
-_Slide 8.16_
+_Slide 8.17_
 
 Pas question, Jack. Ce serait trop simple. Ce qu’il faut, c’est repenser comment on fabrique, utilise et recycle ces technologies. Car on produit presque 50 millions de tonnes de déchets électroniques par an ! Imaginez une montagne de vieux téléphones et d’ordinateurs. Et seulement une fraction de tout cela est recyclée correctement. Le reste ? Brûlé, envoyé dans des décharges… Des déchets qui contiennent pourtant encore beaucoup de ces fameux matériaux précieux.
 

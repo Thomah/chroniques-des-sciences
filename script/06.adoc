@@ -61,6 +61,8 @@ _Slide 6.5_
 
 Avec le temps, sa valeur diminue, mais son mystère persiste. Et c’est là que le véritable génie intervient. Il faudra attendre... quelques millénaires pour que William Gilbert, un médecin anglais du XVIIe siècle, observe avec méthode cette force d'attraction de l’ambre. Il donne à ce phénomène le nom d’électricité, venant directement de "êlektron".
 
+_Slide 6.5.0_
+
 [.text-center]
 **Jack**
 
@@ -71,23 +73,25 @@ Ce qui est fascinant, Professeur, c'est que ses travaux ne se sont pas limités 
 
 Mais à cette époque, cela reste une curiosité : une force mystérieuse qui attire, éclate et intrigue les savants. Après Gilbert, il faudra encore attendre plus d’un siècle pour que la science avance. Les recherches stagnent, jusqu’à ce que des phénomènes inattendus relancent l’intérêt : des expériences plus audacieuses montrent que l’électricité ne se limite pas à des étincelles ou des frottements.
 
+_Slide 6.6_
+
+_Slide 6.6.0_
+
 Au XVIIIe siècle, Luigi Galvani, médecin italien, observe quelque chose de saisissant.
 
-https://www.youtube.com/watch?v=3a_8FQW8Jsg
-
 Peut-être l'un d'entre vous serait volontaire pour m'aider à l'illustrer ? Je vois vous brieffer à l'écart. Pendant ce temps... Jack peux-tu raconter tes meilleures blagues ?
+
+_Slide 6.6.1_
 
 [.text-center]
 **Jack**
 
-Blague 1 2 3
+_Jack raconte ses blagues_
 
 [.text-center]
 **Prof. Calvet**
 
 Tout est prêt ? Merci, cher... euh... comment vous appelez-vous déjà ? Ah oui, parfait. Bien, installez-vous ici... ne vous inquiétez pas, c’est totalement indolore.
-
-_Slide 6.6_
 
 Commençons par évoquer ce que Luigi Galvani a découvert tout à fait par hasard. Imaginez… un grenouille. Oui, une grenouille !
 
@@ -99,12 +103,12 @@ Maintenant... place à la science ! Attention, ça peut picoter… mais c’es
 
 _Le professeur fait semblant d'assomer le volontaire avec un gros livre_
 
-_Slide 6.6.0_
+_Slide 6.6.2_
 
 [.text-center]
 **Jack**
 
-Professeur ! Je crois qu’il... il ne respire plus !
+Professeur ! Je crois que ce volontaire... ne respire plus !
 
 [.text-center]
 **Prof. Calvet**
@@ -170,7 +174,7 @@ _Slide 6.8.0_
 [.text-center]
 **Jack**
 
-Vous voulez la bagarre ? Parce que je suis prêt à me battre pour le courant continu, personnellement.
+Vous voulez la bagarre Professeur ?
 
 _Slide 6.9_
 
@@ -179,13 +183,13 @@ _Slide 6.9_
 
 Ah, cher Jack, tu n’es pas le seul ! Mesdames et messieurs, nous sommes à la fin du XVIIIe siècle dans une époque où deux grands génies vont s’affronter : Thomas Edison et Nikola Tesla. Une époque connue sous le nom de… la guerre des courants !
 
-D'un côté, Edison est l’inventeur du phonographe, de l’ampoule électrique, et de bien d'autres merveilles ! Son courant continu  est sûr, stable, et parfait pour alimenter les villes.
+D'un côté, Edison est l’inventeur du phonographe, de l’ampoule électrique, et de bien d'autres merveilles ! Son courant continu est sûr, stable, et parfait pour alimenter les villes.
 
-Et de l'autre, Tesla, humble apprenti autrefois à son service… mais aujourd’hui son rival. Car le courant continu a des limites ! Le courant alternatif a l'avantage de pouvoirt transporter l’électricité sur de longues distances, à moindre coût !
+Et de l'autre, Tesla, humble apprenti autrefois à son service… mais aujourd’hui son rival. Car le courant continu a des limites ! Le courant alternatif a l'avantage de pouvoir transporter l’électricité sur de longues distances, à moindre coût !
 
 Et ainsi démarra un combat politique. Mais ne vous méprenez pas : ce n’était pas qu’un débat de savants. Edison allait user de toutes les tactiques possibles pour discréditer Tesla et son courant alternatif.
 
-Il a en effet électrocuté des animaux – des chevaux, des éléphants ! – pour prouver que le courant alternatif était dangereux. Une mise en scène choquante, destinée à effrayer le public.
+Il a en effet électrocuté des animaux – des chiens, chats, des chevaux, et même un éléphant ! – pour prouver que le courant alternatif était dangereux. Une mise en scène choquante, destinée à effrayer le public.
 
 _Slide 6.10_
 
