@@ -127,12 +127,16 @@ def run_http_server():
 # Load states from YAML file
 def load_states():
     try:
-        print(os.path.isfile("states.yaml"))
         with open("states.yaml", "r", encoding="utf-8") as file:
             return yaml.safe_load(file)
     except Exception as e:
         print(f"Error loading states.yaml: {e}")
         return {}
+
+def reload_state(serial_text):
+    global STATES
+    STATES = load_states()
+    log_to_serial_text("State reloaded successfully.", serial_text)
 
 # Function to parse URL and extract state
 def get_current_state(url):
@@ -234,7 +238,7 @@ def update_gui(state_label, current_args_label, next_args_label, serial_text):
         current_url = driver.current_url
         state_key, fragment_index = get_current_state(current_url)
         state_info = STATES.get(state_key, "No state data available")
-        state_label.config(text=f"Current State: {state_key} | Fragment Index: {fragment_index}")
+        state_label.config(text=f"{state_key}_{fragment_index}")
         state_label.after(100, update_gui, state_label, current_args_label, next_args_label, serial_text)
         
         current_speak_message = get_current_human_speach(state_key, fragment_index)
@@ -352,9 +356,6 @@ def main():
     serial_strobe_frame = tk.Frame(main_frame)
     serial_strobe_frame.pack(fill='x', pady=5)
 
-    serial_label = tk.Label(serial_strobe_frame, text="Select Serial Port:", font=("Arial", 12))
-    serial_label.pack(side="left", padx=10)
-
     serial_ports = choose_serial_port()
     serial_port_var = tk.StringVar(value=serial_ports[0] if serial_ports else "")
     serial_port_menu = tk.OptionMenu(serial_strobe_frame, serial_port_var, *serial_ports)
@@ -362,27 +363,27 @@ def main():
     serial_port_menu.bind("<Configure>", lambda event: serial_port_selected(event, serial_port_var, root, serial_text))
 
     # Align the "Send 'strobe'" button with the serial port selection
-    strobe_button = tk.Button(serial_strobe_frame, text="Send 'strobe'", font=("Arial", 12), command=lambda: send_strobe(serial_text))
+    strobe_button = tk.Button(serial_strobe_frame, text="Strobe", font=("Arial", 12), command=lambda: send_strobe(serial_text))
     strobe_button.pack(side="left", padx=10)
 
-    # State Display Section
-    state_frame = tk.Frame(main_frame)
-    state_frame.pack(fill='x', pady=5)
+    # Add "Reload State" Button
+    reload_button = tk.Button(serial_strobe_frame, text="Reload State", font=("Arial", 12), command=lambda: reload_state(serial_text))
+    reload_button.pack(side="left", padx=10)
 
-    state_label = tk.Label(state_frame, text="Current State: Loading...", font=("Arial", 12), justify="left")
-    state_label.pack(fill='x', padx=10)
+    state_label = tk.Label(serial_strobe_frame, text="Loading...", font=("Arial", 12))
+    state_label.pack(side="right", padx=10)
 
     # Current & Next Message Section
     message_frame = tk.Frame(main_frame)
     message_frame.pack(fill='both', pady=5)
 
-    current_message_label = tk.Label(message_frame, text="Current Message:", font=("Arial", 12, "bold"))
+    current_message_label = tk.Label(message_frame, text="Current:", font=("Arial", 12, "bold"))
     current_message_label.pack()
     
     current_args_label = scrolledtext.ScrolledText(message_frame, wrap=tk.WORD, font=("Arial", 16), height=5, state=tk.DISABLED)
     current_args_label.pack(expand=True, fill='both', padx=10, pady=5)
 
-    next_message_label = tk.Label(message_frame, text="Next Message:", font=("Arial", 12, "bold"))
+    next_message_label = tk.Label(message_frame, text="Next:", font=("Arial", 12, "bold"))
     next_message_label.pack()
 
     next_args_label = scrolledtext.ScrolledText(message_frame, wrap=tk.WORD, font=("Arial", 16), height=5, state=tk.DISABLED)

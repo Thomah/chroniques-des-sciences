@@ -8,7 +8,7 @@
     args: "La scène s'ouvre sur un laboratoire. Des vieux livres, des fioles, des instruments de mesure, des parchemins sont sur une table. A côté, sur une place d'honneur, on devine derrière un tissu une grande boîte avec des lumières clignotantes. Un savant en blouse blance entre en scène l'air surexité"
   - trigger: auto
     exec: human
-    args: "Chers toustes, bienvenue dans mon laboratoire ! Je suis le Professeur Calvet et je serais votre hôte pour la soirée. Avant de commencer, laissez-moi vous présenter mon assistant IA : Jack"
+    args: "Chers toustes, **bienvenue** dans mon laboratoire ! Je suis le **Professeur Calvet** et je serais votre hôte pour la soirée. Avant de commencer, **laissez-moi vous présenter mon assistant IA : Jack**"
   - trigger: fragment
     delay: 1000
     exec: speak
@@ -424,27 +424,28 @@
     id: 4_1_0
   - trigger: auto
     exec: human
-    args: "Voilà une scène typique d'un **atelier textile au XVe siècle*. Remarquez le métier à tisser et la concentration qu'il demande. Mais derrière ce calme apparent se cache une tâche répétitive. Et puisque nous avons la chance d'avoir ce mini-métier à tisser, j'ai **besoin d'un volontaire** !\n\nBravo, vous êtes engagé !"
+    args: "Voilà une scène typique d'un **atelier textile au XVe siècle**. Remarquez le métier à tisser et la concentration qu'il demande. Mais derrière ce calme apparent se cache une tâche répétitive. Et puisque nous avons la chance d'avoir ce mini-métier à tisser, j'ai **besoin d'un volontaire** !\n\nBravo, vous êtes engagé !"
 "4_2":
   - trigger: auto
     exec: human
-    args: "Voilà les bases. Chaque fois qu'un fil de chaîne est levé, on doit faire passer le fil de trame en dessous, puis baisser le fil suivant et recommencer. Vous essayez ?"
+    args: "Voilà les bases. Chaque fois qu'un **fil de chaîne est levé**, on doit faire passer le **fil de trame en dessous**, puis baisser le fil suivant et recommencer. Vous essayez ?"
   - trigger: fragment
     delay: 5
     exec: speak
     args: Statistiquement, je donnerais à cette tâche un indice de ennui-o-mètre assez élevé.
-    id: 4_2_0
+    id: 4_1_1
   - trigger: auto
     exec: human
-    args: "Maintenant que vous avez pris le rythme, je vous laisse tisser un peu et on voit ce que ça donne ?"
+    args: "Maintenant que vous avez pris le rythme, **je vous laisse tisser un peu** et on voit ce que ça donne ?"
   - trigger: fragment
     delay: 5
     exec: speak
     args: Heureusement, au XVIIIe siècle, à Lyon, un homme nommé Basile Bouchon a eu une idée.
+    id: 4_2_0
 "4_3":
   - trigger: auto
     exec: human
-    args: "Bouchon introduit un **système de contrôle à papier perforé*. Le principe ? Les **perforations dans le papier dictaient* si un fil de chaîne devait être levé ou baissé. Cela remplaçait une bonne partie du travail manuel et offrait une régularité impressionnante."
+    args: "Bouchon introduit un **système de contrôle à papier perforé**. Le principe ? Les **perforations dans le papier dictaient** si un fil de chaîne devait être levé ou baissé. Cela remplaçait une bonne partie du travail manuel et offrait une régularité impressionnante."
   - trigger: fragment
     delay: 5
     exec: speak
@@ -452,7 +453,7 @@
     id: 4_3_0
   - trigger: auto
     exec: human
-    args: "Cette machine sera **reprise par Joseph-Marie Jacquard* et popularisée au début du XIXe siècle pour **réduire le travail des enfants**, souvent employés comme aides par leurs parents tisseurs. Mais il **regretta toute sa vie les conséquences sociales* de cette innovation. En effet, les enfants durent trouver du travail ailleurs **dans des usines** où les conditions étaient plus difficiles. Et certains **ouvriers s'y opposaient fermement**, ce qui a donné la **révolte des Canuts**."
+    args: "Cette machine sera **reprise par Joseph-Marie Jacquard** et popularisée au début du XIXe siècle pour **réduire le travail des enfants**, souvent employés comme aides par leurs parents tisseurs. Mais il **regretta toute sa vie les conséquences sociales** de cette innovation. En effet, les enfants durent trouver du travail ailleurs **dans des usines** où les conditions étaient plus difficiles. Et certains **ouvriers s'y opposaient fermement**, ce qui a donné la **révolte des Canuts**."
 "4_4":
   - trigger: auto
     delay: 5
@@ -461,7 +462,7 @@
     id: 4_4_0
   - trigger: auto
     exec: human
-    args: "Nous sommes en **novembre 1831, à Lyon**, où les Canuts travaillent dans des **conditions extrêmement dures**. Ces ouvriers tissent des tissus luxueux pour l'aristocratie et la haute bourgeoisie, mais ils sont payés une misère."
+    args: "Nous sommes en **novembre 1831, à Lyon**, où les Canuts travaillent dans des **conditions extrêmement dures**. Ces **ouvriers tissent des tissus luxueux** pour l'aristocratie et la haute bourgeoisie, mais ils sont **payés une misère**."
   - trigger: fragment
     delay: 5
     exec: speak

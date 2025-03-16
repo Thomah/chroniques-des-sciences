@@ -18,25 +18,11 @@ pip install -r requirements-<os>.txt
 python main.py
 ```
 
-# Slides
-
-## Build
-
-```
-npm install
-```
-
-## Run
-
-```
-npm start
-```
-
 ## Open the speaker view
 
 Enter  `S` on any slide
 
-# Generate dialogs
+## Generate dialogs
 
 ```
 python -m venv venv
@@ -46,7 +32,7 @@ pip install -r requirements.txt
 python generate_dialogs.py
 ```
 
-# Generate script
+## Generate script
 
 ```
 sudo apt-get install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
@@ -65,16 +51,16 @@ pip install -r requirements.txt
 python generate_script.py
 ```
 
-# MAVHi
+## MAVHi
 
-## On Windows
+### On Windows
 
 ```
 pip install pygetwindow pywin32 pyserial pynput selenium
 python mavhi\windows-connector.py
 ```
 
-## On Linux
+### On Linux
 
 ```
 # Give access to serial port
