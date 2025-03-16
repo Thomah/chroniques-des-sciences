@@ -1,11 +1,12 @@
 import sys
 import subprocess
 import time
-import platform
 import os
+import re
 import threading
 import yaml
 import tkinter as tk
+from tkinter import ttk
 from tkinter import scrolledtext
 from urllib.parse import urlparse
 
@@ -77,6 +78,11 @@ else:
             print(f"Error: {e}")
             return False
 
+def log_to_serial_text(message, serial_text):
+    print(message)
+    serial_text.insert(tk.END, f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
+    serial_text.see(tk.END)
+
 # Function to open localhost in Firefox using Selenium
 def open_localhost():
     options = Options()
@@ -105,29 +111,9 @@ def list_serial_ports():
     return [port.device for port in ports]
 
 def choose_serial_port():
-    available_ports = list_serial_ports()
-    print("Available serial ports:")
-    if not available_ports:
-        print("No serial ports available.")
-    else:
-        for i, port in enumerate(available_ports, start=1):
-            print(f"{i}: {port}")
-
-    print("0: Proceed without a serial port")
-    choice = input("Choose a serial port (number): ")
-
-    try:
-        choice = int(choice)
-        if choice == 0:
-            return None
-        elif 1 <= choice <= len(available_ports):
-            return available_ports[choice - 1]
-        else:
-            print("Invalid choice. Using no serial port.")
-            return None
-    except ValueError:
-        print("Invalid input. Using no serial port.")
-        return None
+    available_ports = list_ports.comports()
+    ports = [port.device for port in available_ports]
+    return ports
 
 # Function to run HTTP server in the current directory
 def run_http_server():
@@ -159,6 +145,53 @@ def get_current_state(url):
     fragment_index = state[2] if len(state) > 2 else None  # Last number is fragment index, None if not set
     return state_key, fragment_index
 
+def get_current_human_speach(state_key, fragment_index):
+    state_data = STATES.get(state_key, [])
+    args_list = []
+    
+    if fragment_index is None:
+        for j in range(0, len(state_data)):
+            next_entry = state_data[j]
+            if next_entry.get("trigger") == "fragment" and next_entry.get("exec") != "human":
+                break
+            elif next_entry.get("trigger") == "fragment" and next_entry.get("exec") == "human":
+                text = re.findall(r'\*\*(.*?)\*\*', next_entry.get("args", ""))
+                args_list.extend(text)
+            elif next_entry.get("exec") == "human":
+                text = re.findall(r'\*\*(.*?)\*\*', next_entry.get("args", ""))
+                args_list.extend(text)
+            else:
+                args_list.append("")
+        return {
+            "exec": "human",
+            "args": "\n".join([arg for arg in args_list if arg.strip() != ""])
+        }
+    
+    fragment_count = -1
+    
+    for i, entry in enumerate(state_data):
+        if fragment_count == fragment_index:
+            for j in range(i, len(state_data)):
+                next_entry = state_data[j]
+                if next_entry.get("trigger") == "fragment" and next_entry.get("exec") != "human":
+                    break
+                elif next_entry.get("trigger") == "fragment" and next_entry.get("exec") == "human":
+                    text = re.findall(r'\*\*(.*?)\*\*', next_entry.get("args", ""))
+                    args_list.extend(text)
+                elif next_entry.get("exec") == "human":
+                    text = re.findall(r'\*\*(.*?)\*\*', next_entry.get("args", ""))
+                    args_list.extend(text)
+                else:
+                    args_list.append("")
+            return {
+                "exec": "human",
+                "args": "\n".join([arg for arg in args_list if arg.strip() != ""])
+            }
+        if(entry.get("trigger") == "fragment"):
+            fragment_count += 1
+    
+    return {"exec": "human", "args": "/"}
+
 def get_next_speak_message(state_key, fragment_index):
     state_data = STATES.get(state_key, [])
     
@@ -177,29 +210,46 @@ def get_next_speak_message(state_key, fragment_index):
                 for j in range(i, len(state_data)):
                     next_entry = state_data[j]
                     if next_entry.get("trigger") == "fragment":
-                        return f"{state_key}_{next_fragment_index} : {next_entry.get('exec', '')}\n{next_entry.get('args', '')}"
-            fragment_count+= 1
+                        return {
+                            "state_key": state_key,
+                            "next_fragment_index": next_fragment_index,
+                            "exec": next_entry.get("exec", ""),
+                            "args": next_entry.get("args", "")
+                        }
+            fragment_count += 1
     
-    return "No more fragment on current slide."
+    return {
+        "state_key": state_key,
+        "next_fragment_index": next_fragment_index,
+        "exec": "No more fragment on current slide.",
+        "args": ""
+    }
 
-def update_gui(url_label, state_label, speak_text, serial_text):
+def update_gui(state_label, current_args_label, next_args_label, serial_text):
     """Update the Tkinter label with the current URL and process serial input."""
     global driver, ser
 
     # Update URL from Firefox
     try:
         current_url = driver.current_url
-        url_label.config(text="Current URL: " + current_url)
         state_key, fragment_index = get_current_state(current_url)
         state_info = STATES.get(state_key, "No state data available")
         state_label.config(text=f"Current State: {state_key} | Fragment Index: {fragment_index}")
+        state_label.after(100, update_gui, state_label, current_args_label, next_args_label, serial_text)
+        
+        current_speak_message = get_current_human_speach(state_key, fragment_index)
+        current_args_label.config(state=tk.NORMAL, bg=get_exec_color(current_speak_message["exec"]))
+        current_args_label.delete(1.0, tk.END)
+        current_args_label.insert(tk.END, current_speak_message["args"])
+        current_args_label.config(state=tk.DISABLED)
+        
         next_speak_message = get_next_speak_message(state_key, fragment_index)
-        speak_text.config(state=tk.NORMAL)
-        speak_text.delete(1.0, tk.END)
-        speak_text.insert(tk.END, next_speak_message)
-        speak_text.config(state=tk.DISABLED)
+        next_args_label.config(state=tk.NORMAL, bg=get_exec_color(next_speak_message["exec"]))
+        next_args_label.delete(1.0, tk.END)
+        next_args_label.insert(tk.END, next_speak_message["args"])
+        next_args_label.config(state=tk.DISABLED)
     except Exception as e:
-        url_label.config(text="Error retrieving current URL: " + str(e))
+        log_to_serial_text("Error while updating gui..." + str(e), serial_text)
     
     # Process serial input if available
     if ser:
@@ -222,35 +272,58 @@ def update_gui(url_label, state_label, speak_text, serial_text):
         except Exception as e:
             print("Error reading from serial port:", e)
     
-    # Schedule next update after 1000 ms
-    url_label.after(1000, update_gui, url_label, state_label, speak_text, serial_text)
+def get_exec_color(exec_value):
+    """Return a color based on the exec value."""
+    colors = {
+        "human": "red",
+        "speak": "blue",
+        "audio": "yellow"
+    }
+    return colors.get(exec_value, "white")
 
-def send_strobe():
+def open_serial_connection(port, serial_text):
+    if port:
+        try:
+            ser = serial.Serial(port, 9600)  # Open the serial port with baudrate 9600
+            log_to_serial_text(f"Serial connection established on port {port}.", serial_text)
+            return ser
+        except Exception as e:
+            log_to_serial_text(f"Error opening serial port: {e}", serial_text)
+            return None
+    return None
+
+def serial_port_selected(event, serial_port_var, root, serial_text):
+    """Callback when a serial port is selected in the GUI dropdown."""
+    selected_port = serial_port_var.get()
+    
+    # Open the serial connection based on selected port
+    global ser
+    ser = open_serial_connection(selected_port, serial_text)
+    
+    # Update the label or text box with status
+    if ser:
+        log_to_serial_text(f"Serial port {selected_port} opened successfully", serial_text)
+    else:
+        log_to_serial_text(f"Failed to open serial port {selected_port}", serial_text)
+
+def send_strobe(serial_text):
+    log_to_serial_text("Sending 'strobe' command to serial port...", serial_text)
     def worker():
         global ser
         if ser:
             try:
                 ser.write(b"strobe\n")
                 ser.flush()
-                print("Sent 'strobe' to serial port.")
             except Exception as e:
-                print("Error sending 'strobe':", e)
+                log_to_serial_text(f"Error sending 'strobe': {e}", serial_text)
         else:
-            print("No serial port open. Cannot send 'strobe'.")
+            log_to_serial_text(f"No serial port open. Cannot send 'strobe'", serial_text)
     
     threading.Thread(target=worker, daemon=True).start()
 
 # Main execution flow
 def main():
     global driver, ser
-
-    port = choose_serial_port()
-    if port:
-        try:
-            ser = serial.Serial(port, 9600)
-        except Exception as e:
-            print(f"Error opening serial port: {e}")
-            ser = None
 
     # Start HTTP server serving the current directory
     http_server_proc = run_http_server()
@@ -271,25 +344,59 @@ def main():
     root.title("M.A.V.Hi.")
     root.geometry("600x400")
 
-    url_label = tk.Label(root, text="Retrieving URL...", font=("Arial", 14), padx=10, pady=10)
-    url_label.pack(fill='x')
+    # Main Frame for layout grouping
+    main_frame = tk.Frame(root)
+    main_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
-    # Add a button to send "strobe" on the serial port
-    strobe_button = tk.Button(root, text="Send 'strobe'", font=("Arial", 12), command=send_strobe)
-    strobe_button.pack(pady=5)
+    # Serial Port and Send Strobe Button Section (Aligned)
+    serial_strobe_frame = tk.Frame(main_frame)
+    serial_strobe_frame.pack(fill='x', pady=5)
 
-    state_label = tk.Label(root, text="Current State: Loading...", font=("Arial", 12), justify="left")
-    state_label.pack(fill='x', padx=10, pady=5)
+    serial_label = tk.Label(serial_strobe_frame, text="Select Serial Port:", font=("Arial", 12))
+    serial_label.pack(side="left", padx=10)
+
+    serial_ports = choose_serial_port()
+    serial_port_var = tk.StringVar(value=serial_ports[0] if serial_ports else "")
+    serial_port_menu = tk.OptionMenu(serial_strobe_frame, serial_port_var, *serial_ports)
+    serial_port_menu.pack(side="left", padx=10)
+    serial_port_menu.bind("<Configure>", lambda event: serial_port_selected(event, serial_port_var, root, serial_text))
+
+    # Align the "Send 'strobe'" button with the serial port selection
+    strobe_button = tk.Button(serial_strobe_frame, text="Send 'strobe'", font=("Arial", 12), command=lambda: send_strobe(serial_text))
+    strobe_button.pack(side="left", padx=10)
+
+    # State Display Section
+    state_frame = tk.Frame(main_frame)
+    state_frame.pack(fill='x', pady=5)
+
+    state_label = tk.Label(state_frame, text="Current State: Loading...", font=("Arial", 12), justify="left")
+    state_label.pack(fill='x', padx=10)
+
+    # Current & Next Message Section
+    message_frame = tk.Frame(main_frame)
+    message_frame.pack(fill='both', pady=5)
+
+    current_message_label = tk.Label(message_frame, text="Current Message:", font=("Arial", 12, "bold"))
+    current_message_label.pack()
     
-    speak_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, font=("Arial", 24), height=5, state=tk.DISABLED)
-    speak_text.pack(expand=True, fill='both', padx=10, pady=5)
-    
-    # Scrolled text widget to display incoming serial data
-    serial_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, font=("Arial", 12), height=10)
+    current_args_label = scrolledtext.ScrolledText(message_frame, wrap=tk.WORD, font=("Arial", 16), height=5, state=tk.DISABLED)
+    current_args_label.pack(expand=True, fill='both', padx=10, pady=5)
+
+    next_message_label = tk.Label(message_frame, text="Next Message:", font=("Arial", 12, "bold"))
+    next_message_label.pack()
+
+    next_args_label = scrolledtext.ScrolledText(message_frame, wrap=tk.WORD, font=("Arial", 16), height=5, state=tk.DISABLED)
+    next_args_label.pack(expand=True, fill='both', padx=10, pady=5)
+
+    # Serial Data Section
+    serial_frame = tk.Frame(main_frame)
+    serial_frame.pack(fill='both', pady=10)
+
+    serial_text = scrolledtext.ScrolledText(serial_frame, wrap=tk.WORD, font=("Arial", 12), height=10)
     serial_text.pack(expand=True, fill='both', padx=10, pady=10)
-    
+
     # Start the periodic update loop
-    root.after(1000, update_gui, url_label, state_label, speak_text, serial_text)
+    root.after(100, update_gui, state_label, current_args_label, next_args_label, serial_text)
 
     print("Interface launched. Close the window or press Ctrl+C in the terminal to exit.")
     try:

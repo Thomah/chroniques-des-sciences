@@ -71,7 +71,7 @@
 "2_2":
   - trigger: auto
     exec: human
-    args: "A cette époque, les gens n'utilisent pas encore de chiffres comme nous les connaissons.\n\nPour tenir des comptes, ils créent des petites bulles d'argile, des **bulle-enveloppe**. À l'intérieur, on place des **petits jetons** représentant différentes quantités de moutons, jarres d'huile, ou sacs de grain. Et ce n'est pas tout ! L'extérieur de chaque bulle est soigneusement gravé avec un résumé de ce qui se trouve à l'intérieur."
+    args: "A cette époque, les gens n'utilisent pas encore de chiffres comme nous les connaissons.\n\nPour tenir des comptes, ils créent des petites bulles d'argile, des **bulle-enveloppe**. À l'intérieur, on place des **petits jetons** représentant différentes quantités de moutons, jarres d'huile, ou sacs de grain. Et ce n'est pas tout ! L'extérieur de chaque bulle est soigneusement **gravé avec un résumé** de ce qui se trouve à l'intérieur."
   - trigger: fragment
     delay: 0
     exec: speak
@@ -93,7 +93,7 @@
 "2_5":
   - trigger: auto
     exec: human
-    args: "Et bien des années - des millénaires après, les techniques de calcul vont connaître une avancée majeure : les **abaques**. En soit, ce sont des tablettes gravées dans la pierre..."
+    args: "Et bien des années - des millénaires après, les techniques de calcul vont connaître **une avancée majeure** : les **abaques**. En soit, ce sont des **tablettes gravées dans la pierre**..."
   - trigger: fragment
     exec: audio
     args: audio/interferences-mobile-0484.mp3;0.3;0;1
@@ -279,7 +279,7 @@
   - trigger: auto
     exec: human
     args: "Avant de plonger dans ses inventions, laissez-moi vous présenter rapidement John Napier."
-  - trigger: fragment
+  - trigger: auto
     exec: human
     args: "Cet **Écossais, né en 1550**, n'était pas seulement un mathématicien. Non, c'était un véritable **touche-à-tout de génie**. Écoutez un peu son CV :"
   - trigger: fragment
