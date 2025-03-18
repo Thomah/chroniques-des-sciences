@@ -26,6 +26,12 @@ else:
     GECKODRIVER_PATH = "/usr/local/bin/geckodriver"
     FIREFOX_PATH = "/usr/bin/firefox"
 
+def log_to_serial_text(message):
+    print(message)
+    if ui_elements.get("serial_text") is not None:
+        ui_elements.get("serial_text").insert(tk.END, f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
+        ui_elements.get("serial_text").see(tk.END)
+
 # Define bring_window_to_front for Windows
 if sys.platform.startswith("win"):
     import pygetwindow as gw
@@ -37,7 +43,7 @@ if sys.platform.startswith("win"):
         try:
             windows = gw.getWindowsWithTitle(window_title)
             if not windows:
-                print(f"Window with title '{window_title}' not found.")
+                log_to_serial_text(f"Window with title '{window_title}' not found.")
                 return False
 
             hwnd = windows[0]._hWnd
@@ -54,10 +60,10 @@ if sys.platform.startswith("win"):
             shell.SendKeys('%')
             win32gui.SetForegroundWindow(hwnd)
 
-            print(f"Window '{window_title}' brought to the front.")
+            log_to_serial_text(f"Window '{window_title}' brought to the front.")
             return True
         except Exception as e:
-            print(f"Error: {e}")
+            log_to_serial_text(f"Error: {e}")
             return False
 
 # Define bring_window_to_front for Linux (using xdotool)
@@ -67,24 +73,21 @@ else:
             # Find window ID by title using xdotool
             window_id = subprocess.check_output(["xdotool", "search", "--name", window_title]).decode().strip()
             if not window_id:
-                print(f"Window with title '{window_title}' not found.")
+                log_to_serial_text(f"Window with title '{window_title}' not found.")
                 return False
             # Activate and raise the window
             subprocess.run(["xdotool", "windowactivate", window_id])
             subprocess.run(["xdotool", "windowraise", window_id])
-            print(f"Window '{window_title}' brought to the front.")
+            log_to_serial_text(f"Window '{window_title}' brought to the front.")
             return True
         except Exception as e:
-            print(f"Error: {e}")
+            log_to_serial_text(f"Error: {e}")
             return False
 
-def log_to_serial_text(message, serial_text):
-    print(message)
-    serial_text.insert(tk.END, f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
-    serial_text.see(tk.END)
-
 # Function to open localhost in Firefox using Selenium
-def open_localhost():
+def open_slides():
+    global driver
+
     options = Options()
     options.binary_location = FIREFOX_PATH
 
@@ -98,12 +101,37 @@ def open_localhost():
     driver = webdriver.Firefox(service=service, options=options)
     try:
         driver.get("http://localhost:8080")
-        print("Opened http://localhost:8080 in Firefox")
+        log_to_serial_text("Opened http://localhost:8080 in Firefox")
+
+        # Open a new tab and navigate to webcam.html
+        driver.execute_script("window.open('http://localhost:8080/webcam.html', '_blank');")
+        log_to_serial_text("Opened webcam.html in a new tab")
+
+        # Update window title as needed; this is an example title for Firefox.
+        if not bring_window_to_front(window_title):
+            log_to_serial_text(f"Window '{window_title}' not found. Exiting program.")
+
+        update_gui()
+
+        # Replace "Open Firefox" button with "Close Slides"
+        ui_elements["open_slides_button"].config(text="Close Slides", command=close_slides)
+
         return driver
     except Exception as e:
-        print(f"Error opening localhost: {e}")
+        log_to_serial_text(f"Error opening localhost: {e}")
         driver.quit()
         return None
+
+def close_slides():
+    global driver
+
+    if driver:
+        driver.quit()  # Close the Firefox browser
+        driver = None
+        log_to_serial_text("Slides closed successfully.")
+
+    # Restore UI button to "Open Firefox"
+    ui_elements["open_slides_button"].config(text="Open Firefox", command=open_slides)
 
 # Serial port selection
 def list_serial_ports():
@@ -119,7 +147,7 @@ def choose_serial_port():
 def run_http_server():
     # Use the directory where this script is located
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    print("Starting HTTP server in", script_dir)
+    log_to_serial_text(f"Starting HTTP server in {script_dir}")
     # Start the HTTP server in a subprocess
     proc = subprocess.Popen([sys.executable, "-m", "http.server", "8080", "--directory", script_dir])
     return proc
@@ -130,13 +158,13 @@ def load_states():
         with open("states.yaml", "r", encoding="utf-8") as file:
             return yaml.safe_load(file)
     except Exception as e:
-        print(f"Error loading states.yaml: {e}")
+        log_to_serial_text(f"Error loading states.yaml: {e}")
         return {}
 
-def reload_state(serial_text):
+def reload_state():
     global STATES
     STATES = load_states()
-    log_to_serial_text("State reloaded successfully.", serial_text)
+    log_to_serial_text("State reloaded successfully.")
 
 # Function to parse URL and extract state
 def get_current_state(url):
@@ -229,31 +257,86 @@ def get_next_speak_message(state_key, fragment_index):
         "args": ""
     }
 
-def update_gui(state_label, current_args_label, next_args_label, serial_text):
+def get_exec_color(exec_value):
+    """Return a color based on the exec value."""
+    colors = {
+        "human": "red",
+        "speak": "blue",
+        "audio": "yellow"
+    }
+    return colors.get(exec_value, "white")
+
+def open_serial_connection(port):
+    if port:
+        try:
+            ser = serial.Serial(port, 9600)
+            log_to_serial_text(f"Serial connection established on port {port}.")
+            return ser
+        except Exception as e:
+            log_to_serial_text(f"Error opening serial port: {e}")
+            return None
+    return None
+
+def serial_port_selected(event, serial_port_var, root):
+    """Callback when a serial port is selected in the GUI dropdown."""
+    selected_port = serial_port_var.get()
+    
+    # Open the serial connection based on selected port
+    global ser
+    ser = open_serial_connection(selected_port)
+    
+    # Update the label or text box with status
+    if ser:
+        log_to_serial_text(f"Serial port {selected_port} opened successfully")
+    else:
+        log_to_serial_text(f"Failed to open serial port {selected_port}")
+
+def send_strobe():
+    log_to_serial_text("Sending 'strobe' command to serial port...")
+    def worker():
+        global ser
+        if ser:
+            try:
+                ser.write(b"strobe\n")
+                ser.flush()
+            except Exception as e:
+                log_to_serial_text(f"Error sending 'strobe': {e}")
+        else:
+            log_to_serial_text(f"No serial port open. Cannot send 'strobe'")
+    
+    threading.Thread(target=worker, daemon=True).start()
+
+def update_gui():
     """Update the Tkinter label with the current URL and process serial input."""
     global driver, ser
+    
+    state_label = ui_elements.get("state_label")
+    current_args_label = ui_elements.get("current_args_label")
+    next_args_label = ui_elements.get("next_args_label")
+    serial_text = ui_elements.get("serial_text")
 
     # Update URL from Firefox
-    try:
-        current_url = driver.current_url
-        state_key, fragment_index = get_current_state(current_url)
-        state_info = STATES.get(state_key, "No state data available")
-        state_label.config(text=f"{state_key}_{fragment_index}")
-        state_label.after(100, update_gui, state_label, current_args_label, next_args_label, serial_text)
-        
-        current_speak_message = get_current_human_speach(state_key, fragment_index)
-        current_args_label.config(state=tk.NORMAL, bg=get_exec_color(current_speak_message["exec"]))
-        current_args_label.delete(1.0, tk.END)
-        current_args_label.insert(tk.END, current_speak_message["args"])
-        current_args_label.config(state=tk.DISABLED)
-        
-        next_speak_message = get_next_speak_message(state_key, fragment_index)
-        next_args_label.config(state=tk.NORMAL, bg=get_exec_color(next_speak_message["exec"]))
-        next_args_label.delete(1.0, tk.END)
-        next_args_label.insert(tk.END, next_speak_message["args"])
-        next_args_label.config(state=tk.DISABLED)
-    except Exception as e:
-        log_to_serial_text("Error while updating gui..." + str(e), serial_text)
+    if driver is not None:
+        try:
+
+            current_url = driver.current_url
+            state_key, fragment_index = get_current_state(current_url)
+            state_label.config(text=f"{state_key}_{fragment_index}")
+            state_label.after(100, update_gui)
+            
+            current_speak_message = get_current_human_speach(state_key, fragment_index)
+            current_args_label.config(state=tk.NORMAL, bg=get_exec_color(current_speak_message["exec"]))
+            current_args_label.delete(1.0, tk.END)
+            current_args_label.insert(tk.END, current_speak_message["args"])
+            current_args_label.config(state=tk.DISABLED)
+            
+            next_speak_message = get_next_speak_message(state_key, fragment_index)
+            next_args_label.config(state=tk.NORMAL, bg=get_exec_color(next_speak_message["exec"]))
+            next_args_label.delete(1.0, tk.END)
+            next_args_label.insert(tk.END, next_speak_message["args"])
+            next_args_label.config(state=tk.DISABLED)
+        except Exception as e:
+            log_to_serial_text("Error while updating gui..." + str(e))
     
     # Process serial input if available
     if ser:
@@ -264,66 +347,17 @@ def update_gui(state_label, current_args_label, next_args_label, serial_text):
                 serial_text.insert(tk.END, data + "\n")
                 serial_text.see(tk.END)
                 if data == "ARCADE_RED_BUTTON_PRESSED":
-                    print("Arcade Red Button pressed")
+                    log_to_serial_text("Arcade Red Button pressed")
                     bring_window_to_front(window_title)
                     keyboard.press('&')
                     keyboard.release('&')
                 elif data == "ARCADE_BLUE_BUTTON_PRESSED":
-                    print("Arcade Blue Button pressed")
+                    log_to_serial_text("Arcade Blue Button pressed")
                     bring_window_to_front(window_title)
                     keyboard.press('à')
                     keyboard.release('à')
         except Exception as e:
-            print("Error reading from serial port:", e)
-    
-def get_exec_color(exec_value):
-    """Return a color based on the exec value."""
-    colors = {
-        "human": "red",
-        "speak": "blue",
-        "audio": "yellow"
-    }
-    return colors.get(exec_value, "white")
-
-def open_serial_connection(port, serial_text):
-    if port:
-        try:
-            ser = serial.Serial(port, 9600)  # Open the serial port with baudrate 9600
-            log_to_serial_text(f"Serial connection established on port {port}.", serial_text)
-            return ser
-        except Exception as e:
-            log_to_serial_text(f"Error opening serial port: {e}", serial_text)
-            return None
-    return None
-
-def serial_port_selected(event, serial_port_var, root, serial_text):
-    """Callback when a serial port is selected in the GUI dropdown."""
-    selected_port = serial_port_var.get()
-    
-    # Open the serial connection based on selected port
-    global ser
-    ser = open_serial_connection(selected_port, serial_text)
-    
-    # Update the label or text box with status
-    if ser:
-        log_to_serial_text(f"Serial port {selected_port} opened successfully", serial_text)
-    else:
-        log_to_serial_text(f"Failed to open serial port {selected_port}", serial_text)
-
-def send_strobe(serial_text):
-    log_to_serial_text("Sending 'strobe' command to serial port...", serial_text)
-    def worker():
-        global ser
-        if ser:
-            try:
-                ser.write(b"strobe\n")
-                ser.flush()
-            except Exception as e:
-                log_to_serial_text(f"Error sending 'strobe': {e}", serial_text)
-        else:
-            log_to_serial_text(f"No serial port open. Cannot send 'strobe'", serial_text)
-    
-    threading.Thread(target=worker, daemon=True).start()
+            log_to_serial_text("Error reading from serial port:", e)
 
 # Main execution flow
 def main():
@@ -332,16 +366,6 @@ def main():
     # Start HTTP server serving the current directory
     http_server_proc = run_http_server()
     time.sleep(1)
-
-    driver = open_localhost()
-    if driver is None:
-        print("Failed to open localhost. Exiting program.")
-        sys.exit()
-
-    # Update window title as needed; this is an example title for Firefox.
-    if not bring_window_to_front(window_title):
-        print(f"Window '{window_title}' not found. Exiting program.")
-        sys.exit()
 
     # Create a small Tkinter interface to display the current URL
     root = tk.Tk()
@@ -360,15 +384,19 @@ def main():
     serial_port_var = tk.StringVar(value=serial_ports[0] if serial_ports else "")
     serial_port_menu = tk.OptionMenu(serial_strobe_frame, serial_port_var, *serial_ports)
     serial_port_menu.pack(side="left", padx=10)
-    serial_port_menu.bind("<Configure>", lambda event: serial_port_selected(event, serial_port_var, root, serial_text))
+    serial_port_menu.bind("<Configure>", lambda event: serial_port_selected(event, serial_port_var, root))
 
     # Align the "Send 'strobe'" button with the serial port selection
-    strobe_button = tk.Button(serial_strobe_frame, text="Strobe", font=("Arial", 12), command=lambda: send_strobe(serial_text))
+    strobe_button = tk.Button(serial_strobe_frame, text="Strobe", font=("Arial", 12), command=send_strobe)
     strobe_button.pack(side="left", padx=10)
 
     # Add "Reload State" Button
-    reload_button = tk.Button(serial_strobe_frame, text="Reload State", font=("Arial", 12), command=lambda: reload_state(serial_text))
+    reload_button = tk.Button(serial_strobe_frame, text="Reload State", font=("Arial", 12), command=reload_state)
     reload_button.pack(side="left", padx=10)
+
+    # "Open Firefox" Button
+    ui_elements["open_slides_button"] = tk.Button(serial_strobe_frame, text="Open Firefox", font=("Arial", 12), command=open_slides)
+    ui_elements["open_slides_button"].pack(side="left", padx=10)
 
     state_label = tk.Label(serial_strobe_frame, text="Loading...", font=("Arial", 12))
     state_label.pack(side="right", padx=10)
@@ -396,14 +424,19 @@ def main():
     serial_text = scrolledtext.ScrolledText(serial_frame, wrap=tk.WORD, font=("Arial", 12), height=10)
     serial_text.pack(expand=True, fill='both', padx=10, pady=10)
 
-    # Start the periodic update loop
-    root.after(100, update_gui, state_label, current_args_label, next_args_label, serial_text)
+    ui_elements["state_label"] = state_label
+    ui_elements["current_args_label"] = current_args_label
+    ui_elements["next_args_label"] = next_args_label
+    ui_elements["serial_text"] = serial_text
 
-    print("Interface launched. Close the window or press Ctrl+C in the terminal to exit.")
+    # Start the periodic update loop
+    root.after(100, update_gui)
+
+    log_to_serial_text("Interface launched. Close the window or press Ctrl+C in the terminal to exit.")
     try:
         root.mainloop()
     except KeyboardInterrupt:
-        print("Exiting program...")
+        log_to_serial_text("Exiting program...")
     finally:
         http_server_proc.terminate()
 
@@ -412,6 +445,7 @@ driver = None
 ser = None
 keyboard = Controller()
 window_title = "Des cailloux aux octets — Mozilla Firefox"
+ui_elements = {}
 STATES = load_states()
 
 if __name__ == '__main__':

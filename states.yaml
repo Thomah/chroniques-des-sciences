@@ -195,7 +195,7 @@
     id: 2_10_8
   - trigger: auto
     exec: human
-    args: "Oui, très juste, Jack. Le mot algorithme dérive de son nom, latinisé en **\"Algoritmi\"**. C'est ainsi que ses méthodes de calcul se sont diffusées en Europe. Les mathématiques deviennent alors un langage universel, capable de traiter des concepts abstraits. C'est cette abstraction qui rend possible toutes les avancées des mathématiques et de la science aujourd'hui.\n\nLes plus grandes inventions ne sont pas toujours des objets, mais aussi des idées, des méthodes qui perdurent au-delà des siècles.\n\nMais des grandes idées, Al-Khwarizmi n'est pas le seul à en avoir eu évidemment."
+    args: "Oui, très juste, Jack. Le mot algorithme dérive de son nom, latinisé en **\"Algoritmi\"**. C'est ainsi que ses méthodes de calcul se sont diffusées en Europe. Les **mathématiques deviennent alors un langage universel**, capable de traiter des concepts abstraits. C'est cette abstraction qui rend possible toutes les avancées des mathématiques et de la science aujourd'hui.\n\nLes plus **grandes inventions ne sont pas toujours des objets**, mais aussi des idées, des méthodes qui perdurent au-delà des siècles.\n\nMais des grandes idées, Al-Khwarizmi n'est pas le seul à en avoir eu évidemment."
   - trigger: fragment
     exec: speak
     args: "Vous avez une idée derrière la tête Professeur. Où souhaitez-vous aller ?"
@@ -278,7 +278,7 @@
 "3_1":
   - trigger: auto
     exec: human
-    args: "Avant de plonger dans ses inventions, laissez-moi vous présenter rapidement John Napier."
+    args: "Avant de plonger dans ses inventions, laissez-moi vous **présenter rapidement John Napier**."
   - trigger: auto
     exec: human
     args: "Cet **Écossais, né en 1550**, n'était pas seulement un mathématicien. Non, c'était un véritable **touche-à-tout de génie**. Écoutez un peu son CV :"
@@ -614,7 +614,7 @@
     id: 5_7_1
   - trigger: auto
     exec: human
-    args: "Et l'aventure n'est pas finie ! Si Babbage n'a pas pu faire aboutir ses projets, c'est en grande partie à cause du financement, mais aussi à cause de la **technologie**. Il était en avance son temps, il lui manquait... une étincelle ? Jack, tu sais où on va !"
+    args: "Et l'aventure n'est pas finie ! Si Babbage n'a pas pu faire aboutir ses projets, c'est en grande partie **à cause du financement**, mais aussi **à cause de la technologie**. Il était en avance son temps, il lui manquait... une étincelle ? Jack, tu sais où on va !"
 "5_8":
   - trigger: auto
     delay: 5
@@ -772,13 +772,13 @@
     args: "Ici, nous avons une réaction d'oxydoréduction entre deux métaux : le zinc et le cuivre. La pomme de terre joue le rôle d'électrolyte en permettant aux charges de circuler."
   - trigger: fragment
     exec: human
-    args: "À l'anode, le zinc perd des électrons et se transforme en ions Zn²⁺. C'est ce qu'on appelle une oxydation."
+    args: "À l'**anode, le zinc** perd des électrons et se transforme en ions Zn²⁺. C'est ce qu'on appelle une **oxydation**."
   - trigger: fragment
     exec: human
-    args: "Ces électrons circulent dans le circuit et arrivent à la cathode, où le cuivre capte ces électrons pour être réduit."
+    args: "Ces électrons circulent dans le circuit et arrivent **à la cathode, où le cuivre** capte ces électrons pour être **réduit**."
   - trigger: fragment
     exec: human
-    args: "Ce transfert d'électrons crée un courant électrique, assez faible mais suffisant pour allumer une LED ! Et voilà ! Un humble tubercule, devenu une source d'électricité ! Mais comme dans toute transformation, les grandes idées ne manquent jamais de provoquer... des étincelles !"
+    args: "Ce transfert d'électrons crée un courant électrique, assez faible mais suffisant pour allumer une LED ! Et voilà ! Un **humble tubercule, devenu une source d'électricité** ! Mais comme dans toute transformation, les grandes idées ne manquent jamais de **provoquer... des étincelles** !"
   - trigger: fragment
     exec: speak
     args: Vous voulez la bagarre Professeur ?
@@ -901,14 +901,14 @@
     args: audio/extrait-cest-carre-le-s.mp3;0.6;0;5
   - trigger: auto
     exec: human
-    args: "Un bond prodigieux pour l'époque. Les scientifiques étaient sceptiques, car ils pensaient que les ondes radios voyageaient en ligne droite et ne pouvaient pas suivre la courbure de la Terre. Marconi a montré qu'elles pouvaient **rebondir dans l'ionosphère*, une couche que personne ne connaissait encore à l'époque.\n\nCependant, son héritage est aussi complexe sur le plan personnel. Plus tard dans sa vie, Marconi s'**associe au régime fasciste italien**. Cela ne réduit pas l'importance de ses accomplissements techniques, mais ajoute une **nuance à sa postérité**.\n\nCe qu'il faut retenir, c'est que la TSF n'a pas été le fruit d'un seul homme. Elle représente la force de la collaboration et de l'innovation à travers le monde.\n\nMais en plus des communications, l'électricité a aussi ouvert une nouvelle ère : celle où la logique s'en mêle, et où des **machines commencent à réfléchir**."
+    args: "Un bond prodigieux pour l'époque. Les scientifiques étaient sceptiques, car ils pensaient que les ondes radios voyageaient en ligne droite et ne pouvaient pas suivre la courbure de la Terre. Marconi a montré qu'elles pouvaient **rebondir dans l'ionosphère*, une couche que personne ne connaissait encore à l'époque.\n\nCependant, son héritage est aussi complexe sur le plan personnel. Plus tard dans sa vie, Marconi s'**associe au régime fasciste italien**. Cela ne réduit pas l'importance de ses accomplissements techniques, mais ajoute une **nuance à sa postérité**.\n\nCe qu'il faut retenir, c'est que la TSF n'a pas été le fruit d'un seul homme. Elle représente la **force de la collaboration et de l'innovation** à travers le monde.\n\nMais en plus des communications, l'électricité a aussi ouvert une nouvelle ère : celle où la logique s'en mêle, et où des **machines commencent à réfléchir**."
   - trigger: fragment
     exec: speak
     args: On parle de moi là ?
     id: 7_6_3
   - trigger: auto
     exec: human
-    args: "Non, Jack. Mais pose-toi cette question : si tu pouvais **manipuler le passage de l'électricité à travers un circuit*, comme ouvrir ou fermer une porte, que pourrais-tu faire ?"
+    args: "Non, Jack. Mais pose-toi cette question : si tu pouvais **manipuler le passage de l'électricité à travers un circuit**, comme ouvrir ou fermer une porte, que pourrais-tu faire ?"
   - trigger: fragment
     exec: speak
     args: Heu... Éteindre et allumer les lumières dans une maison comme un magicien ?

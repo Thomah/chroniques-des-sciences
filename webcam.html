@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Feed</title>
+    <style>
+        /* Basic styling */
+        body {
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            height: 100vh;
+            margin: 0;
+            background: #2c2c2c; /* Dark gray background */
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        video {
+            border: 5px solid #444; /* Border around the video */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        button {
+            background-color: #333; /* Dark button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #555; /* Slightly lighter when hovering */
+        }
+
+    </style>
+</head>
+<body>
+    <video id="webcam" width="640" height="480" autoplay></video>
+    <button id="fullscreenBtn">Go Fullscreen</button>
+
+    <script>
+        // Get the video and button elements
+        const video = document.getElementById('webcam');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        // Request access to the webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                // Assign the webcam stream to the video element
+                video.srcObject = stream;
+            })
+            .catch(function(error) {
+                // Handle errors
+                console.log("Error accessing webcam: " + error);
+            });
+
+        // Fullscreen functionality
+        fullscreenBtn.addEventListener('click', function() {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { // Firefox
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE/Edge
+                video.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
