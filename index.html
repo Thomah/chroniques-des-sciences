@@ -90,6 +90,7 @@
 			runState(Reveal, `${getIndexH()}_${getIndexV()}`, "fragment");
 		});
 		Reveal.on('slidechanged', event => {
+			console.log(event);
 			if (event.indexh != getIndexH() || event.indexv != getIndexV()) {
 				console.log("URL is not matching the slidechanged event");
 				console.log(`${event.indexh}_${event.indexv} != ${getIndexH()}_${getIndexV()}`);
@@ -101,9 +102,8 @@
 				setTimeout(() => {
 					stopObserving();
 					console.log('Stopped observing URL changes.');
-				}, 10000);
+				}, 4000);
 			} else {
-				console.log(event);
 				resetState();
 				runState(Reveal, `${event.indexh}_${event.indexv}`, "auto");
 			}

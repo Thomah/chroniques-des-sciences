@@ -11,6 +11,10 @@
     font-size: 3rem;
 }
 
+.reveal h3 {
+    font-size: 2rem;
+}
+
 .reveal p,
 .reveal a,
 .reveal th,
@@ -83,11 +87,34 @@ code {
     border-radius: 20px;
 }
 
+ul.centered-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 0px;
+}
+
+.centered-list li {
+    text-decoration: none;
+    margin: 10px 0;
+    list-style: none;
+    text-align: center;
+}
+
+.centered-list a {
+    text-decoration: none;
+}
+
+.centered-list a:hover {
+    text-decoration: underline;
+}
+
 @keyframes blink {
+
     0%,
     100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }

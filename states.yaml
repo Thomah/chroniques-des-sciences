@@ -1138,3 +1138,35 @@
   - trigger: auto
     exec: human
     args: "Eh bien, Jack... Je crois que **cela dépend d'eux**."
+"9_4":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_5":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_6":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_7":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_8":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_9":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_10":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
+"9_11":
+  - trigger: auto
+    delay: 5000
+    exec: Reveal.next
