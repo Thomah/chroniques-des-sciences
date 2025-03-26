@@ -90,8 +90,12 @@ def process_yaml():
         for index, action in enumerate(actions, start=0):
             if action.get("exec") == "speak":
                 fingerprint = generate_fingerprint(action)
-                filename = f"{state}_{index}.mp3"
-                output_file = os.path.join(audio_output_folder, f"{state}_{index}.mp3")
+                print(action.get("id"))
+                if action.get("id") is None:
+                    filename = f"{state}_{index}.mp3"
+                else:
+                    filename = f"{action.get("id")}.mp3"
+                output_file = os.path.join(audio_output_folder, filename)
 
                 if os.path.exists(output_file) and fingerprints.get(filename) == fingerprint:
                     print(f"Skipping existing file {filename}, fingerprint matches.")
